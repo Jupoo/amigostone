@@ -1,0 +1,57 @@
+.reg-info {
+	background: $color-orange-extralight;
+	border: solid 1px $color-orange-light;
+	@include rem(font-size, 15px);
+	@include rem(line-height, 20px);
+	@include rem(padding, 15px);
+	color: $color-grey-dark;
+	font-family: $font-medium;
+	border-radius: $border-radius-base;
+
+	&__text {
+		text-align: right;
+		color: $color-orange;
+	}
+
+	&__btns {
+		@include clearfix();
+	}
+}
+
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.reg-info {
+		text-align: center;
+
+		&__btns {
+			display: inline-block;
+			vertical-align: top;
+		}
+
+		&__text {
+			text-align: center;
+		}
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.reg-info {
+
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.reg-info {
+
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.reg-info {
+
+	}
+}

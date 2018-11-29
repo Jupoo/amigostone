@@ -1,0 +1,49 @@
+#id-ajax-upload-file, input.ajax_upload_file_input, input[id*="id-ajax-upload-file"] {
+  display: none
+}
+
+.dynamic-form input[type='text'], [class*="dynamic-form--"] input[type='text'], .formset-elements .add-row {
+  display: none;
+}
+
+.dynamic-form:hover .delete-row, [class*="dynamic-form--"]:hover .delete-row {
+    display: inline-block;
+}
+
+label[for*='id-ajax-upload-file'], label.ajax_upload_file_label {
+  display: inline-block;
+}
+
+.formset-elements {
+  & label {
+    display: none;
+  }
+  & input[type='file'] {
+    display: none;
+  }
+}
+
+input[id*="id-ajax-upload-file"] {
+  display: none;
+}
+
+a.delete-row {
+    display: none;
+    background: url(#{$img-path}del.png?1ebc7ea8f332) no-repeat center center;
+    height: 24px;
+    width: 24px;
+    position: absolute;
+    left: -8px;
+    top: -8px;
+}
+
+.photo {
+    //width: 40px;
+    //height: 40px;
+    //background: url(/static/images/photo.png?62c40f6604e0);
+    //vertical-align: middle;
+}
+
+#index_quick_order label[for*='id-ajax-upload-file-orderfile_set-'], #index_quick_order label[for*='id-ajax-upload-file-orderfile_set-'] > div {
+  width: 100%;
+}

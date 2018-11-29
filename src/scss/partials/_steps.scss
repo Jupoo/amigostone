@@ -1,0 +1,125 @@
+.steps {
+	&__item {
+		display: flex;
+    	justify-content: center;
+		align-items: center;
+	}
+
+	&__name {
+		display: inline-block;
+		vertical-align: top;
+		width: 75%;
+		@include rem(font-size, 16px);
+		@include rem(line-height, 20px);
+	}
+
+	&__num {
+		display: inline-block;
+		vertical-align: top;
+		font-family: $font-medium;
+		text-align: center;
+		@include rem(width, 46px);
+		@include rem(min-width, 46px);
+		@include rem(height, 46px);
+		@include rem(font-size, 22px);
+		@include rem(line-height, 42px);
+		border-radius: 50%;
+	}
+
+	&--left {
+		padding-right: 45%;
+		text-align: right;
+	}
+
+	&--right {
+		padding-left: 45%;
+		text-align: left;
+	}
+
+	&--left &__num {
+		border: solid 2px $color-orange;
+		color: $color-orange;
+		@include rem(margin-left, 10px);
+	}
+
+	&--right &__num {
+		border: solid 2px $color-green;
+		color: $color-green;
+		@include rem(margin-right, 10px);
+	}
+
+	&__arrow {
+		@include rem(font-size, 26px);
+		@include rem(padding-top, 35px);
+	}
+
+	&--left &__arrow {
+		@include rem(margin-left, 10px);
+		color: $color-orange;
+	}
+
+	&--right &__arrow {
+		@include rem(margin-right, 10px);
+		color: $color-green;
+	}
+
+	&__item:last-child &__arrow {
+		visibility: hidden;
+	}
+}
+
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.steps {
+
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.steps {
+
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.steps {
+
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.steps {
+		&__name {
+			@include rem(font-size, 12px);
+			@include rem(line-height, 18px);
+			text-transform: uppercase;
+			font-family: $font-medium;
+			width: 60%;
+		}
+
+		&--left {
+			padding-right: 15%;
+		}
+
+		&--right {
+			padding-left: 15%;
+		}
+
+		&__arrow {
+			@include rem(font-size, 26px);
+			@include rem(padding-top, 50px);
+		}
+
+		&--left &__name {
+			color: $color-orange;
+		}
+
+		&--right &__name {
+			color: $color-green;
+		}
+	}
+}

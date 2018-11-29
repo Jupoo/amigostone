@@ -1,0 +1,83 @@
+.subscription {
+	//background: $color-green-extralight;
+	border-top: solid 1px lighten($color-grey-light, 10%);
+	@include rem(padding, 15px 0px);
+	text-transform: uppercase;
+	text-align: center;
+
+	&__info {
+		display: inline-block;
+		vertical-align: top;
+		margin-right: 30px;
+		text-align: right;
+	}
+
+	&__btn {
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	&__title {
+		@include rem(font-size, 16px);
+		@include rem(line-height, 20px);
+		color: $color-green;
+		font-weight: bold;
+	}
+
+	&__text {
+		@include rem(font-size, 17.85px);
+		@include rem(line-height, 20px);
+		font-family: $font-reg;
+		color: $color-base;
+		text-transform: lowercase;
+
+		& span {
+			color: $color-green;
+			font-family: $font-medium;
+			text-transform: uppercase;
+		}
+	}
+}
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.subscription {
+
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.subscription {
+
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.subscription {
+		&__info {
+			display: block;
+			text-align: center;
+			margin-right: 0px;
+			@include rem(margin-bottom, 10px);
+		}
+
+		&__btn {
+			display: block;
+		}
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.subscription {
+		&__title {
+			@include rem(font-size, 14px);
+		}
+
+		&__text {
+			@include rem(font-size, 15.7px);
+		}
+	}
+}

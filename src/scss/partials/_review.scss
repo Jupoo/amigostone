@@ -1,0 +1,146 @@
+.review {
+	background: #fff;
+	border: solid 1px $color-border;
+	border-radius: $border-radius-base;
+
+	&--grey {
+		background: $color-grey-extralight;
+	}
+
+	&__body {
+		@include rem(padding, 15px);
+	}
+
+	&__name {
+		color: $color-green;
+		font-family: $font-medium;
+		@include rem(margin-bottom, 10px);
+	}
+
+	&__name-icon {
+		@include rem(margin-right, 10px);
+		@include rem(font-size, 30px);
+		@include rem(line-height, 30px);
+		float: left;
+	}
+
+	&__name-text {
+		overflow: hidden;
+		@include rem(font-size, 16px);
+		@include rem(line-height, 22px);
+	}
+
+	&__text {
+		@include rem(font-size, 16px);
+		@include rem(line-height, 24px);
+		color: $color-grey-dark;
+		font-family: $font-light;
+	}
+
+	&__info {
+		width: 100%;
+		@include rem(font-size, 14px);
+		@include rem(line-height, 16px);
+		color: $color-grey;
+		font-family: $font-medium;
+		border-top: solid 1px $color-border;
+		@include rem(padding, 10px 15px);
+	}
+
+	&__icon {
+		@include rem(margin-right, 5px);
+		@include rem(font-size, 16px);
+		@include rem(line-height, 16px);
+	}
+
+	&__rating {
+
+	}
+
+	&__rating-stars {
+		position: relative;
+		display: inline-block;
+    	vertical-align: top;
+		@include rem(font-size, 17.24px);
+	}
+
+	&__rating-stars-empty {
+		color: $color-grey-light;
+		@include rem(height, 16px);
+		white-space: nowrap;
+	}
+
+	&__rating-stars-active {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		overflow: hidden;
+		white-space: nowrap;
+		@include rem(height, 16px);
+		color: $color-orange;
+	}
+
+	&__date {
+
+	}
+
+	&__date-icon {
+
+	}
+
+	&__order {
+		border-bottom: solid 1px $color-border;
+		@include rem(padding, 15px);
+	}
+
+	&__order-title {
+		color: $color-grey-dark;
+		@include rem(font-size, 14px);
+		@include rem(line-height, 22px);
+		text-align: right;
+		@include rem(margin-bottom, 5px);
+	}
+
+	&__order-name {
+		color: $color-grey-dark;
+		@include rem(font-size, 16px);
+		@include rem(line-height, 22px);
+		@include rem(padding, 5px 10px);
+		border-radius: $border-radius-base;
+		background: $color-green-maxextralight;
+		border: solid 1px lighten($color-green,50%);
+	}
+
+	&__order-id {
+		color: $color-green;
+	}
+}
+
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.review {
+
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.review {
+
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.review {
+
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.review {
+
+	}
+}

@@ -1,0 +1,225 @@
+<!-- @@master  = partials/_master-accounts.html-->
+ 
+<!-- @@block  =  content-->
+<section class="page__section">
+    <div class="page__content-inner">
+        <ul class="breadcrumbs">
+            <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link"><span class="icon--home"></span></a></li>
+            <li class="breadcrumbs__item"><a href="profile.html" class="breadcrumbs__link">Личный кабинет</a></li>
+            <li class="breadcrumbs__item"><div class="breadcrumbs__link">Статьи</div></li>
+        </ul>
+        <div class="page__header">
+            <h1 class="page__header-title">Личный кабинет | ООО СТУПКА</h1>
+        </div>
+        <div class="page__body profile">
+            <div class="row">
+                <div class="col-xl-3 col-md-4">
+                    <div class="col-bottom-min">
+                        <!-- @@include = partials/_profile-card.html -->
+                    </div>
+                    <!-- @@include = partials/_profile-menu.html -->
+                </div>
+                <div class="col-xl-9 col-md-8 col-sm-top-min">
+                    <div class="col-bottom-min">
+                        <!-- @@include = partials/_profile-menu-top.html -->
+                    </div>
+                    <div class="col-bottom-min">
+                        <div class="clearfix">
+                            <div class="left col-md-full pos-md-center">
+                                <div class="profile__header">Статьи</div>
+                            </div>
+                            <div class="right col-md-full col-md-top-micro">
+                                <a href="" target="_blank" class="btn btn--min btn--orange col-md-full"><span class="icon--plus-squared"></span>Добавить статью</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box page__info col-bottom-min">Здесь может отображаться какая-то подсказка</div>
+                    <div class="col-bottom-min">
+                        <div class="tabs-page js-tab">
+                            <div class="tabs-page__btns">
+                                <div class="tabs-page__btn-wrap tabs-page--btn-first current js-tab-btn" data-tab="1"><div class="tabs-page__btn">Все</div></div>
+                                <div class="tabs-page__btn-wrap js-tab-btn" data-tab="2"><div class="tabs-page__btn">Опубликованные</div></div>
+                                <div class="tabs-page__btn-wrap js-tab-btn" data-tab="3"><div class="tabs-page__btn">Не опубликованные</div></div>
+                                <div class="tabs-page__btn-wrap js-tab-btn" data-tab="4"><div class="tabs-page__btn">Черновики</div></div>
+                            </div>
+                            <div class="tabs-page__body tabs-page--body-no-border">
+                                <div class="tabs-page__content js-tab-content current" data-tab="1">
+                                    <div class="col-bottom-min">
+                                        <div class="profile__edit-wrap">
+                                            <div class="profile__edit-btns">
+                                                <div class="profile__edit">
+                                                    <a href="profile-articles-edit.html" class="profile__edit-icon icon--edit col-bottom-micro"></a>
+                                                    <div class="profile__edit-icon icon--eye col-bottom-micro"></div>
+                                                    <div class="profile__edit-icon-wrap js-confirm-win-wrap">
+                                                        <div class="profile__edit-icon icon--delete js-confirm-win-btn"></div>
+                                                        <div class="confirm-win__modal js-confirm-win-modal">
+                                                            <div class="confirm-win__title">Хотите удалить услугу из вашего каталога?</div><!-- В зависимости от каталога менять: услугу, товар, работу -->
+                                                            <div class="row row--padd-min">
+                                                                <div class="col-6">
+                                                                    <a href="" class="btn btn--micro btn--fill">Да</a>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <a href="" class="btn btn--red btn--micro btn--fill btn--empty js-confirm-win-btn-no">Нет</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="profile__edit-body">
+                                                <!-- @@include = partials/_articles-card-profile.html -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-bottom-min">
+                                        <div class="profile__edit-wrap">
+                                            <div class="profile__edit-btns">
+                                                <div class="profile__edit">
+                                                    <a href="profile-articles-edit.html" class="profile__edit-icon icon--edit col-bottom-micro"></a>
+                                                    <div class="profile__edit-icon icon--eye col-bottom-micro"></div>
+                                                    <div class="profile__edit-icon-wrap js-confirm-win-wrap">
+                                                        <div class="profile__edit-icon icon--delete js-confirm-win-btn"></div>
+                                                        <div class="confirm-win__modal js-confirm-win-modal">
+                                                            <div class="confirm-win__title">Хотите удалить услугу из вашего каталога?</div><!-- В зависимости от каталога менять: услугу, товар, работу -->
+                                                            <div class="row row--padd-min">
+                                                                <div class="col-6">
+                                                                    <a href="" class="btn btn--micro btn--fill">Да</a>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <a href="" class="btn btn--red btn--micro btn--fill btn--empty js-confirm-win-btn-no">Нет</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="profile__edit-body">
+                                                <!-- @@include = partials/_articles-card-profile.html -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-bottom-min">
+                                        <div class="profile__edit-wrap">
+                                            <div class="profile__edit-btns">
+                                                <div class="profile__edit">
+                                                    <a href="profile-articles-edit.html" class="profile__edit-icon icon--edit col-bottom-micro"></a>
+                                                    <div class="profile__edit-icon icon--eye col-bottom-micro"></div>
+                                                    <div class="profile__edit-icon-wrap js-confirm-win-wrap">
+                                                        <div class="profile__edit-icon icon--delete js-confirm-win-btn"></div>
+                                                        <div class="confirm-win__modal js-confirm-win-modal">
+                                                            <div class="confirm-win__title">Хотите удалить услугу из вашего каталога?</div><!-- В зависимости от каталога менять: услугу, товар, работу -->
+                                                            <div class="row row--padd-min">
+                                                                <div class="col-6">
+                                                                    <a href="" class="btn btn--micro btn--fill">Да</a>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <a href="" class="btn btn--red btn--micro btn--fill btn--empty js-confirm-win-btn-no">Нет</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="profile__edit-body">
+                                                <!-- @@include = partials/_articles-card-profile.html -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- @@include = partials/_pagination.html -->
+                                </div>
+                                <div class="tabs-page__content js-tab-content" data-tab="2">
+                                    <div class="col-bottom-min">
+                                        <div class="profile__edit-wrap">
+                                            <div class="profile__edit-btns">
+                                                <div class="profile__edit">
+                                                    <a href="profile-articles-edit.html" class="profile__edit-icon icon--edit col-bottom-micro"></a>
+                                                    <div class="profile__edit-icon icon--eye col-bottom-micro"></div>
+                                                    <div class="profile__edit-icon-wrap js-confirm-win-wrap">
+                                                        <div class="profile__edit-icon icon--delete js-confirm-win-btn"></div>
+                                                        <div class="confirm-win__modal js-confirm-win-modal">
+                                                            <div class="confirm-win__title">Хотите удалить услугу из вашего каталога?</div><!-- В зависимости от каталога менять: услугу, товар, работу -->
+                                                            <div class="row row--padd-min">
+                                                                <div class="col-6">
+                                                                    <a href="" class="btn btn--micro btn--fill">Да</a>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <a href="" class="btn btn--red btn--micro btn--fill btn--empty js-confirm-win-btn-no">Нет</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="profile__edit-body">
+                                                <!-- @@include = partials/_articles-card-profile.html -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tabs-page__content js-tab-content" data-tab="3">
+                                    <div class="col-bottom-min">
+                                        <div class="profile__edit-wrap">
+                                            <div class="profile__edit-btns">
+                                                <div class="profile__edit">
+                                                    <a href="profile-articles-edit.html" class="profile__edit-icon icon--edit col-bottom-micro"></a>
+                                                    <div class="profile__edit-icon icon--eye col-bottom-micro"></div>
+                                                    <div class="profile__edit-icon-wrap js-confirm-win-wrap">
+                                                        <div class="profile__edit-icon icon--delete js-confirm-win-btn"></div>
+                                                        <div class="confirm-win__modal js-confirm-win-modal">
+                                                            <div class="confirm-win__title">Хотите удалить услугу из вашего каталога?</div><!-- В зависимости от каталога менять: услугу, товар, работу -->
+                                                            <div class="row row--padd-min">
+                                                                <div class="col-6">
+                                                                    <a href="" class="btn btn--micro btn--fill">Да</a>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <a href="" class="btn btn--red btn--micro btn--fill btn--empty js-confirm-win-btn-no">Нет</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="profile__edit-body">
+                                                <!-- @@include = partials/_articles-card-profile.html -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                 <div class="tabs-page__content js-tab-content" data-tab="4">
+                                    <div class="col-bottom-min">
+                                        <div class="profile__edit-wrap">
+                                            <div class="profile__edit-btns">
+                                                <div class="profile__edit">
+                                                    <a href="profile-articles-edit.html" class="profile__edit-icon icon--edit col-bottom-micro"></a>
+                                                    <div class="profile__edit-icon icon--eye col-bottom-micro"></div>
+                                                    <div class="profile__edit-icon-wrap js-confirm-win-wrap">
+                                                        <div class="profile__edit-icon icon--delete js-confirm-win-btn"></div>
+                                                        <div class="confirm-win__modal js-confirm-win-modal">
+                                                            <div class="confirm-win__title">Хотите удалить услугу из вашего каталога?</div><!-- В зависимости от каталога менять: услугу, товар, работу -->
+                                                            <div class="row row--padd-min">
+                                                                <div class="col-6">
+                                                                    <a href="" class="btn btn--micro btn--fill">Да</a>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <a href="" class="btn btn--red btn--micro btn--fill btn--empty js-confirm-win-btn-no">Нет</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="profile__edit-body">
+                                                <!-- @@include = partials/_articles-card-profile.html -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- @@close-->

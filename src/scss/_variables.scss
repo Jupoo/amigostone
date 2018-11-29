@@ -1,0 +1,94 @@
+$width-content-xl:                  1200px; //ПК 1200px
+$width-content-lg:                  992px; //планшет 1024px
+$width-content-md:                  768px; //планшет 768px
+$width-content-sm:                  576px; //планшет 768px
+$width-content-xs:                  320px; //моб 320px
+
+$padd-desktop:                      20px; //отступы на ПК
+$padd-mobile:                       3%; //отступы на мобильных и планшетных экранах
+
+//--------------------------- ЦВЕТА BEGIN ----------------------------//
+$color-base:                   		#404040;
+
+$color-green:						#35a536;
+$color-green-light:					#88e189;
+$color-green-extralight:		    #eeffe8;
+$color-green-maxextralight:		    lighten($color-green-extralight,3%);
+$color-green-dark:                  #2c892d;
+$color-green-darker:                #206220;
+
+$color-grey:                        #9b9b9b;
+$color-grey-light:                  #ccc;
+$color-grey-lighter:                #eee;
+$color-grey-extralight:             #fafafa;
+$color-grey-dark:                   darken($color-grey, 10%);
+$color-grey-darkest:                #2b2b2b;
+
+$color-orange:                  	#f98500;
+$color-orange-extralight:           lighten(#f98500,47%);
+$color-orange-light:                lighten(#f98500,40%);
+
+$color-red:                  	    #e03438;
+//--------------------------- ЦВЕТА END ----------------------------//
+
+$bg-base:                           $color-grey-extralight;
+$bg-grey-light:                     $color-grey-extralight;
+$bg-grey-dark:                      $color-grey-darkest;
+
+$color-border:                  	darken($color-grey-lighter,4%);
+$color-border-form:                 #d3d3d3;
+$color-placeholder:                 lighten($color-grey,10%);
+$color-shadow:                      $color-grey-light;
+
+$font-size-base:                    100%;
+$line-height-base:                  normal;
+
+
+//--------------------------- ССЫЛКИ BEGIN ----------------------------//
+$link-color:                        $color-green;
+$link-hover-color:                  darken($link-color, 7%);
+$link-decoration:                   none;
+$link-hover-decoration:             none;
+//--------------------------- ССЫЛКИ END ----------------------------//
+
+
+//--------------------------- ШРИФТЫ BEGIN ----------------------------//
+$font-path:                         "../fonts/";
+
+$font-name-light:                	"MuseoSansLight/MuseoSansLight";  //100
+$font-name-light-italic:            "MuseoSansLightItalic/MuseoSansLightItalic";  //100 italic
+
+$font-name-regular:                 "MuseoSansRegular/MuseoSansRegular";  //300
+$font-name-italic:                 	"MuseoSansItalic/MuseoSansItalic";  //300 italic
+
+$font-name-medium:                	"MuseoSansMedium/MuseoSansMedium";  //500
+$font-name-medium-italic:           "MuseoSansMediumItalic/MuseoSansMediumItalic";  //500 italic
+
+$font-name-bold:                	"MuseoSansBold/MuseoSansBold";  //700
+$font-name-bold-italic:             "MuseoSansBoldItalic/MuseoSansBoldItalic";  //700 italic
+
+$font-name-black:                	"MuseoSansBlack/MuseoSansBlack";  //900
+$font-name-black-italic:            "MuseoSansBlackItalic/MuseoSansBlackItalic";  //900 italic
+
+$font-name-icons:                	"Fontello/fontello"; //Иконочные шрифты
+
+$font-reg:                          "MuseoSans";
+$font-light:                        "MuseoSansLight";
+$font-medium:                       "MuseoSansMedium";
+$font-black:                        "MuseoSansBlack";
+$font-icons:                        "Fontello";
+
+$font-family-base:                  $font-reg, "Helvetica Neue", Helvetica, Arial, sans-serif;
+//--------------------------- ШРИФТЫ END ----------------------------//
+
+$img-path:                          "../img/";
+$svg-path:                          "../img/svg/";
+
+$sprite-file:                       "sprite.png";
+$sprite-file2x:                     "sprite@2x.png";
+
+$SCREEN_RETINA_pixel_ratio:         1.25;
+$SCREEN_RETINA_resolution:          120;
+
+$border-radius-base:                4px;
+$transition-speed:                  .4s;

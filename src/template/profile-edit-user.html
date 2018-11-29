@@ -1,0 +1,76 @@
+<!-- @@master  = partials/_master-accounts.html-->
+ 
+<!-- @@block  =  content-->
+<section class="page__section">
+    <div class="page__content-inner">
+        <ul class="breadcrumbs">
+            <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link"><span class="icon--home"></span></a></li>
+            <li class="breadcrumbs__item"><a href="profile-user.html" class="breadcrumbs__link">Личный кабинет</a></li>
+            <li class="breadcrumbs__item"><div class="breadcrumbs__link">Редактирование профиля</div></li>
+        </ul>
+        <div class="page__header">
+            <h1 class="page__header-title">Личный кабинет | Кожевникова Виктория Юрьевна</h1>
+        </div>
+        <div class="page__body profile">
+            <div class="row">
+                <div class="col-xl-3 col-md-4">
+                    <div class="col-bottom-min">
+                        <!-- @@include = partials/_profile-card-user.html -->
+                    </div>
+                    <!-- @@include = partials/_profile-menu-user.html -->
+                </div>
+                <div class="col-xl-9 col-md-8 col-sm-top-min">
+                    <div class="col-bottom-min">
+                        <!-- @@include = partials/_profile-menu-top-user.html -->
+                    </div>
+                    <!-- @@include = partials/_profile-edit-header.html -->
+                    <div class="box page__info col-bottom-min">Здесь может отображаться какая-то подсказка</div>
+                    <div class="tabs-page js-tab">
+                        <!-- @@include = partials/_profile-edit-menu-user.html -->
+                        <div class="tabs-page__body tabs-page--body-no-border">
+                            <div class="box">
+                                <form action="" method="post" class="form" enctype="multipart/form-data">
+                                    <div class="row row--padd-min">
+                                        <div class="col-lg-6 col-md-12">
+                                            <div class="form__field">
+                                                <div class="form__title">Имя</div>
+                                                <input placeholder="Как к вам обращаться?" name="" value="" type="text" class="form__input" />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-12">
+                                            <div class="form__field">
+                                                <div class="form__title">Контактный телефон</div>
+                                                <input placeholder="+7 (___) ___-__-__" name="" value="" type="tel" class="form__input request-phone" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__field">
+                                        <div class="form__title">Город</div>
+                                        <!-- @@include = partials/_smart-search-city.html -->
+                                    </div>
+
+                                    <div class="separate-line"></div>
+
+                                    <div class="page__info-header col-bottom-min">Ваш e-mail/логин</div>
+                                    <div class="form__field">
+                                        <div class="form__title">E-mail</div>
+                                        <input placeholder="E-mail" name="" value="amigostone@mail.ru" type="email" class="form__input" disabled="disabled" />
+                                        <a href="/profile-edit-pass.html" class="form__hint">Как я могу изменить e-mail?</a>
+                                    </div>
+
+                                    <div class="separate-line separate-line--min"></div>
+
+                                    <div class="box box--light-orange box--err page__info col-bottom-micro">Ошибка!</div>
+                                    <div class="clearfix">
+                                        <button class="btn btn--min right col-xsm-full" type="submit" name="state" value="0">Сохранить</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- @@close-->

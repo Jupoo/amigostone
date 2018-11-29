@@ -1,0 +1,93 @@
+.reg {
+
+	&__person {
+		display: block;
+	}
+
+	&__person-img {
+		@include rem(max-width, 193px);
+		margin: 0 auto;
+
+		& img {
+			width: 100%;
+		}
+	}
+
+	&__person-text {
+		@include rem(font-size, 14px);
+		@include rem(line-height, 22px);
+		@include rem(margin-top, 10px);
+		font-family: $font-medium;
+		color: $color-green;
+		text-transform: uppercase;
+		text-align: center;
+		transition: color $transition-speed ease;
+	}
+
+	&__person:hover &__person-text {
+		color: darken($color-green, 7%);
+	}
+
+	&__res {
+		@include clearfix();
+	}
+
+	&__res-img {
+		@include rem(max-width, 120px);
+		float: left;
+		margin: 0 auto;
+
+		& img {
+			width: 100%;
+		}
+	}
+
+	&__res-text {
+		@include rem(font-size, 15px);
+		@include rem(line-height, 23px);
+		@include rem(padding-left, 15px);
+		overflow: hidden;
+	}
+}
+
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.reg {
+
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.reg {
+		&__person-img {
+			@include rem(max-width, 140px);
+		}
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.reg {
+		&__person-img {
+			@include rem(max-width, 193px);
+		}
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.reg {
+		&__res-img {
+			float: none;
+			@include rem(margin-bottom, 10px);
+		}
+
+		&__res-text {
+			padding-left: 0px;
+			width: 100%;
+			text-align: center;
+		}
+	}
+}

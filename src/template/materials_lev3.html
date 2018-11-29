@@ -1,0 +1,246 @@
+<!-- @@master  = partials/_master.html-->
+ 
+<!-- @@block  =  content-->
+<section class="page__section">
+    <div class="page__content-inner">
+        <ul class="breadcrumbs">
+            <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link"><span class="icon--home"></span></a></li>
+            <li class="breadcrumbs__item"><a href="/materials.html" class="breadcrumbs__link">Каталог камней</a></li>
+            <li class="breadcrumbs__item"><a href="/materials_lev2.html" class="breadcrumbs__link">Натуральный камень</a></li>
+            <li class="breadcrumbs__item"><div class="breadcrumbs__link">Лабрадорит</div></li>
+        </ul>
+        <div class="page__header">
+            <h1 class="page__header-title">Лабрадорит</h1>
+        </div>
+        <div class="page__body">
+            <div class="row">
+                <div class="col-xl-3 col-md-4 col-sm-bottom-min">
+                    <div class="col-bottom-min">
+                        <!-- @@include = partials/_categories.html -->
+                    </div>
+                    <div class="filter">
+                        <div class="filter__title">Фильтр</div>
+                        <div class="filter__body">
+                            <form action="" data-filter-form="" class="form">
+                                <div class="form__field"><!-- Только для каталога Услуг, Товаров и Работ. Надо только плейсхолдеры покороче написать-->
+                                    <div class="form__title">Город</div>
+                                    <!-- @@include = partials/_smart-search-city.html -->
+                                </div>
+
+                                <div class="form__field"><!-- Только для каталога камня-->
+                                    <div class="form__title">Страна производства</div><!-- Если натуральный камень: страна происхождения-->
+                                    <div class="pseudo-select">
+                                        <div class="pseudo-select__control">
+                                            <div class="pseudo-select__arrow"><span class="icon--down-open-mini"></span></div>
+                                            <div class="pseudo-select__text">Все страны</div>
+                                        </div>
+                                        <ul class="pseudo-select__list">
+                                            <li class="pseudo-select__option current" data-value="1">Все страны</li>
+                                            <li class="pseudo-select__option" data-value="2">Россия</li>
+                                            <li class="pseudo-select__option" data-value="3">Мексика</li>
+                                            <li class="pseudo-select__option" data-value="4">Уругвай</li>
+                                        </ul>
+                                        <select name="status" class="pseudo-select__real">
+                                            <option value="1" selected="selected">Все страны</option>
+                                            <option value="2">Россия</option>
+                                            <option value="3">Мексика</option>
+                                            <option value="4">Уругвай</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form__field"><!-- Только для искусственного камня-->
+                                    <div class="form__title">Линейка</div>
+                                    <div class="pseudo-select">
+                                        <div class="pseudo-select__control">
+                                            <div class="pseudo-select__arrow"><span class="icon--down-open-mini"></span></div>
+                                            <div class="pseudo-select__text">Все линейки</div>
+                                        </div>
+                                        <ul class="pseudo-select__list">
+                                            <li class="pseudo-select__option current" data-value="1">Все линейки</li>
+                                            <li class="pseudo-select__option" data-value="2">Aspen</li>
+                                            <li class="pseudo-select__option" data-value="3">Crystal</li>
+                                            <li class="pseudo-select__option" data-value="4">Tempest</li>
+                                        </ul>
+                                        <select name="status" class="pseudo-select__real">
+                                            <option value="1" selected="selected">Все производители</option>
+                                            <option value="2">Aspen</option>
+                                            <option value="3">Crystal</option>
+                                            <option value="4">Tempest</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="filter__separate"></div><!-- Только для каталога камня-->
+                                <div class="form__field">
+                                    <div class="form__title">Цвет камня</div>
+                                    <div class="row">
+                                        <div class="col-md-12 col-sm-6 col-bottom-micro">
+                                            <label for="checkcolor1" class="pseudo-check">
+                                                <div class="pseudo-check__check"><span class="pseudo-check__check-icon icon--check"></span></div>
+                                                <div class="pseudo-check__text">Белый / светло-серый</div>
+                                                <input id="checkcolor1" name="" value="yes" type="checkbox" class="pseudo-check__real" />
+                                            </label>
+                                        </div>
+                                        <div class="col-md-12 col-sm-6 col-bottom-micro">
+                                            <label for="checkcolor2" class="pseudo-check">
+                                                <div class="pseudo-check__check"><span class="pseudo-check__check-icon icon--check"></span></div>
+                                                <div class="pseudo-check__text">Бежевый / жёлтый</div>
+                                                <input id="checkcolor2" name="" value="yes" type="checkbox" class="pseudo-check__real" />
+                                            </label>
+                                        </div>
+                                        <div class="col-md-12 col-sm-6 col-bottom-micro">
+                                            <label for="checkcolor3" class="pseudo-check">
+                                                <div class="pseudo-check__check"><span class="pseudo-check__check-icon icon--check"></span></div>
+                                                <div class="pseudo-check__text">Красный / розовый</div>
+                                                <input id="checkcolor3" name="" value="yes" type="checkbox" class="pseudo-check__real" />
+                                            </label>
+                                        </div>
+                                        <div class="col-md-12 col-sm-6 col-bottom-micro">
+                                            <label for="checkcolor4" class="pseudo-check">
+                                                <div class="pseudo-check__check"><span class="pseudo-check__check-icon icon--check"></span></div>
+                                                <div class="pseudo-check__text">Коричневый</div>
+                                                <input id="checkcolor4" name="" value="yes" type="checkbox" class="pseudo-check__real" />
+                                            </label>
+                                        </div>
+                                        <div class="col-md-12 col-sm-6 col-bottom-micro">
+                                            <label for="checkcolor5" class="pseudo-check">
+                                                <div class="pseudo-check__check"><span class="pseudo-check__check-icon icon--check"></span></div>
+                                                <div class="pseudo-check__text">Синий</div>
+                                                <input id="checkcolor5" name="" value="yes" type="checkbox" class="pseudo-check__real" />
+                                            </label>
+                                        </div>
+                                        <div class="col-md-12 col-sm-6 col-bottom-micro">
+                                            <label for="checkcolor6" class="pseudo-check">
+                                                <div class="pseudo-check__check"><span class="pseudo-check__check-icon icon--check"></span></div>
+                                                <div class="pseudo-check__text">Зелёный</div>
+                                                <input id="checkcolor6" name="" value="yes" type="checkbox" class="pseudo-check__real" />
+                                            </label>
+                                        </div>
+                                        <div class="col-md-12 col-sm-6 col-bottom-micro">
+                                            <label for="checkcolor7" class="pseudo-check">
+                                                <div class="pseudo-check__check"><span class="pseudo-check__check-icon icon--check"></span></div>
+                                                <div class="pseudo-check__text">Чёрный / тёмно-серый</div>
+                                                <input id="checkcolor7" name="" value="yes" type="checkbox" class="pseudo-check__real" />
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="filter__separate"></div><!-- Только для каталога Камня и каталога Услуг-->
+                                <div class="form__field">
+                                    <div class="form__title">Цена</div>
+                                    <div class="form__price">
+                                        <input type="text" id="amount" readonly />
+                                        <div id="slider-range"></div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-9 col-md-8">
+                    <div class="box page__info col-bottom-min">
+                        В каталоге представлен весь ассортимент камня на рынке с фотографиями и описанием.<br />
+                        Также, на странице камня вы можете просматривать компании, которые занимаются продажей этого камня и их стоимость.<br />
+                        Стоимость м2 камня указана в валюте доллар или евро.<br />
+                        Чтобы оставить заявку, нажмите кнопку «заказать» и уточните детали вашего запроса.
+                    </div>
+                    <div class="sorting"><!--Для каталог услуг, работ, товаров-->
+                        <div class="sorting__title">Сортировка:</div>
+                        <div class="sorting__body">
+                            <div class="sorting__order-by">
+                                <div class="sorting__order-by-label">по имени:</div>
+                                <a href="/catalogue/materials/?o=title" class="sorting__toggle-views"><span class="sorting__icon icon--up-open-mini"></span></a>
+                                <a href="/catalogue/materials/?o=-title" class="sorting__toggle-views"><span class="sorting__icon icon--down-open-mini"></span></a>
+                            </div>
+                            <div class="sorting__order-by">
+                                <div class="sorting__order-by-label">по дате:</div>
+                                <a href="/catalogue/materials/?o=date" class="sorting__toggle-views sorting--toggle-views-active"><span class="sorting__icon icon--up-open-mini"></span></a>
+                                <a href="/catalogue/materials/?o=-date" class="sorting__toggle-views"><span class="sorting__icon icon--down-open-mini"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter-top col-bottom-min"><!--Для искусственного камня-->
+                        <div class="filter-top__title">Производители</div>
+                        <ul class="filter-top__list">
+                            <li class="filter-top__item filter-top--active"><a href="">Corian Quartz (DuPont Zodiac)</a></li>
+                            <li class="filter-top__item"><a href="">Lafite Stone</a></li>
+                            <li class="filter-top__item"><a href="">Quartz Master</a></li>
+                            <li class="filter-top__item"><a href="">Samsung Radianz</a></li>
+                            <li class="filter-top__item"><a href="">Akrilika</a></li>
+                            <li class="filter-top__item"><a href="">Avant Quartz</a></li>
+                            <li class="filter-top__item"><a href="">Caesarstone</a></li>
+                            <li class="filter-top__item"><a href="">Cambria</a></li>
+                            <li class="filter-top__item"><a href="">HanStone</a></li>
+                            <li class="filter-top__item"><a href="">Plaza Stone</a></li>
+                            <li class="filter-top__item"><a href="">Smart Quartz</a></li>
+                            <li class="filter-top__item"><a href="">Still Stone</a></li>
+                            <li class="filter-top__item"><a href="">Technistone</a></li>
+                            <li class="filter-top__item"><a href="">Vicostone</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-bottom-min"><!--Для каталога камней-->
+                        <div class="row row--padd-min">
+                            <div class="col-xl-4 col-lg-6 col-md-12 pos-lg-center">
+                                <div class="sorting-cabinet">
+                                    <div class="sorting-cabinet__title">по имени:</div>
+                                    <a href="" class="sorting-cabinet__toggle-views sorting-cabinet--toggle-views-active"><span class="sorting-cabinet__icon icon--up-open-mini"></span></a>
+                                    <a href="" class="sorting-cabinet__toggle-views"><span class="sorting-cabinet__icon icon--down-open-mini"></span></a>
+                                </div>
+                                <div class="sorting-cabinet marg-l-min">
+                                    <div class="sorting-cabinet__title">по дате:</div>
+                                    <a href="" class="sorting-cabinet__toggle-views sorting-cabinet--toggle-views-active"><span class="sorting-cabinet__icon icon--up-open-mini"></span></a>
+                                    <a href="" class="sorting-cabinet__toggle-views"><span class="sorting-cabinet__icon icon--down-open-mini"></span></a>
+                                </div>
+                            </div>
+                            <div class="col-xl-8 col-lg-6 col-md-12">
+                                <!-- @@include = partials/_smart-search-name.html -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row--padd-min">
+                        <div class="col-xl-4 col-sm-6 col-bottom-min">
+                            <!-- @@include = partials/_catalog-item-stone.html -->
+                        </div>
+                        <div class="col-xl-4 col-sm-6 col-bottom-min">
+                            <!-- @@include = partials/_catalog-item.html -->
+                        </div>
+                        <div class="col-xl-4 col-sm-6 col-bottom-min">
+                            <!-- @@include = partials/_catalog-item-stone.html -->
+                        </div>
+                        <div class="col-xl-4 col-sm-6 col-bottom-min">
+                            <!-- @@include = partials/_catalog-item.html -->
+                        </div>
+                        <div class="col-xl-4 col-sm-6 col-bottom-min">
+                            <!-- @@include = partials/_catalog-item-stone.html -->
+                        </div>
+                        <div class="col-xl-4 col-sm-6 col-bottom-min">
+                            <!-- @@include = partials/_catalog-item.html -->
+                        </div>
+                        <div class="col-xl-4 col-sm-6 col-bottom-min">
+                            <!-- @@include = partials/_catalog-item-stone.html -->
+                        </div>
+                        <div class="col-xl-4 col-sm-6 col-bottom-min">
+                            <!-- @@include = partials/_catalog-item.html -->
+                        </div>
+                        <div class="col-xl-4 col-sm-6 col-bottom-min">
+                            <!-- @@include = partials/_catalog-item-stone.html -->
+                        </div>
+                        <div class="col-xl-4 col-sm-6 col-bottom-min">
+                            <!-- @@include = partials/_catalog-item.html -->
+                        </div>
+                        <div class="col-xl-4 col-sm-6 col-bottom-min">
+                            <!-- @@include = partials/_catalog-item-stone.html -->
+                        </div>
+                        <div class="col-xl-4 col-sm-6 col-bottom-min">
+                            <!-- @@include = partials/_catalog-item.html -->
+                        </div>
+                    </div>
+                    <!-- @@include = partials/_pagination.html -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- @@close-->

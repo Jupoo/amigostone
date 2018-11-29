@@ -1,0 +1,207 @@
+.form {
+	&__header {
+		color: $color-green;
+		font-family: $font-medium;
+		@include rem(font-size, 24px);
+		@include rem(line-height, 30px);
+		text-align: center;
+		@include rem(padding-bottom, 15px);
+	}
+
+	&__field {
+		@include rem(margin-bottom, 10px);
+		position: relative;
+
+		/*&:last-child {
+			margin-bottom: 0px;
+		}*/
+	}
+
+	&__title {
+		@include rem(font-size, 15px);
+		@include rem(line-height, 20px);
+		@include rem(margin-bottom, 5px);
+		//font-family: $font-light;
+	}
+
+	&__input {
+		@include rem(font-size, 15px);
+		@include rem(line-height, 15px);
+		@include rem(height, 40px);
+		@include rem(padding, 0px 10px);
+		width: 100%;
+		border: solid 1px $color-border-form;
+		background: #fff;
+		display: block;
+		font-family: $font-reg;
+		border-radius: $border-radius-base;
+		color: $color-base;
+
+		&:-moz-placeholder {
+			color: $color-placeholder;
+			line-height: normal;
+		}
+
+		&::-webkit-input-placeholder {
+			color: $color-placeholder;
+			line-height: normal;
+		}
+
+		&:focus {
+			border: solid 1px darken($color-border-form, 10%);
+			color: $color-base;
+		}
+
+		&.err {
+			border: solid 1px $color-red;
+		}
+	}
+
+	&__input[disabled] {
+		background: $color-grey-lighter;
+		color: $color-grey;
+	}
+
+	&--field-icon &__input {
+		@include rem(padding-left, 50px);
+	}
+
+	&__textarea {
+		@include rem(font-size, 15px);
+		@include rem(line-height, 20px);
+		@include rem(height, 102px);
+		@include rem(padding, 10px);
+		width: 100%;
+		border: solid 1px $color-border-form;
+		background: #fff;
+		display: block;
+		font-family: $font-reg;
+		border-radius: $border-radius-base;
+		color: $color-base;
+		resize: none;
+
+		&::-webkit-input-placeholder {
+			line-height: 19px;
+			color: $color-placeholder;
+		}
+
+		&:focus {
+			border: solid 1px darken($color-border-form, 10%);
+			color: $color-base;
+		}
+
+		&.err {
+			border: solid 1px $color-red;
+		}
+	}
+
+	&--textarea-min {
+		@include rem(height, 62px);
+	}
+
+	&--field-icon &__textarea {
+		@include rem(padding-left, 50px);
+	}
+
+	&__file {
+		display: block;
+		@include rem(font-size, 15px);
+		@include rem(line-height, 20px);
+		text-align: center;
+		cursor: pointer;
+		transition: all $transition-speed ease;
+		background: $color-grey-lighter;
+    	@include rem(padding, 5px);
+		border-radius: $border-radius-base;
+
+		&:hover {
+			color: $color-green;
+		}
+	}
+
+	&__file-icon {
+		@include rem(margin-right, 10px);
+	}
+
+	&__field-icon {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		height: 100%;
+		color: $color-green;
+		@include rem(font-size, 20px);
+		@include rem(line-height, 40px);
+		@include rem(width, 40px);
+		text-align: center;
+		border-right: solid 1px $color-border-form;
+	}
+
+	&--field-email &__field-icon,
+	&--field-mess &__field-icon {
+		@include rem(font-size, 16px);
+	}
+
+	&__hint {
+		display: block;
+		@include rem(font-size, 14px);
+		@include rem(line-height, 20px);
+		@include rem(margin-top, 5px);
+		font-style: italic;
+		color: $color-grey;
+		text-align: right;
+	}
+
+	a.form__hint {
+		color: $color-green;
+
+		&:hover {
+			color: darken($color-green,10%);
+		}
+	}
+
+	/*& .js-form-replace {
+		color: @color-orange;
+		font: normal 16px/22px OpenSans;
+	}*/
+
+	&__price {
+		& input {
+			border: 0;
+			color: $color-orange;
+			font-family: $font-medium;
+			@include rem(margin-bottom, 10px);
+		}
+	}
+}
+
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.form {
+
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.form {
+
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.form {
+		&__header {
+			@include rem(font-size, 20px);
+			@include rem(line-height, 26px);
+		}
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.form {
+
+	}
+}

@@ -1,0 +1,107 @@
+<!-- @@master  = partials/_master-accounts.html-->
+ 
+<!-- @@block  =  content-->
+<section class="page__section">
+    <div class="page__content-inner">
+        <ul class="breadcrumbs">
+            <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link"><span class="icon--home"></span></a></li>
+            <li class="breadcrumbs__item"><a href="profile.html" class="breadcrumbs__link">Личный кабинет</a></li>
+            <li class="breadcrumbs__item"><div class="breadcrumbs__link">Мои заказы</div></li>
+        </ul>
+        <div class="page__header">
+            <h1 class="page__header-title">Личный кабинет | ООО СТУПКА</h1>
+        </div>
+        <div class="page__body profile">
+            <div class="row">
+                <div class="col-xl-3 col-md-4">
+                    <div class="col-bottom-min">
+                        <!-- @@include = partials/_profile-card.html -->
+                    </div>
+                    <!-- @@include = partials/_profile-menu.html -->
+                </div>
+                <div class="col-xl-9 col-md-8 col-sm-top-min">
+                    <div class="col-bottom-min">
+                        <!-- @@include = partials/_profile-menu-top.html -->
+                    </div>
+                    <div class="col-bottom-min">
+                        <div class="clearfix">
+                            <div class="left col-md-full pos-md-center">
+                                <div class="profile__header">Работа с заказами</div>
+                            </div>
+                            <div class="right col-md-full col-md-top-micro">
+                                <a href="" target="_blank" class="btn btn--min btn--orange col-md-full"><span class="icon--plus-squared"></span>Разместить новый заказ</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box page__info col-bottom-min">Здесь отображаются все отсканированные договоры по заказам, подписанные обеими сторонами. Договор может быть загружен вами или заказчиком.</div>
+                    <div class="col-bottom-min">
+                        <div class="tabs-page">
+                            <div class="tabs-page__btns">
+                                <a href="/profile-orders.html" class="tabs-page__btn-wrap tabs-page--btn-first"><div class="tabs-page__btn">Мои ответы на заказы</div></a>
+                                <a href="/profile-orders-docs.html" class="tabs-page__btn-wrap current"><div class="tabs-page__btn">Документы к заказам</div></a>
+                                <a href="/profile-orders-reviews.html" class="tabs-page__btn-wrap"><div class="tabs-page__btn">Отзывы к заказам</div></a>
+                            </div>
+                            <div class="tabs-page__body tabs-page--body-no-border">
+                                <div class="box col-bottom-min">
+                                    <div class="order-docs js-expand-wrap">
+                                        <div class="order-docs__top">
+                                            <div class="order-docs__title col-xsm-full"><span class="order-docs__icon icon--doc-form"></span>Договор к заказу</div>
+                                            <div class="order-docs__date col-xsm-full"><span class="order-docs__icon icon--calendar"></span>Загружен: <span>26.11.2017</span></div>
+                                        </div>
+                                        <div class="separate-line separate-line--micro"></div>
+                                        <a href="" class="order-docs__order-name">П-образная столешница на кухню из акрила светлых тонов</a>
+                                        <div class="separate-line separate-line--micro"></div>
+                                        <div class="order-docs__wrap">
+                                            <div class="order-docs__img"><img src="/img/files/banner.jpg" alt=""></div>
+                                            <div class="order-docs__body">
+                                                <div class="order-docs__info">Заказчик подтвердил загруженный вами договор на выполнение работ по заказу.</div>
+                                                <!--
+                                                Если договор загрузил заказчик:
+                                                <div class="order-docs__info">Договор на выполнение работ по заказу был загружен заказчиком.</div>
+                                                -->
+
+                                                <!--
+                                                Если договор загрузила компания и он не подтвержден:
+                                                <div class="order-docs__info">Вы загрузили договор на выполнение работ по заказу. Ожидайте подтверждения от заказчика.</div>
+                                                -->
+
+                                                <!--
+                                                Если договор загрузила компания и он подтвержден:
+                                                <div class="order-docs__info">Заказчик подтвердил загруженный вами договор на выполнение работ по заказу.</div>
+                                                -->
+
+                                                <!--
+                                                Если договор загрузила компания и заказчик его отклонил:
+                                                <div class="order-docs__info">Заказчик отклонил загруженный вами договор. Перейдите в заказ и загрузите корректный договр.</div>
+                                                -->
+                                                <div class="col-top-min js-expand-hidden">
+                                                    <!-- Если договор был отклонен заказчиком, то на кнопке пишем - Загрузить новый договор.
+                                                    И при нажатии на кнопку - перебрасываем компанию в заказ и скролим к месту загрузки договора.
+                                                    <a href="/profile-order.html/#company_contract" class="btn btn--min col-xsm-full">Загрузить новый договор</a>
+                                                    -->
+                                                    <div class="btn btn--min js-expand-btn col-xsm-full" data-expand="hidden" data-id="expand1">Просмотреть</div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="js-expand-body none" data-id="expand1">
+                                            <div class="box box--grey col-top-min">
+                                                <div class="order-docs__file-wrap">
+                                                    <div class="order-docs__file">
+                                                        <img src="/img/files/banner.jpg" alt="">
+                                                    </div>
+                                                    <div class="order-docs__file-arrow js-expand-btn" data-expand="show" data-id="expand1"><span class="icon--up-open-mini"></span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- @@close-->

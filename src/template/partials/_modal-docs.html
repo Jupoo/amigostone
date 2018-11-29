@@ -1,0 +1,54 @@
+<!-- Модальное окно Создания заказа -->
+<div class="modal-window" id="modal-docs-original">
+    <div class="modal-window__body">
+        <div class="col-bottom-min">
+            <div class="modal-window__title">Оригиналы документов</div>
+        </div>
+        <form action="" data-filter-form="" class="form">
+            <div class="docs__requisites">
+                <div class="docs__requisites-l">Плательщик:</div>
+                <div class="docs__requisites-r">ООО ВЕНЕЦИЯ КОНСТРАКШЕН</div>
+            </div>
+            <div class="docs__requisites">
+                <div class="docs__requisites-l">Юридический адрес:</div>
+                <div class="docs__requisites-r">190121, Санкт-Петербург, наб. Реки Пряжки, д.30, литера А, помещение 207</div>
+            </div>
+            <div class="separate-line separate-line--min"></div>
+            <label for="check-original" class="pseudo-check">
+                <div class="pseudo-check__check"><span class="pseudo-check__check-icon icon--check"></span></div>
+                <div class="pseudo-check__text">Отправлять оригиналы документов</div>
+                <input id="check-original" name="" value="yes" type="checkbox" class="pseudo-check__real" />
+            </label>
+            <div class="docs__hint">Оригиналы документов вы получите по почте России по указанному юридическому адресу.</div>
+            <div class="separate-line separate-line--min"></div>
+            <div class="pos-right">
+                <button class="btn btn--min col-xsm-full" type="submit" name="" value="">Сохранить</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="modal-window" id="modal-docs-electronic">
+    <div class="modal-window__body">
+        <div class="col-bottom-min">
+            <div class="modal-window__title">Электронные копии документов</div>
+        </div>
+        <form action="" data-filter-form="" class="form">
+            <div class="form__field">
+                <div class="form__title">Ваш e-mail</div>
+                <input placeholder="E-mail" name="" value="amigostone@mail.ru" type="email" class="form__input" disabled="disabled" />
+                <a href="/profile-edit-pass.html" class="form__hint">Как я могу изменить e-mail?</a>
+            </div>
+            <div class="separate-line separate-line--min"></div>
+            <label for="check-electronic" class="pseudo-check col-bottom-micro">
+                <div class="pseudo-check__check"><span class="pseudo-check__check-icon icon--check"></span></div>
+                <div class="pseudo-check__text">Присылать копии документов на эл. почту</div>
+                <input id="check-electronic" name="" value="yes" type="checkbox" class="pseudo-check__real" />
+            </label>
+            <div class="separate-line separate-line--min"></div>
+            <div class="pos-right">
+                <button class="btn btn--min col-xsm-full" type="submit" name="" value="">Сохранить</button>
+            </div>
+        </form>
+    </div>
+</div>

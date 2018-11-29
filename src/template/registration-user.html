@@ -1,0 +1,152 @@
+<!-- @@master  = partials/_master.html-->
+ 
+<!-- @@block  =  content-->
+<section class="page__section">
+    <div class="page__content-inner">
+        <ul class="breadcrumbs">
+            <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link"><span class="icon--home"></span></a></li>
+            <li class="breadcrumbs__item"><a href="/registration.html" class="breadcrumbs__link">Регистрация</a></li>
+            <li class="breadcrumbs__item"><div class="breadcrumbs__link">Регистрация заказчика</div></li><!-- Регистрация заказчика | Регистрация мастера | Регистрация дизайнера / архитектора -->
+        </ul>
+        <div class="page__header">
+            <h1 class="page__header-title">Регистрация</h1>
+        </div>
+        <div class="page__body">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="box col-onesize">
+                        <form action="" method="post" class="form" enctype="multipart/form-data">
+                            <div class="heading heading--small">Регистрация физического лица</div><!-- Регистрация физического лица | Регистрация мастера | Регистрация дизайнера / архитектора -->
+                            <div class="form__field">
+                                <div class="form__title">Имя</div>
+                                <input placeholder="Как к вам обращаться?" name="" value="" type="text" class="form__input" />
+                            </div>
+
+                            <div class="row row--padd-min">
+                                <div class="col-sm-6">
+                                    <div class="form__field">
+                                        <div class="form__title">E-mail</div>
+                                        <input placeholder="Ваш e-mail" name="" value="" type="email" class="form__input" />
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form__field">
+                                        <div class="form__title">Контактный телефон</div>
+                                        <input placeholder="+7 (___) ___-__-__" name="" value="" type="tel" class="form__input request-phone" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__field">
+                                <div class="form__title">Город</div>
+                                <!-- @@include = partials/_smart-search-city.html -->
+                            </div>
+
+                            <div class="separate-line"></div>
+                            <div class="row row--padd-min">
+                                <div class="col-sm-6">
+                                    <div class="form__field">
+                                        <div class="form__title">Пароль</div>
+                                        <input placeholder="Ваш пароль" name="" value="" type="password" class="form__input" />
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form__field">
+                                        <div class="form__title">Повторите пароль</div>
+                                        <input placeholder="Повторите ваш пароль" name="" value="" type="password" class="form__input" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="box box--light-orange box--err page__info col-bottom-micro">Ошибка!</div>
+                            <div class="clearfix">
+                                <div class="left col-top-micro col-bottom-micro col-xsm-top-0">
+                                    Здесь капча
+                                </div>
+                                <button class="btn btn--min btn--disabled right col-xsm-full" type="submit" name="" value="0">Зарегистрироваться</button>
+                            </div>
+                        </form>
+                        <div class="col-top">
+                            <div class="separate-line separate-line--minless"></div>
+                            <div class="page__info-header col-bottom-min">Зарегистрироваться через аккаунт Google</div>
+                            <div class="socials socials--green socials--big">
+                                <a href="" class="socials__btn socials--ggl icon--gplus"></a>
+                            </div>
+                            <div class="separate-line separate-line--minless"></div>
+                            <div class="pos-right">
+                                <a href="/login.html"><span class="icon--user-plus marg-r-micro"></span>Авторизоваться</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-lg-top">
+                    <div class="box col-onesize">
+                        <div class="heading heading--small">В результате вы получаете</div>
+
+                        <!-- Это вариант для Заказчика -->
+                        <div class="reg__res col-top">
+                            <div class="reg__res-img"><img src="img/hour.png" alt="" /></div>
+                            <div class="reg__res-text">Удобную площадку для заказа услуг по производству изделий из камня. Создавайте заказы и бронируйте товары в любой день недели в удобное время. Биржа Amigo Stone работает 24 часа в сутки без выходных и праздников!</div>
+                        </div>
+                        <div class="reg__res col-top">
+                            <div class="reg__res-img"><img src="img/list.png" alt="" /></div>
+                            <div class="reg__res-text">Большой список предложений. После подтверждения заявки вы увидите множество откликов на заказ от компаний. Выбирайте лучший вариант, пользуйтесь качественными услугами без лишних посредников.</div>
+                        </div>
+                        <div class="reg__res col-top">
+                            <div class="reg__res-img"><img src="img/personal_area.png" alt="" /></div>
+                            <div class="reg__res-text">Личный кабинет, в котором сохраняется вся информация. История заказов, их статус, изменения, сроки, готовность товара к отгрузке и многое другое. Вы следите за заказом в реальном времени и общаетесь с исполнителем.</div>
+                        </div>
+                        <div class="reg__res col-top">
+                            <div class="reg__res-img"><img src="img/cool.png" alt="" /></div>
+                            <div class="reg__res-text">Вам доступны консультации специалистов биржи по всем вопросам выбора камня и производства изделий. В любое время, неограниченное число раз и совершенно бесплатно!</div>
+                        </div>
+
+                        <!--
+                        ВАРИАНТ ДЛЯ МАСТЕРА
+
+                        <div class="reg__res col-top">
+                            <div class="reg__res-img"><img src="img/orders.png" alt="" /></div>
+                            <div class="reg__res-text">Постоянные заказы на изделия или услуги, каменной отрасли. Список заявок ежедневно обновляется и расширяется. Заходите на сайт, оставляйте отклик, отвечайте на вопросы покупателей, чтобы получить заказ в работу.</div>
+                        </div>
+                        <div class="reg__res col-top">
+                            <div class="reg__res-img"><img src="img/promotion.png" alt="" /></div>
+                            <div class="reg__res-text">Ваш сайт в самом посещаемом клиентами месте рунета. Ваша личная страница на сайте — рекламная площадка. Размещайте информацию о своих услугах, данные об акциях, скидках. Чем выше активность и ваш рейтинг — тем больше заказов в работе!</div>
+                        </div>
+                        <div class="reg__res col-top">
+                            <div class="reg__res-img"><img src="img/partners.png" alt="" /></div>
+                            <div class="reg__res-text">Партнёрские контакты и связи. Биржа Amigo Stone — лучшая площадка для сотрудничества с компаниями и другими мастерами. Создавайте совместные проекты или работайте как приглашённый специалист. Участвуйте в семинарах, встречах и мероприятиях каменной отрасли. Будьте в курсе событий!</div>
+                        </div>
+                        <div class="reg__res col-top">
+                            <div class="reg__res-img"><img src="img/warranty.png" alt="" /></div>
+                            <div class="reg__res-text">Информационную поддержку. Специалисты биржи всегда проконсультируют вас по вопросам проведения заказов, правильному оформлению личной страницы, бонусной программе и другим моментам связанным с работой на бирже.</div>
+                        </div>
+
+                        -->
+
+                        <!--
+                        ВАРИАНТ ДЛЯ ДИЗАЙНЕРА
+
+                        <div class="reg__res col-top">
+                            <div class="reg__res-img"><img src="img/orders.png" alt="" /></div>
+                            <div class="reg__res-text">Большое число заказов на производство, которые оставляют покупатели на сайте. Список заявок постоянно обновляется и расширяется. Оставляйте свой отклик и общайтесь с клиентами, чтобы получить заказ в работу.</div>
+                        </div>
+                        <div class="reg__res col-top">
+                            <div class="reg__res-img"><img src="img/promotion.png" alt="" /></div>
+                            <div class="reg__res-text">Ваша страница - дополнительная рекламная площадка. Размещайте информацию, данные об акциях для клиентов, ведите рассылку и новостную ленту.<br />Ваша отличная репутация на бирже привлечёт больше заказов!</div>
+                        </div>
+                        <div class="reg__res col-top">
+                            <div class="reg__res-img"><img src="img/partners.png" alt="" /></div>
+                            <div class="reg__res-text">Биржа Amigo Stone — удобная площадка для создания новых связей с другими компаниями. Работайте над общими проектами или ищите дополнительные мощности и специалистов. Участвуйте в отраслевых семинарах, организуйте встречи и мероприятия.</div>
+                        </div>
+                        <div class="reg__res col-top">
+                            <div class="reg__res-img"><img src="img/warranty.png" alt="" /></div>
+                            <div class="reg__res-text">Гарантии и поддержку. Специалисты биржи консультируют вас по вопросам рекламы, по правильному оформлению страницы компании, бонусной программе и другим моментам. Чтобы показать компанию для клиентов с лучшей стороны.</div>
+                        </div>
+
+                        -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- @@close-->

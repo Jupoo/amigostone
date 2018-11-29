@@ -1,0 +1,162 @@
+.product-card {
+	display: block;
+	background: #fff;
+	border-radius: $border-radius-base;
+	@include shadow;
+	transition: all $transition-speed ease;
+	color: $color-base;
+	max-width: 350px;
+	margin: 0 auto;
+	height: 100%;
+
+	&__img {
+		border-radius: $border-radius-base $border-radius-base 0px 0px;
+		overflow: hidden;
+		border-bottom: solid 1px $color-border;
+		border-top: solid 1px $color-border;
+		padding: 50%;
+    	position: relative;
+
+		& img {
+			width: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+
+	&__body {
+		@include rem(padding, 15px);
+	}
+
+	&__name {
+		@include rem(font-size, 16px);
+		@include rem(line-height, 22px);
+		font-family: $font-medium;
+		@include rem(margin-bottom, 15px);
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+
+	&__reviews {
+		@include rem(margin-bottom, 10px);
+	}
+
+	&__reviews-stars {
+		position: relative;
+		display: inline-block;
+    	vertical-align: top;
+
+		& .icon--thumb {
+			@include rem(font-size, 16px);
+		}
+
+		& .icon--star {
+			@include rem(font-size, 17.24px);
+		}
+	}
+
+	&__reviews-stars-empty {
+		color: $color-grey-light;
+		@include rem(height, 16px);
+		white-space: nowrap;
+	}
+
+	&__reviews-stars-active {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		overflow: hidden;
+		white-space: nowrap;
+		@include rem(height, 16px);
+
+		& .icon--thumb {
+			color: $color-green;
+		}
+
+		& .icon--star {
+			color: $color-orange;
+		}
+	}
+
+	&__reviews-count {
+		display: inline-block;
+    	vertical-align: top;
+		@include rem(font-size, 14px);
+		@include rem(line-height, 16px);
+		@include rem(margin-left, 10px);
+	}
+
+	&__reviews-num {
+		display: inline-block;
+		vertical-align: top;
+		font-family: $font-medium;
+	}
+
+	&__reviews-title {
+		display: inline-block;
+		vertical-align: top;
+		@include rem(width, 65px);
+	}
+
+	&__btn {
+		@include rem(margin-top, 10px);
+	}
+
+	&__city {
+		color: $color-green;
+		@include rem(font-size, 14px);
+		@include rem(line-height, 18px);
+		@include rem(margin-top, 10px);
+		text-align: center;
+	}
+
+	&__city-icon {
+		@include rem(font-size, 18px);
+		@include rem(margin-right, 5px);
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	&:hover &__btn {
+		background: $color-green;
+		color: #fff;
+	}
+
+	&:hover {
+		box-shadow: 0px 0px 15px 4px rgba(0, 0, 0, 0.1);
+		color: $color-base;
+	}
+}
+
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.product-card {
+
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.product-card {
+
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.product-card {
+
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.product-card {
+		&__name {
+			@include rem(font-size, 16px);
+		}
+	}
+}

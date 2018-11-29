@@ -1,0 +1,143 @@
+.stone-select {
+	background: #fff;
+	border: solid 1px $color-border;
+	border-radius: $border-radius-base;
+	@include rem(padding, 15px);
+	transition: all $transition-speed ease;
+	position: relative;
+
+	&__status {
+		display: none;
+		position: absolute;
+		@include rem(top, 15px);
+		right: 0px;
+		background: $color-red;
+		color: #fff;
+		font-family: $font-medium;
+		@include rem(font-size, 14px);
+		@include rem(line-height, 30px);
+		@include rem(padding, 0px 15px);
+		border-radius: $border-radius-base 0px 0px $border-radius-base;
+	}
+
+	&.selected &__status {
+		display: block;
+	}
+
+	&__status-icon {
+		@include rem(margin-left, 10px);
+	}
+
+	&.selected {
+		background: $color-green-maxextralight;
+		border: solid 1px lighten($color-green,40%);
+	}
+
+	&__check-wrap {
+		display: flex;
+		align-items: center;
+	}
+
+    &__check {
+		display: block;
+		@include rem(width, 30px);
+		@include rem(height, 30px);
+		@include rem(max-width, 30px);
+		@include rem(min-width, 30px);
+		border: solid 1px $color-border-form;
+		border-radius: 50%;
+		cursor: pointer;
+		background: $color-grey-extralight;
+		transition: all $transition-speed ease;
+		text-align: center;
+
+		&:hover {
+			border: solid 1px darken($color-border-form,10%);
+		}
+	}
+
+	&__name {
+		@include rem(font-size, 14px);
+		@include rem(line-height, 20px);
+		@include rem(padding-left, 10px);
+		font-family: $font-medium;
+	}
+
+	&.selected &__name {
+		@include rem(padding-right, 110px);
+	}
+
+	&__name-item {
+		display: flex;
+		align-items: center;
+		@include rem(font-size, 14px);
+		@include rem(line-height, 20px);
+		@include rem(height, 40px);
+		@include rem(padding-left, 40px);
+		font-family: $font-medium;
+		color: $color-green;
+
+		& span {
+			white-space: nowrap;
+		}
+	}
+
+	&__check-icon {
+		color: $color-green;
+		@include rem(font-size, 26px);
+		@include rem(line-height, 28px);
+		transition: all $transition-speed ease;
+	}
+
+	&--check-icon-down {
+		display: block;
+	}
+
+	&--check-icon-up {
+		display: none;
+	}
+
+	&.check &--check-icon-down {
+		display: none;
+	}
+
+	&.check &--check-icon-up {
+		display: block;
+	}
+
+	&.check &__check {
+		border: solid 1px darken($color-border-form,10%);
+	}
+}
+
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.stone-select {
+
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.stone-select {
+
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.stone-select {
+
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.stone-select {
+		&__name-item {
+			@include rem(padding-left, 0px);
+			//@include rem(line-height, 20px);
+		}
+	}
+}

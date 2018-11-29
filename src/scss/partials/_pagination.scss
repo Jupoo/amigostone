@@ -1,0 +1,93 @@
+.pagination {
+	background: #fff;
+	border: solid 1px $color-border;
+	@include rem(padding, 15px);
+	border-radius: $border-radius-base;
+	font-size: 0;
+
+	&__item {
+		display: inline-block;
+		vertical-align: top;
+		margin: 0px 3px;
+
+		&:first-child {
+			margin-left: 0px;
+		}
+
+		&:last-child {
+			margin-right: 0px;
+		}
+	}
+
+	&__link {
+		display: block;
+		padding: 0px 5px;
+		background: $color-grey-extralight;
+		@include rem(font-size, 14px);
+		@include rem(line-height, 28px);
+		@include rem(min-width, 30px);
+		text-align: center;
+		font-family: $font-medium;
+		border-radius: $border-radius-base;
+		border: solid 1px $color-border;
+		color: $color-grey;
+		transition: all $transition-speed ease;
+
+		&:hover {
+			background: $color-grey-lighter;
+			color: $color-grey-dark;
+			border: solid 1px darken($color-border, 10%);
+		}
+	}
+
+	&__item--active &__link {
+		color: #fff;
+		background: $color-green;
+		border: solid 1px $color-green;
+	}
+
+	&--arrow {
+		@include rem(font-size, 20px);
+	}
+
+	&--sep {
+		background: none;
+		border: none;
+		@include rem(line-height, 30px);
+
+		&:hover {
+			background: none;
+			color: $color-grey;
+			border: none;
+		}
+	}
+}
+
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.pagination {
+
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.pagination {
+
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.pagination {
+
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.pagination {
+
+	}
+}

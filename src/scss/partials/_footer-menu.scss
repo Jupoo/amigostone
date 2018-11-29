@@ -1,0 +1,78 @@
+.footer-menu {
+	background: $color-green;
+
+	&__link {
+		display: block;
+		color: #fff;
+		text-transform: uppercase;
+		@include rem(font-size, 14px);
+		@include rem(line-height, 40px);
+		text-align: center;
+		position: relative;
+		@include rem(padding, 0px 10px);
+    	white-space: nowrap;
+
+		&:hover {
+			color: $color-base;
+		}
+
+		&:after {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 25%;
+			right: 0px;
+			width: 1px;
+			height: 50%;
+			background: $color-green-light;
+		}
+	}
+
+	&__item:last-child &__link:after {
+		display: none;
+	}
+}
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.footer-menu {
+		&__item:nth-child(-n+3) &__link {
+			border-bottom: solid 1px $color-green-light;
+		}
+
+		&__item:nth-child(3n) &__link:after {
+			display: none;
+		}
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.footer-menu {
+
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.footer-menu {
+
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.footer-menu {
+		&__item &__link {
+			border-bottom: solid 1px $color-green-light;
+		}
+
+		&__item:last-child &__link {
+			border-bottom: none;
+		}
+
+		&__item &__link:after {
+			display: none;
+		}
+	}
+}

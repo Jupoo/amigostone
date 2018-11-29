@@ -1,0 +1,429 @@
+<!-- @@master  = partials/_master-accounts.html-->
+ 
+<!-- @@block  =  content-->
+<section class="page__section">
+    <div class="page__content-inner">
+        <ul class="breadcrumbs">
+            <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link"><span class="icon--home"></span></a></li>
+            <li class="breadcrumbs__item"><a href="profile-user.html" class="breadcrumbs__link">Личный кабинет</a></li>
+            <li class="breadcrumbs__item"><div class="breadcrumbs__link">Мои заказы</div></li>
+        </ul>
+        <div class="page__header">
+            <h1 class="page__header-title">Личный кабинет | Кожевникова Виктория Юрьевна</h1>
+        </div>
+        <div class="page__body profile">
+            <div class="row">
+                <div class="col-xl-3 col-md-4">
+                    <div class="col-bottom-min">
+                        <!-- @@include = partials/_profile-card-user.html -->
+                    </div>
+                    <!-- @@include = partials/_profile-menu-user.html -->
+                </div>
+                <div class="col-xl-9 col-md-8 col-sm-top-min">
+                    <div class="col-bottom-min">
+                        <!-- @@include = partials/_profile-menu-top-user.html -->
+                    </div>
+                    <div class="col-bottom-min">
+                        <div class="clearfix">
+                            <div class="left col-md-full pos-md-center">
+                                <div class="profile__header">Работа с заказами</div>
+                            </div>
+                            <div class="right col-md-full col-md-top-micro">
+                                <a href="" target="_blank" class="btn btn--min btn--orange col-md-full"><span class="icon--plus-squared"></span>Разместить новый заказ</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order order--detail">
+                        <div class="js-expand-wrap">
+                            <div class="order__detail-top">
+                                <a href="/profile-orders-user.html" class="order__detail-top-btn left"><span class="order__detail-top-icon icon--left-open-mini"></span>Все мои заказы</a>
+                                <div class="order__detail-top-btn right js-expand-btn"><span class="order__detail-top-icon icon--edit"></span>Дополнить заказ</div>
+                            </div>
+                            <div class="js-expand-body none">
+                                <form action="" method="post" class="form" enctype="multipart/form-data">
+                                    <div class="page--content-inner-min">
+                                        <div class="page__info-header col-bottom-micro">Дополнения по вашему заказу</div>
+                                        <div class="form__field">
+                                            <div class="form__title">Вы можете дополнить заказ не более 3х раз!</div>
+                                            <textarea placeholder="Введите новые параметры заказа..." name="" class="form__textarea"></textarea>
+                                            <div class="form__hint">Если параметры вашего заказа изменились, укажите актуальную информацию здесь.</div>
+                                        </div>
+                                        <div class="form__field">
+                                            <div class="form__title">Вы можете прикрепить к заказу изображения и файлы</div>
+                                            <div class="form__hint col-bottom-micro"><div class="pos-left">Не более 3-х файлов.<br />Размер каждого файла не должен превышать 5Мб.<br/>Допустимые форматы .doc, .pdf, .xls(.xlsx), .jpg, png.</div></div>
+                                            <div class="btn btn--micro col-xsm-full"><span class="icon--upload"></span>Прикрепить файлы</div>
+                                            <div class="col-top-micro"><!-- Выводим, если загрузили файлы -->
+                                                <div class="order__docs order--docs-t-no">
+                                                    <div class="order__doc left marg-r-micro">
+                                                        <span class="order__doc-icon icon--doc"></span>
+                                                        <span class="order__doc-name">xls</span>
+                                                    </div>
+                                                    <div class="order__doc left marg-r-micro">
+                                                        <span class="order__doc-icon icon--doc"></span>
+                                                        <span class="order__doc-name">doc</span>
+                                                    </div>
+                                                    <div class="order__doc left marg-r-micro">
+                                                        <img src="img/files/image_0_02_05_4bc37ddabadb39cd8f90fc6c1b50a5403c844a15a8f7ce1c0a91003569ed8118_V.jpg.250x250_q85_crop.jpg" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="separate-line separate-line--min"></div>
+                                        <!--СООБЩЕНИЕ<div class="box box--light-green box--ok page__info col-bottom-micro">Данные успешно сохранены!</div>-->
+                                        <div class="clearfix">
+                                            <button class="btn btn--min btn--orange right col-xsm-full" type="submit" name="" value="0">Дополнить заказ</button>
+                                        </div>
+                                    </div>
+                                    <div class="separate-line"></div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="js-expand-wrap">
+                            <div class="order__btn-show-wrap js-expand-hidden"><span class="order__btn-show js-expand-btn" data-expand="hidden">Развернуть заказ<span class="icon--down-open-mini"></span></span></div><!-- Добавляем кнопку, когда исполнитель выбран и мы сворачиваем заказ -->
+
+                            <div class="order__wrap">
+                                <div class="none js-expand-body"><!-- Добавляем класс none, когда исполнитель выбран и мы сворачиваем заказ -->
+                                    <div class="row">
+                                        <div class="col-xl-3 col-lg-4 col-md-5 col-sm-5">
+                                            <div class="catalog-detail__gal">
+                                                <div class="col-bottom-min">
+                                                    <a href="" class="catalog-detail__gal-img">
+                                                        <img src="img/files/image_0_02_05_4bc37ddabadb39cd8f90fc6c1b50a5403c844a15a8f7ce1c0a91003569ed8118_V.jpg.250x250_q85_crop.jpg" alt="" />
+                                                        <div class="catalog-detail__gal-search"><span class="catalog-detail__gal-icon icon--search"></span></div>
+                                                    </a>
+                                                </div>
+                                                <div class="catalog-detail__gal-thumbs">
+                                                    <div class="row row--padd-min">
+                                                        <div class="col-4 col-bottom-micro">
+                                                            <a href="" class="catalog-detail__gal-thumb">
+                                                                <img src="img/files/image_0_02_05_4bc37ddabadb39cd8f90fc6c1b50a5403c844a15a8f7ce1c0a91003569ed8118_V.jpg.250x250_q85_crop.jpg" alt="" />
+                                                                <div class="catalog-detail__gal-search"><span class="catalog-detail__gal-icon icon--search"></span></div>
+                                                            </a>
+                                                        </div>
+                                                        <div class="col-4 col-bottom-micro">
+                                                            <a href="" class="catalog-detail__gal-thumb">
+                                                                <img src="img/files/image_0_02_05_4bc37ddabadb39cd8f90fc6c1b50a5403c844a15a8f7ce1c0a91003569ed8118_V.jpg.250x250_q85_crop.jpg" alt="" />
+                                                                <div class="catalog-detail__gal-search"><span class="catalog-detail__gal-icon icon--search"></span></div>
+                                                            </a>
+                                                        </div>
+                                                        <div class="col-4 col-bottom-micro">
+                                                            <a href="" class="catalog-detail__gal-thumb">
+                                                                <img src="img/files/image_0_02_05_4bc37ddabadb39cd8f90fc6c1b50a5403c844a15a8f7ce1c0a91003569ed8118_V.jpg.250x250_q85_crop.jpg" alt="" />
+                                                                <div class="catalog-detail__gal-search"><span class="catalog-detail__gal-icon icon--search"></span></div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="btn btn--micro btn--fill btn--empty"><span class="icon--doc-form"></span>Добавить фото</div>
+                                            <div class="order__file-header col-top">Прикреплённые файлы</div>
+                                            <div class="row row--padd-min">
+                                                <div class="col-sm-4 col-3 col-top-micro">
+                                                    <a href="" class="order__file">
+                                                        <span class="order__file-icon icon--doc"></span>
+                                                        <span class="order__file-name">xls</span>
+                                                        <span class="order__file-load icon--download"></span>
+                                                    </a>
+                                                </div>
+                                                <div class="col-sm-4 col-3 col-top-micro">
+                                                    <a href="" class="order__file">
+                                                        <span class="order__file-icon icon--doc"></span>
+                                                        <span class="order__file-name">doc</span>
+                                                        <span class="order__file-load icon--download"></span>
+                                                    </a>
+                                                </div>
+                                                <div class="col-sm-4 col-3 col-top-micro">
+                                                    <a href="" class="order__file">
+                                                        <span class="order__file-icon icon--doc"></span>
+                                                        <span class="order__file-name">b3d</span>
+                                                        <span class="order__file-load icon--download"></span>
+                                                    </a>
+                                                </div>
+                                                <div class="col-sm-4 col-3 col-top-micro">
+                                                    <a href="" class="order__file">
+                                                        <span class="order__file-icon icon--doc"></span>
+                                                        <span class="order__file-name">pdf</span>
+                                                        <span class="order__file-load icon--download"></span>
+                                                    </a>
+                                                </div>
+                                                <div class="col-sm-4 col-3 col-top-micro">
+                                                    <a href="" class="order__file">
+                                                        <span class="order__file-icon icon--doc"></span>
+                                                        <span class="order__file-name">doc</span>
+                                                        <span class="order__file-load icon--download"></span>
+                                                    </a>
+                                                </div>
+                                                <div class="col-sm-4 col-3 col-top-micro">
+                                                    <a href="" class="order__file">
+                                                        <span class="order__file-icon icon--doc"></span>
+                                                        <span class="order__file-name">b3d</span>
+                                                        <span class="order__file-load icon--download"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="btn btn--micro btn--fill btn--orange btn--empty col-top-micro"><span class="icon--doc-form"></span>Добавить файл</div>
+                                        </div>
+                                        <div class="col-xl-9 col-lg-8 col-md-7 col-sm-7 col-xsm-top">
+                                            <div class="order__body">
+                                                <div class="order__info">
+                                                    <div class="left"><span class="order__info-icon icon--vcard"></span>Заказ <span class="order__id">ID 442</span></div>
+                                                    <div class="right"><span class="order__info-icon icon--calendar"></span>23.11.2017</div>
+                                                </div>
+                                                <div class="order__title">Столешница из искусственного камня Samsung Staron Sanded SS418</div>
+                                                <div class="show-more js-show-more-wrap">
+                                                    <div class="page__text show-more__text js-show-more-text">
+                                                        <p><strong>Нужна столешница из искусственного камня Samsung Staron Sanded SS418.</strong> Размер: 3000х600мм, толщина 600мм. Вырез под мойку (Просьба рассчитать с интегрированной мойкой и без).</p>
+                                                        <p>Нужна столешница из искусственного камня Samsung Staron Sanded SS418. Размер: 3000х600мм, толщина 600мм. Вырез под мойку (Просьба рассчитать с интегрированной мойкой и без).</p>
+                                                        <p>«FavoriteStone» специализируется на реализации проектов из натурального камня любой сложности и масштаба, включая разработку проектной документации. Для производства изделий компания располагает собственной производственной базой, оснащенной самым современным и автоматизированным оборудованием, которое обеспечивает производство продукции любой сложности и в кратчайшие сроки.</p>
+                                                        <p><strong>Основные виды выполняемых нами работ:</strong></p>
+                                                        <ul>
+                                                            <li>Поставка и монтаж вентилируемой фасадной системы с облицовкой плитами из натурального камня (мрамор, гранит);</li>
+                                                            <li>Облицовка натуральным гранитом цокольной части здания и входных групп, порталов «мокрым» методом;</li>
+                                                            <li>Поставка и монтаж сложных архитектурных форм на фасадной части здания;</li>
+                                                            <li>Поставка материалов и облицовка мрамором и гранитом интерьерной части здания;</li>
+                                                            <li>Изготовление и монтаж сложных панно и мозаик из натурального камня с применением гидроабразивного метода резки;</li>
+                                                            <li>Облицовка лестниц, монтаж балюстрад, каминов и пр.</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="show-more__btn-wrap"><div class="show-more__btn js-show-more-btn">Показать полностью</div></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="order__addition">
+                                        <div class="order__addition-item">
+                                            <div class="col-padd-min">
+                                                <div class="order__addition-comment">Совсем забыл! Мне еще нужна самая лучшая столешница из гранита!</div>
+                                                <div class="order__docs"><!-- Выводим, если есть файлы -->
+                                                    <a href="" class="order__doc left marg-r-micro">
+                                                        <span class="order__doc-icon icon--doc"></span>
+                                                        <span class="order__doc-name">xls</span>
+                                                        <span class="order__doc-load icon--download"></span>
+                                                    </a>
+                                                    <a href="" class="order__doc left marg-r-micro">
+                                                        <span class="order__doc-icon icon--doc"></span>
+                                                        <span class="order__doc-name">doc</span>
+                                                        <span class="order__doc-load icon--download"></span>
+                                                    </a>
+                                                    <a href="" class="order__doc left marg-r-micro">
+                                                        <img src="img/files/image_0_02_05_4bc37ddabadb39cd8f90fc6c1b50a5403c844a15a8f7ce1c0a91003569ed8118_V.jpg.250x250_q85_crop.jpg" alt="" />
+                                                        <span class="order__doc-load icon--search"></span>
+                                                    </a>
+                                                </div>
+                                                <div class="order__addition-title">Заказ был дополнен <span>25.02.2018 / 17:39</span></div>
+                                            </div>
+                                            <div class="order__addition-line"></div>
+                                        </div>
+                                        <div class="order__addition-item">
+                                            <div class="col-padd-min">
+                                                <div class="order__addition-comment">И еще! Не забудьте про мойку из акрила! Нужна столешница из искусственного камня Samsung Staron Sanded SS418. Размер: 3000х600мм, толщина 600мм. Вырез под мойку (Просьба рассчитать с интегрированной мойкой и без).</div>
+                                                <div class="order__docs"><!-- Выводим, если есть файлы -->
+                                                    <a href="" class="order__doc left marg-r-micro">
+                                                        <span class="order__doc-icon icon--doc"></span>
+                                                        <span class="order__doc-name">xls</span>
+                                                        <span class="order__doc-load icon--download"></span>
+                                                    </a>
+                                                </div>
+                                                <div class="order__addition-title">Заказ был дополнен <span>25.02.2018 / 17:39</span></div>
+                                            </div>
+                                            <div class="order__addition-line"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="order__btn-show-wrap order--btn-show-wrap-hidden"><span class="order__btn-show js-expand-btn" data-expand="show">Скрыть детали заказа<span class="icon--up-open-mini"></span></span></div><!-- Добавляем кнопку, когда исполнитель выбран и мы сворачиваем заказ -->
+                                </div>
+
+                                <div class="order__status-wrap order--status-selected">
+                                    <div class="order__status">Заказ в работе<span class="order__status-icon icon--pickaxe"></span></div>
+                                    <div class="order__status-info">Ваш заказ выполняется компанией, которую вы выбрали.</div>
+                                </div>
+                                <!--
+                                --------------- ВАРИАНТЫ ВСЕХ ВОЗМОЖНЫХ СТАТУСОВ: ---------------
+
+                                <div class="order__status-wrap">
+                                    <div class="order__status">Проходит проверку<span class="order__status-icon icon--waiting"></span></div>
+                                    <div class="order__status-info">Ваш заказ проходит проверку у администратора портала. Это может занять некоторое время... Подождите пожалуйста.</div>
+                                </div>
+
+                                ---- Если нет предложений ----
+                                <div class="order__status-wrap order--status-choose">
+                                    <div class="order__status">Ожидает вашего выбора<span class="order__status-icon icon--waiting"></span></div>
+                                    <div class="order__status-info">Подождите, когда на ваш заказ поступят предложения от компаний, готовых его выполнить, и выберите одну из них.</div>
+                                </div>
+
+                                ---- Если есть предложения ----
+                                <div class="order__status-wrap order--status-choose">
+                                    <div class="order__status">Ожидает вашего выбора<span class="order__status-icon icon--waiting"></span></div>
+                                    <div class="order__status-info">У вас есть предложения от компаний, готовых выполнить ваш заказ! Вы можете уже сейчас сделать свой выбор или подождать новых предложений.</div>
+                                </div>
+
+                                <div class="order__status-wrap order--status-selected">
+                                    <div class="order__status">Заказ в работе<span class="order__status-icon icon--pickaxe"></span></div>
+                                    <div class="order__status-info">Ваш заказ выполняется компанией, которую вы выбрали.</div>
+                                </div>
+
+                                <div class="order__status-wrap order--status-completed">
+                                    <div class="order__status">Завершён<span class="order__status-icon icon--check"></span></div>
+                                    <div class="order__status-info">Ваш заказ готов! Напишите свой отзыв о выполненной работе!</div>
+                                </div>
+
+                                <div class="order__status-wrap order--status-rejected">
+                                    <div class="order__status">Отклонён<span class="order__status-icon icon--ban"></span></div>
+                                    <div class="order__status-info">Ваш заказ не прошёл проверку у администратора портала и был отклонён.</div>
+                                </div>
+                                -->
+                            </div>
+                        </div>
+                        <div class="order__detail">
+                            <div class="left">
+                                <div class="order__detail-item"><span class="order__icon icon--location"></span>Ростов-на-Дону</div>
+                            </div>
+                            <div class="right">
+                                <div class="order__detail-item"><span class="order__icon icon--eye"></span><span class="order__detail-text">Просмотры: </span>81</div>
+                                <div class="order__detail-item"><span class="order__icon icon--chat"></span><span class="order__detail-text">Предложения: </span>4<span class="order__new-response">+ 2</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-top col-padd-top">
+                        <div class="heading heading--middle">Выберите компанию-производителя</div>
+
+                        <div class="tabs-page js-tab">
+                            <div class="tabs-page__btns">
+                                <div class="tabs-page__btn-wrap tabs-page--btn-first current"><a href="" class="tabs-page__btn">Наши рекомендации</a></div>
+                                <div class="tabs-page__btn-wrap"><a href="" class="tabs-page__btn">Самая низкая цена</a></div>
+                                <div class="tabs-page__btn-wrap"><a href="" class="tabs-page__btn">Рейтинг и цена</a></div>
+                            </div>
+                            <div class="tabs-page__body tabs-page--body-no-border">
+                                <!-- @@include = partials/_profile-order-response-user.html -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-top col-padd-top">
+                        <div class="heading heading--middle">Выбранное вами предложение</div>
+                        <!-- @@include = partials/_profile-order-response-selected-user.html -->
+                    </div>
+
+                    <div class="col-top">
+                        <div class="heading heading--middle">Ваш отзыв о работе компании</div>
+                        <div class="col-bottom-min">
+                            <!-- @@include = partials/_review-white.html -->
+                        </div>
+                    </div>
+
+                    <div class="col-top col-padd-top js-expand-wrap"><!-- Выводить только ДО выбора компании -->
+                        <div class="heading heading--middle">Хотите завершить заказ, не выбрав компанию?</div>
+                        <div class="pos-center js-expand-hidden">
+                            <div class="btn btn--min col-xsm-full js-expand-btn" data-expand="hidden">Завершить без выбора компании</div>
+                        </div>
+                        <div class="none js-expand-body">
+                            <div class="box">
+                                <form action="" method="post" class="form" enctype="multipart/form-data">
+                                    <div class="page__info-header col-bottom-min">Пожалуйста, укажите причину отмены заказа, чтобы мы могли максимально улучшить наш сервис!</div>
+                                    <div class="col-bottom-micro">
+                                        <label for="check1" class="pseudo-check js-check-notice">
+                                            <div class="pseudo-check__check"><span class="pseudo-check__check-icon icon--check"></span></div>
+                                            <div class="pseudo-check__text">Не устроили цены производителей</div>
+                                            <input id="check1" name="" value="yes" type="checkbox" class="pseudo-check__real" />
+                                        </label>
+                                    </div>
+                                    <div class="col-bottom-micro">
+                                        <label for="check2" class="pseudo-check js-check-notice">
+                                            <div class="pseudo-check__check"><span class="pseudo-check__check-icon icon--check"></span></div>
+                                            <div class="pseudo-check__text">Предложения не соответствуют запросу</div>
+                                            <input id="check2" name="" value="yes" type="checkbox" class="pseudo-check__real" />
+                                        </label>
+                                    </div>
+                                    <div class="js-checkshow-wrap">
+                                        <div class="col-bottom-micro">
+                                            <label for="check3" class="pseudo-check js-check-notice">
+                                                <div class="pseudo-check__check"><span class="pseudo-check__check-icon icon--check"></span></div>
+                                                <div class="pseudo-check__text">Другое</div>
+                                                <input id="check3" name="" value="yes" type="checkbox" class="pseudo-check__real js-checkshow-checkbox" />
+                                            </label>
+                                        </div>
+                                        <div class="js-checkshow-show none">
+                                            <div class="form__field">
+                                                <div class="form__title">Укажите свою причину</div>
+                                                <input placeholder="Напишите причину отмены заказа" name="" value="" type="text" class="form__input" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="separate-line separate-line--min"></div>
+
+                                    <div class="box box--light-green box--ok page__info col-bottom-micro">Заказ завершён. Спасибо за ваш ответ!<br />Мы обязательно учт`м информацию и направим все силы на улучшение нашего сервиса, нам очень важно, чтобы вам было максимально удобно работать на нашем портале!</div>
+                                    <div class="clearfix">
+                                        <button class="btn btn--min btn--orange right col-xsm-full" type="submit" name="" value="0">Завершить заказ</button>
+                                        <div class="btn btn--min btn--empty right col-xsm-full marg-r-min marg-r-min-xsm-reset col-xsm-top-micro js-expand-btn" data-expand="show">Не завершать</div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-top col-padd-top js-expand-wrap"><!-- Выводить только ПОСЛЕ выбора компании и ДО загрузки договора -->
+                        <div class="heading heading--middle">Хотите выбрать другую компанию-производителя?</div>
+                        <div class="pos-center js-expand-hidden">
+                            <div class="btn btn--min col-xsm-full js-expand-btn" data-expand="hidden">Отменить выбранную компанию</div>
+                        </div>
+                        <div class="none js-expand-body">
+                            <div class="box">
+                                <form action="" method="post" class="form" enctype="multipart/form-data">
+                                    <div class="page__info-header col-bottom-min">Пожалуйста, укажите причину отмены выбора компании</div>
+                                    <div class="col-bottom-micro">
+                                        <label for="check4" class="pseudo-check js-check-notice">
+                                            <div class="pseudo-check__check"><span class="pseudo-check__check-icon icon--check"></span></div>
+                                            <div class="pseudo-check__text">Вы выбрали компанию случайно</div>
+                                            <input id="check4" name="" value="yes" type="checkbox" class="pseudo-check__real" />
+                                        </label>
+                                    </div>
+                                    <div class="col-bottom-micro">
+                                        <label for="check5" class="pseudo-check js-check-notice">
+                                            <div class="pseudo-check__check"><span class="pseudo-check__check-icon icon--check"></span></div>
+                                            <div class="pseudo-check__text">Окончательная стоимость сильно отличается от заявленной в предложении</div>
+                                            <input id="check5" name="" value="yes" type="checkbox" class="pseudo-check__real" />
+                                        </label>
+                                    </div>
+                                    <div class="col-bottom-micro">
+                                        <label for="check6" class="pseudo-check js-check-notice">
+                                            <div class="pseudo-check__check"><span class="pseudo-check__check-icon icon--check"></span></div>
+                                            <div class="pseudo-check__text">Не удалось связаться с компанией</div>
+                                            <input id="check6" name="" value="yes" type="checkbox" class="pseudo-check__real" />
+                                        </label>
+                                    </div>
+                                    <div class="js-checkshow-wrap">
+                                        <div class="col-bottom-micro">
+                                            <label for="check7" class="pseudo-check js-check-notice">
+                                                <div class="pseudo-check__check"><span class="pseudo-check__check-icon icon--check"></span></div>
+                                                <div class="pseudo-check__text">Другое</div>
+                                                <input id="check7" name="" value="yes" type="checkbox" class="pseudo-check__real js-checkshow-checkbox" />
+                                            </label>
+                                        </div>
+                                        <div class="js-checkshow-show none">
+                                            <div class="form__field">
+                                                <div class="form__title">Укажите свою причину</div>
+                                                <input placeholder="Напишите причину отмены заказа" name="" value="" type="text" class="form__input" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="separate-line separate-line--min"></div>
+
+                                    <div class="box box--light-green box--ok page__info col-bottom-micro">Ваш выбор компании отменён. Теперь вы можете выбрать другую компанию-производителя.</div>
+                                    <div class="clearfix">
+                                        <button class="btn btn--min btn--orange right col-xsm-full" type="submit" name="" value="0">Отменить выбор</button>
+                                        <div class="btn btn--min btn--empty right col-xsm-full marg-r-min marg-r-min-xsm-reset col-xsm-top-micro js-expand-btn" data-expand="show">Не отменять</div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- @@close-->

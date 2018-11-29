@@ -1,0 +1,68 @@
+<!-- Модальное окно Создания заказа -->
+<div class="modal-window" id="modal-order">
+    <div class="modal-window__body">
+        <div class="col-bottom-min">
+            <div class="modal-window__title">Заказ расчёта стоимости</div>
+        </div>
+        <form action="" data-filter-form="" class="form">
+            <div class="form__field">
+                <div class="form__title">Имя</div>
+                <input placeholder="Как к вам обращаться?" name="" value="" type="text" class="form__input" />
+            </div>
+            <div class="row row--padd-min">
+                <div class="col-sm-6">
+                    <div class="form__field">
+                        <div class="form__title">E-mail</div>
+                        <input placeholder="email@amigostone.ru" name="" value="" type="email" class="form__input" />
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form__field">
+                        <div class="form__title">Контактный телефон</div>
+                        <input placeholder="+7 (___) ___-__-__" name="" value="" type="tel" class="form__input request-phone" />
+                    </div>
+                </div>
+            </div>
+            <div class="form__field">
+                <div class="form__title">Название заказа</div>
+                <input placeholder="Например: «Столешница из мрамора»" name="" value="" type="text" class="form__input" />
+            </div>
+            <div class="form__field">
+                <div class="form__title">Описание заказа</div>
+                <textarea placeholder="Опишите детали заказа..." name="" class="form__textarea"></textarea>
+                <div class="form__hint">Максимально подробно опишите все детали будущего изделия, включая тип материала, цвет и желаемые размеры.</div>
+            </div>
+
+            <div class="form__field col-top-min">
+                <div class="form__title">Добавить эскиз / проект (при наличии)</div>
+                <div class="form__hint col-bottom-micro"><div class="pos-left">Не более 5-ти файлов.<br />Размер каждого файла не должен превышать 5Мб.<br/>Допустимые форматы .doc, .pdf, .xls(.xlsx), .jpg, png.</div></div>
+                <div class="btn btn--micro col-xsm-full"><span class="icon--upload"></span>Прикрепить файлы</div>
+                <div class="col-top-micro"><!-- Выводим, если загрузили файлы -->
+                    <div class="order__docs order--docs-t-no">
+                        <div class="order__doc left marg-r-micro">
+                            <span class="order__doc-icon icon--doc"></span>
+                            <span class="order__doc-name">xls</span>
+                        </div>
+                        <div class="order__doc left marg-r-micro">
+                            <span class="order__doc-icon icon--doc"></span>
+                            <span class="order__doc-name">doc</span>
+                        </div>
+                        <div class="order__doc left marg-r-micro">
+                            <img src="img/files/image_0_02_05_4bc37ddabadb39cd8f90fc6c1b50a5403c844a15a8f7ce1c0a91003569ed8118_V.jpg.250x250_q85_crop.jpg" alt="">
+                        </div>
+                        <div class="order__doc left marg-r-micro">
+                            <img src="img/files/image_0_02_05_4bc37ddabadb39cd8f90fc6c1b50a5403c844a15a8f7ce1c0a91003569ed8118_V.jpg.250x250_q85_crop.jpg" alt="">
+                        </div>
+                        <div class="order__doc left marg-r-micro">
+                            <img src="img/files/image_0_02_05_4bc37ddabadb39cd8f90fc6c1b50a5403c844a15a8f7ce1c0a91003569ed8118_V.jpg.250x250_q85_crop.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="separate-line separate-line--min"></div>
+            <div class="pos-right">
+                <button class="btn btn--min col-xsm-full" type="submit" name="" value="">Отправить</button>
+            </div>
+        </form>
+    </div>
+</div>

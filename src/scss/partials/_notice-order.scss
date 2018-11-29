@@ -1,0 +1,159 @@
+.notice-order {
+	display: block;
+	@include rem(padding, 10px 15px);
+	padding-top: 0px;
+	@include rem(margin, 0px -15px);
+	border-top: solid 1px $color-border;
+
+	&:hover {
+		background: $color-grey-extralight;
+	}
+
+	&__info {
+		@include rem(font-size, 16px);
+		@include rem(line-height, 20px);
+	}
+
+	&__name {
+		display: block;
+		font-family: $font-medium;
+		overflow: hidden;
+		color: $color-green;
+	}
+
+	&__mess {
+		overflow: hidden;
+	}
+
+	&__description {
+		@include rem(font-size, 14px);
+		@include rem(line-height, 18px);
+		@include rem(margin-top, 10px);
+		color: $color-grey-dark;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+
+	&__info-top {
+		color: $color-grey;
+		@include rem(font-size, 12px);
+		@include rem(padding, 5px 15px);
+		@include rem(margin, 0px -15px);
+		@include rem(margin-bottom, 10px);
+		font-family: $font-medium;
+		background: $color-grey-extralight;
+		border-bottom: solid 1px $color-border;
+	}
+
+	&:hover &__info-top {
+		background: darken($color-grey-extralight,3%);
+	}
+
+	&__date {
+
+	}
+
+	&__id {
+
+	}
+
+	&__info-icon {
+		@include rem(font-size, 16px);
+		@include rem(margin-right, 5px);
+	}
+
+	&__city {
+		color: $color-grey;
+		@include rem(font-size, 12px);
+		font-family: $font-medium;
+		@include rem(margin-top, 10px);
+		text-align: right;
+	}
+
+	&__detail {
+		@include rem(font-size, 14px);
+		@include rem(line-height, 16px);
+		color: $color-grey;
+		font-family: $font-medium;
+	}
+
+	&__detail-item {
+		white-space: nowrap;
+		@include rem(margin-top, 10px);
+	}
+
+	&__icon {
+		display: inline-block;
+		@include rem(margin-right, 5px);
+		@include rem(font-size, 16px);
+		@include rem(line-height, 16px);
+		@include rem(width, 20px);
+		text-align: left;
+	}
+
+	&__new-response {
+		color: #fff;
+		background: $color-orange;
+		@include rem(padding, 0px 5px);
+		@include rem(margin-left, 5px);
+		border-radius: $border-radius-base;
+		display: inline-block;
+		vertical-align: top;
+		@include rem(font-size, 12px);
+		@include rem(line-height, 16px);
+		font-family: $font-reg;
+	}
+
+	&--new-response-grey {
+		background: $color-grey;
+	}
+
+	&__detail-text {
+		width: 110px;
+    	display: inline-block;
+		vertical-align: top;
+	}
+
+	&__detail-count {
+		display: inline-block;
+		vertical-align: top;
+		width: 30px;
+	}
+
+	&__id-num {
+		color: $color-green;
+	}
+}
+
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.notice-order {
+
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.notice-order {
+
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.notice-order {
+
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.notice-order {
+		&__info {
+			@include rem(font-size, 14px);
+			@include rem(line-height, 18px);
+		}
+	}
+}

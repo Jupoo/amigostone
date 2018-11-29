@@ -1,0 +1,129 @@
+.order-docs {
+	&__top {
+		@include clearfix();
+		color: $color-grey-dark;
+		@include rem(font-size, 14px);
+		@include rem(line-height, 22px);
+		font-family: $font-medium;
+	}
+
+	&__title {
+		float: left;
+	}
+
+	&__date {
+		float: right;
+	}
+
+	&__icon {
+		@include rem(margin-right, 5px);
+		@include rem(font-size,15px);
+		@include rem(line-height,22px);
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	&__order-name {
+		font-family: $font-medium;
+		@include rem(font-size, 16px);
+		@include rem(line-height, 22px);
+	}
+
+	&__info {
+		@include rem(font-size, 16px);
+		@include rem(line-height, 22px);
+		color: $color-grey-dark;
+		font-style: italic;
+	}
+
+	&__file {
+		width: 100%;
+
+		& img {
+			width: 100%;
+		}
+	}
+
+	&__file-wrap {
+		position: relative;
+	}
+
+	&__file-arrow {
+		position: absolute;
+		@include rem(bottom, -15px);
+		left: 50%;
+		@include rem(width, 80px);
+		@include rem(margin-left, -40px);
+		background: $color-green;
+		@include rem(font-size, 40px);
+		@include rem(line-height, 30px);
+		text-align: center;
+		border-radius: 50% 50% 0 0;
+		color: #fff;
+		cursor: pointer;
+		transition: all $transition-speed ease;
+		@include shadow();
+
+		&:hover {
+			background: darken($color-green, 5%);
+		}
+	}
+
+	&__wrap {
+		@include clearfix();
+	}
+
+	&__img {
+		@include rem(width, 110px);
+		float: left;
+		border: solid 1px $color-border;
+		border-radius: $border-radius-base;
+		overflow: hidden;
+
+		& img {
+			width: 100%;
+		}
+	}
+
+	&__body {
+		overflow: hidden;
+		@include rem(padding-left, 20px);
+	}
+
+	&__order-id {
+		color: $color-green;
+	}
+}
+
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.order-docs {
+
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.order-docs {
+
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.order-docs {
+
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.order-docs {
+		&__body {
+			@include rem(padding-left, 0px);
+			@include rem(padding-top, 10px);
+			width: 100%;
+		}
+	}
+}

@@ -1,0 +1,282 @@
+.catalog-item {
+	display: block;
+	background: #fff;
+	border-top: solid 1px $color-border;
+	border-radius: $border-radius-base;
+	text-align: center;
+	height: 100%;
+	@include shadow-path();
+	transition: all $transition-speed ease;
+	position: relative;
+
+	&--grey {
+		background: $color-grey-extralight;
+	}
+
+	&:hover {
+		box-shadow: 0px 0px 15px 4px rgba(0, 0, 0, 0.1);
+		border-top: solid 1px #fff;
+	}
+
+	&__body {
+		@include rem(padding, 15px);
+		border-top: solid 1px $color-border;
+	}
+
+	&__img {
+		display: block;
+		overflow: hidden;
+		@include rem(padding, 15px);
+		position: relative;
+
+		& img {
+			width: 100%;
+		}
+	}
+
+	&__title {
+		display: block;
+		color: $color-green;
+		@include rem(font-size, 18px);
+		@include rem(line-height, 22px);
+		font-family: $font-medium;
+		transition: all $transition-speed ease;
+	}
+
+	&:hover &__title {
+		color: $color-green-dark;
+	}
+
+	&__text {
+		@include rem(font-size, 15px);
+		@include rem(line-height, 21px);
+		@include rem(margin-top, 15px);
+		color: $color-grey-dark;
+	}
+
+	&__price {
+		@include rem(font-size, 15px);
+		@include rem(line-height, 21px);
+		@include rem(margin-top, 15px);
+		white-space: nowrap;
+		color: $color-grey;
+	}
+
+	&__price-count {
+		font-weight: bold;
+		@include rem(margin-left, 10px);
+		@include rem(font-size, 18px);
+		color: $color-base;
+	}
+
+	&__icon-money {
+		@include rem(font-size, 20px);
+		@include rem(margin-right, 10px);
+		color: $color-grey-dark;
+	}
+
+	&__icon-valuta {
+		@include rem(font-size, 20px);
+		@include rem(margin-left, 5px);
+		color: $color-base;
+	}
+
+	&__del {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0px;
+		right: 0;
+		text-align: right;
+		z-index: 2;
+
+		& .confirm-win__modal {
+			@include rem(top, 80px);
+		}
+
+		& .confirm-win__modal:after {
+			display: none;
+		}
+
+		& .confirm-win__modal {
+			width: 80%;
+			left: 10%;
+		}
+	}
+
+	&__del-btn {
+		display: inline-block;
+		vertical-align: top;
+		text-align: center;
+		background: $color-orange;
+		color: #fff;
+		@include rem(font-size, 16px);
+		@include rem(line-height, 30px);
+		@include rem(width, 30px);
+		border-radius: 0px $border-radius-base 0px $border-radius-base;
+		transition: all $transition-speed ease;
+
+		&:hover {
+			background: darken($color-orange, 5%);
+			color: #fff;
+		}
+	}
+
+	&__edit {
+		position: absolute;
+		top: 40px;
+		right: 0px;
+		display: block;
+		background: $color-green;
+		color: #fff;
+		@include rem(font-size, 16px);
+		@include rem(line-height, 30px);
+		@include rem(width, 30px);
+		border-radius: $border-radius-base 0px 0px $border-radius-base;
+		transition: all $transition-speed ease;
+		z-index: 2;
+
+		&:hover {
+			background: darken($color-green, 5%);
+			color: #fff;
+		}
+	}
+
+	&--view {
+		top: 80px;
+	}
+
+	&__edit-price-body {
+		display: none;
+		position: absolute;
+		bottom: 0px;
+		left: 0px;
+		width: 100%;
+		height: 100%;
+	}
+
+	&__edit-price {
+		position: absolute;
+		bottom: 0px;
+		left: 0px;
+		width: 100%;
+		background: rgba(0,0,0,0.7);
+		@include rem(padding, 10px 15px);
+		border-radius: 0px 0px $border-radius-base $border-radius-base;
+		z-index: 2;
+		border-top: solid 3px $color-green;
+	}
+
+	&__edit-price-wrap {
+		display: flex;
+	}
+
+	&__edit-price-val {
+		flex-grow: 2;
+	}
+
+	&__edit-price-btn {
+		flex-grow: 1;
+		display: inline-block;
+		vertical-align: top;
+		color: #fff;
+		border: none;
+		font-family: $font-medium;
+		@include rem(height, 40px);
+		@include rem(font-size, 14px);
+		@include rem(line-height, 40px);
+		@include rem(padding, 0px 10px);
+		background-color: $color-green;
+		cursor: pointer;
+		text-decoration: none;
+		text-align: center;
+		border-radius: $border-radius-base;
+		white-space: nowrap;
+		text-transform: uppercase;
+		max-width: 100%;
+		transition: all $transition-speed ease;
+
+		&:hover {
+			background: darken($color-green, 5%);
+			text-decoration: none;
+			color: #fff;
+		}
+
+		& [class^="icon--"], & [class*=" icon--"] {
+			display: inline-block;
+			vertical-align: top;
+			@include rem(font-size, 18px);
+		}
+	}
+
+	&__edit-price-title {
+		@include rem(font-size, 14px);
+		@include rem(line-height, 14px);
+		@include rem(margin, 10px 0px);
+		color: #fff;
+		font-family: $font-medium;
+		text-align: left;
+
+		&:first-child {
+			margin-top: 0px;
+		}
+	}
+
+	&__flag {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		@include rem(margin-top, -15px);
+		@include rem(padding, 0px 8px);
+		width: 100%;
+		background: $color-red;
+		color: #fff;
+		white-space: nowrap;
+		@include rem(font-size, 14px);
+		@include rem(line-height, 30px);
+		font-family: $font-medium;
+		z-index: 1;
+		text-align: center;
+	}
+
+	&__flag-icon {
+		display: inline-block;
+		vertical-align: top;
+		@include rem(margin-left, 5px);
+		@include rem(font-size, 18px);
+		@include rem(line-height, 30px);
+	}
+}
+
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.catalog-item {
+
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.catalog-item {
+		&__top {
+			@include rem(font-size, 12px);
+			@include rem(line-height, 18px);
+		}
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.catalog-item {
+
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.catalog-item {
+		max-width: 350px;
+		margin: 0 auto;
+	}
+}

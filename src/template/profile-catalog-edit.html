@@ -1,0 +1,211 @@
+<!-- @@master  = partials/_master-accounts.html-->
+ 
+<!-- @@block  =  content-->
+<section class="page__section">
+    <div class="page__content-inner">
+        <ul class="breadcrumbs">
+            <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link"><span class="icon--home"></span></a></li>
+            <li class="breadcrumbs__item"><a href="profile.html" class="breadcrumbs__link">Личный кабинет</a></li>
+            <li class="breadcrumbs__item"><div class="breadcrumbs__link">Статьи</div></li>
+        </ul>
+        <div class="page__header">
+            <h1 class="page__header-title">Личный кабинет | ООО СТУПКА</h1>
+        </div>
+        <div class="page__body profile">
+            <div class="row">
+                <div class="col-xl-3 col-md-4">
+                    <div class="col-bottom-min">
+                        <!-- @@include = partials/_profile-card.html -->
+                    </div>
+                    <!-- @@include = partials/_profile-menu.html -->
+                </div>
+                <div class="col-xl-9 col-md-8 col-sm-top-min">
+                    <div class="col-bottom-min">
+                        <!-- @@include = partials/_profile-menu-top.html -->
+                    </div>
+                    <div class="col-bottom-min">
+                        <div class="clearfix">
+                            <div class="left col-md-full pos-md-center">
+                                <div class="profile__header">Редактирование услуги</div><!-- Услуги, Работы, Товара -->
+                            </div>
+                            <div class="right col-md-full col-md-top-micro"><!--Добавить товар | Добавить работу-->
+                                <a href="/profile-catalog-add.html" target="_blank" class="btn btn--min btn--orange col-md-full"><span class="icon--plus-squared"></span>Добавить услугу</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box page__info col-bottom-min">Здесь может отображаться какая-то подсказка</div>
+
+                    <div class="box">
+                        <form action="" data-filter-form="" class="form">
+                            <div class="row row--padd-min">
+                                <div class="col-xl-6 col-md-12">
+                                    <div class="form__field">
+                                        <div class="form__title">Название</div>
+                                        <input placeholder="Название вашей услуги" name="" value="Монтаж столешницы" type="text" class="form__input" /><!-- услуги, работы, товара -->
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-md-12">
+                                    <div class="form__field">
+                                        <div class="form__title">Категория</div>
+                                        <div class="pseudo-select">
+                                            <div class="pseudo-select__control">
+                                                <div class="pseudo-select__arrow"><span class="icon--down-open-mini"></span></div>
+                                                <div class="pseudo-select__text">Монтаж</div>
+                                            </div>
+                                            <ul class="pseudo-select__list">
+                                                <li class="pseudo-select__option pseudo-select--option-title" data-value="2">Замеры</li>
+                                                <!-- Класс current если активная категория -->
+                                                <li class="pseudo-select__option pseudo-select--option-title current" data-value="3">Монтаж</li><!-- Если это выбираемая категория первого уровня -->
+
+                                                <li class="pseudo-select--option-title">Дизайн, проектирование, чертежи</li><!-- Если это заголовок и не выбираемая категория -->
+                                                <li class="pseudo-select__option pseudo-select--option-lev2" data-value="4-1">Дизайн</li><!-- Если это категория второго уровня -->
+                                                <li class="pseudo-select__option pseudo-select--option-lev2" data-value="4-2">Проектирование</li>
+                                                <li class="pseudo-select__option pseudo-select--option-lev2" data-value="4-3">Чертежи</li>
+
+                                                <li class="pseudo-select--option-title">Обработка поверхности камня</li>
+                                                <li class="pseudo-select__option pseudo-select--option-lev2" data-value="5-1">Шлифовка</li>
+                                                <li class="pseudo-select__option pseudo-select--option-lev2" data-value="5-2">Полировка</li>
+                                                <li class="pseudo-select__option pseudo-select--option-lev2" data-value="5-3">Кристаллизация</li>
+                                                <li class="pseudo-select__option pseudo-select--option-lev2" data-value="5-4">Бучардирование</li>
+                                                <li class="pseudo-select__option pseudo-select--option-lev2" data-value="5-5">Лощение (сатинирование)</li>
+                                                <li class="pseudo-select__option pseudo-select--option-lev2" data-value="5-6">Термообработка</li>
+                                                <li class="pseudo-select__option pseudo-select--option-lev2" data-value="5-7">Пескоструйная обработка</li>
+                                                <li class="pseudo-select__option pseudo-select--option-lev2" data-value="5-8">Имитация природного раскола (скала)</li>
+                                                <li class="pseudo-select__option pseudo-select--option-lev2" data-value="5-9">Патинирование (искусственное состаривание)</li>
+                                                <li class="pseudo-select__option pseudo-select--option-lev2" data-value="5-10">Галтовка</li>
+                                                <li class="pseudo-select__option pseudo-select--option-lev2" data-value="5-11">Комбинированная обработка</li>
+
+                                                <li class="pseudo-select--option-title">Распил, резка камня</li>
+                                                <li class="pseudo-select__option pseudo-select--option-lev2" data-value="6-1">Распил блоков</li>
+                                                <li class="pseudo-select__option pseudo-select--option-lev2" data-value="6-2">Распил слэбов</li>
+                                                <li class="pseudo-select__option pseudo-select--option-lev2" data-value="6-3">Резка камня на плитку</li>
+                                                <li class="pseudo-select__option pseudo-select--option-lev2" data-value="6-4">Резка камня на брусчатку</li>
+                                                <li class="pseudo-select__option pseudo-select--option-lev2" data-value="6-5">Гидроабразивная резка</li>
+                                                <li class="pseudo-select__option pseudo-select--option-lev2" data-value="6-6">Алмазная резка</li>
+
+                                                <li class="pseudo-select--option-title">Резьба, гравировка</li>
+                                                <li class="pseudo-select__option pseudo-select--option-lev2" data-value="7-1">Скульптура</li>
+                                                <li class="pseudo-select__option pseudo-select--option-lev2" data-value="7-2">Высокий рельеф</li>
+                                                <li class="pseudo-select__option pseudo-select--option-lev2" data-value="7-3">Низкорельефная резьба (гравировка)</li>
+
+                                                <li class="pseudo-select--option-title">Облицовка, отделка, мощение</li>
+                                                <li class="pseudo-select__option pseudo-select--option-lev2" data-value="8-1">Наружная облицовка</li>
+                                                <li class="pseudo-select__option pseudo-select--option-lev2" data-value="8-2">Внутренняя облицовка</li>
+                                                <li class="pseudo-select__option pseudo-select--option-lev2" data-value="8-3">Отделка интерьера</li>
+                                                <li class="pseudo-select__option pseudo-select--option-lev2" data-value="8-4">Наружная отделка</li>
+                                                <li class="pseudo-select__option pseudo-select--option-lev2" data-value="8-5">Мощение</li>
+
+                                                <li class="pseudo-select--option-title">Ремонт, реставрация, восстановительные работы</li>
+                                                <li class="pseudo-select__option pseudo-select--option-lev2" data-value="9-1">Реставрация (ремонт) изделий из искусственного камня</li>
+                                                <li class="pseudo-select__option pseudo-select--option-lev2" data-value="9-2">Реставрация (ремонт) изделий из натурального камня</li>
+                                                <li class="pseudo-select__option pseudo-select--option-lev2" data-value="9-3">Реставрация лестниц, ступеней и перил</li>
+                                                <li class="pseudo-select__option pseudo-select--option-lev2" data-value="9-4">Реставрация мозаики</li>
+                                                <li class="pseudo-select__option pseudo-select--option-lev2" data-value="9-5">Реставрация скульптуры и архитектурных элементов</li>
+                                                <li class="pseudo-select__option pseudo-select--option-lev2" data-value="9-6">Восстановление поверхности искусственного камня</li>
+                                                <li class="pseudo-select__option pseudo-select--option-lev2" data-value="9-7">Восстановление поверхности натурального камня</li>
+
+                                                <li class="pseudo-select__option pseudo-select--option-title" data-value="10">Прочие услуги</li>
+                                            </ul>
+                                            <select name="status" class="pseudo-select__real">
+                                                <option value="2">Замеры</option>
+                                                <option value="3" selected="selected">Монтаж</option><!-- Атрибут selected="selected" если активная категория -->
+                                                <option value="4-1">Дизайн</option>
+                                                <option value="4-2">Проектирование</option>
+                                                <option value="4-3">Чертежи</option>
+                                                <!-- и так далее... Выводятся только элементы с id -->
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form__field">
+                                <div class="form__title">Описание</div><!--услуги, работы, товара-->
+                                <textarea placeholder="Описание вашей услуги" name="" class="form__textarea"></textarea><!--услуги, работы, товара-->
+                            </div>
+
+                            <div class="row row--padd-min"><!--Только для каталога УСЛУГ-->
+                                <div class="col-sm-6">
+                                    <div class="form__field">
+                                        <div class="form__title">Стоимость вашей услуги</div>
+                                        <input placeholder="Цена" name="" value="5000" type="text" class="form__input" />
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form__field">
+                                        <div class="form__title">Валюта</div>
+                                        <div class="pseudo-select">
+                                            <div class="pseudo-select__control">
+                                                <div class="pseudo-select__arrow"><span class="icon--down-open-mini"></span></div>
+                                                <div class="pseudo-select__text">руб</div>
+                                            </div>
+                                            <ul class="pseudo-select__list">
+                                                <li class="pseudo-select__option current" data-value="1">руб</li>
+                                                <li class="pseudo-select__option" data-value="2">usd</li>
+                                                <li class="pseudo-select__option" data-value="3">eur</li>
+                                            </ul>
+                                            <select name="status" class="pseudo-select__real">
+                                                <option value="1" selected="selected">руб</option>
+                                                <option value="2">usd</option>
+                                                <option value="3">eur</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row row--padd-min">
+                                <div class="col-sm-6">
+                                    <div class="form__field">
+                                        <div class="form__title">Начало акции</div>
+                                        <input placeholder="Дата начала" id="from" name="from" value="" type="text" class="form__input datepicker from" />
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form__field">
+                                        <div class="form__title">Конец акции</div>
+                                        <input placeholder="Дата завершения" id="to" name="to" value="" type="text" class="form__input datepicker to" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form__field col-top-min">
+                                <div class="form__title">Добавьте фото к вашей услуге</div><!--услуге, работе, товару-->
+                                <div class="form__hint col-bottom-micro"><!-- Количество прикрепляемых файлов уточнить у Маши -->
+                                    <div class="pos-left">Не более 5-ти файлов.<br />Размер каждого файла не должен превышать 5Мб.<br/>Допустимые форматы .doc, .pdf, .xls(.xlsx), .jpg, png.</div>
+                                </div>
+                                <div class="btn btn--micro col-xsm-full"><span class="icon--upload"></span>Прикрепить файлы</div>
+                                <div class="col-top-micro"><!-- Выводим, если загрузили файлы -->
+                                    <div class="order__docs order--docs-t-no">
+                                        <div class="order__doc left marg-r-micro">
+                                            <span class="order__doc-icon icon--doc"></span>
+                                            <span class="order__doc-name">xls</span>
+                                        </div>
+                                        <div class="order__doc left marg-r-micro">
+                                            <span class="order__doc-icon icon--doc"></span>
+                                            <span class="order__doc-name">doc</span>
+                                        </div>
+                                        <div class="order__doc left marg-r-micro">
+                                            <img src="img/files/image_0_02_05_4bc37ddabadb39cd8f90fc6c1b50a5403c844a15a8f7ce1c0a91003569ed8118_V.jpg.250x250_q85_crop.jpg" alt="">
+                                        </div>
+                                        <div class="order__doc left marg-r-micro">
+                                            <img src="img/files/image_0_02_05_4bc37ddabadb39cd8f90fc6c1b50a5403c844a15a8f7ce1c0a91003569ed8118_V.jpg.250x250_q85_crop.jpg" alt="">
+                                        </div>
+                                        <div class="order__doc left marg-r-micro">
+                                            <img src="img/files/image_0_02_05_4bc37ddabadb39cd8f90fc6c1b50a5403c844a15a8f7ce1c0a91003569ed8118_V.jpg.250x250_q85_crop.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="separate-line separate-line--min"></div>
+                            <div class="pos-right">
+                                <button class="btn btn--min col-xsm-full" type="submit" name="" value="">Сохранить</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- @@close-->

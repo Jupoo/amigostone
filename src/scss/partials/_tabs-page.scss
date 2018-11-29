@@ -1,0 +1,145 @@
+.tabs-page {
+	&__btns {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__btn-wrap {
+		display: flex;
+		align-items: center;
+		border-bottom: solid 3px $color-border;
+		@include rem(margin, 0px 5px);
+		transition: all $transition-speed ease;
+
+		&:hover {
+			border-bottom: solid 3px darken($color-border,10%);
+		}
+
+		&.current {
+			border-bottom: solid 3px $color-green;
+
+			&:hover {
+				border-bottom: solid 3px $color-green;
+			}
+		}
+
+		&:first-child {
+			margin-left: 0px;
+		}
+
+		&:last-child {
+			margin-right: 0px;
+		}
+	}
+
+	&__btn {
+		display: block;
+		@include rem(font-size, 14px);
+		@include rem(line-height, 20px);
+		@include rem(padding, 5px 10px);
+		cursor: pointer;
+		transition: all $transition-speed ease;
+		font-family: $font-medium;
+		width: 100%;
+		position: relative;
+		text-transform: uppercase;
+		color: darken($color-grey-dark,5%);
+	}
+
+	&__btn-wrap:hover &__btn {
+		color: $color-base;
+	}
+
+	&__btn-wrap.current &__btn {
+		color: $color-green;
+	}
+
+	&__body {
+		@include rem(padding, 15px);
+		border-radius: 0px $border-radius-base $border-radius-base $border-radius-base;
+		border: solid 1px $color-border;
+	}
+
+	&--body-no-border {
+		padding: 0px;
+		@include rem(padding-top, 15px);
+		border: none;
+		border-top: solid 1px $color-border;
+		border-radius: 0px;
+	}
+
+	&__content {
+		display: none;
+
+		&.current {
+			display: block;
+		}
+	}
+}
+
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.tabs-page {
+		&__btn {
+			@include rem(padding, 8px);
+			@include rem(font-size, 13px);
+			@include rem(line-height, 19px);
+		}
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.tabs-page {
+		&__btn-wrap {
+			min-width: 100%;
+			margin: 0;
+			justify-content: flex-start;
+			background: $color-grey-extralight;
+
+			&:hover {
+				background: darken($color-grey-extralight,3%);
+			}
+
+			&.current {
+				background: darken($color-grey-extralight,3%);
+			}
+		}
+
+		&__btn {
+			@include rem(font-size, 14px);
+			@include rem(line-height, 20px);
+			@include rem(padding, 10px 15px);
+		}
+
+		&--btn-first {
+			border-radius: $border-radius-base $border-radius-base 0px 0px;
+		}
+
+		&__body {
+			@include rem(padding, 15px 0px);
+			border-radius: 0px;
+			border: none;
+		}
+
+		&--body-no-border {
+			padding: 0px;
+			@include rem(padding-top, 15px);
+		}
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.tabs-page {
+
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.tabs-page {
+
+	}
+}

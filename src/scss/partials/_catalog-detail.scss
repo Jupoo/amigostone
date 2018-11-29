@@ -1,0 +1,335 @@
+.catalog-detail {
+	&__gal {
+
+	}
+
+	&__gal-img {
+		display: block;
+		background: $color-grey-lighter;
+		border: solid 1px $color-border;
+		border-radius: $border-radius-base;
+		position: relative;
+
+		& img {
+			width: 100%;
+			border-radius: $border-radius-base;
+		}
+	}
+
+	&__gal-thumbs {
+
+	}
+
+	&__gal-thumb {
+		display: block;
+		background: $color-grey-lighter;
+		border: solid 1px $color-border;
+		border-radius: $border-radius-base;
+		height: 100%;
+		position: relative;
+
+		& img {
+			width: 100%;
+			border-radius: $border-radius-base;
+		}
+	}
+
+	&__gal-search {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 100%;
+		background: url("#{$img-path}00000040.png") repeat 0px 0px;
+		text-align: center;
+		opacity: 0;
+		border-radius: $border-radius-base;
+		transition: all $transition-speed ease;
+	}
+
+	&__gal-icon {
+		color: #fff;
+		@include rem(font-size, 24px);
+		@include rem(line-height, 24px);
+		@include rem(top, -12px);
+		margin-top: 50%;
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	&__gal-img &__gal-icon {
+		@include rem(font-size, 40px);
+		@include rem(line-height, 40px);
+		@include rem(top, -20px);
+	}
+
+	&__gal-thumb:hover &__gal-search,
+	&__gal-img:hover &__gal-search {
+		opacity: 1;
+	}
+
+	&__body {
+
+	}
+
+	&__title {
+		@include rem(font-size, 18px);
+		@include rem(line-height, 22px);
+		font-family: $font-medium;
+	}
+
+	&__title-min {
+		@include rem(font-size, 14px);
+		@include rem(line-height, 20px);
+		font-family: $font-medium;
+		color: $color-grey-dark;
+		text-transform: uppercase;
+	}
+
+	&__title-icon {
+		display: inline-block;
+		vertical-align: top;
+		margin-left: 10px;
+		@include rem(font-size, 14px);
+		@include rem(line-height, 18px);
+	}
+
+	&__character {
+		border: solid 1px $color-border;
+		border-radius: $border-radius-base;
+		@include rem(padding, 5px);
+	}
+
+	&__character-block {
+		background: $color-grey-extralight;
+
+		&:nth-child(2n) {
+			background: #fff;
+		}
+	}
+
+	&__character-title {
+		color: $color-grey-dark;
+		@include rem(padding, 10px);
+	}
+
+	&__character-text {
+		display: block;
+		@include rem(padding, 10px);
+	}
+
+	&__description {
+		@include rem(font-size, 15px);
+		@include rem(line-height, 23px);
+		//color: $color-grey-dark;
+		//font-family: $font-light;
+		color: $color-base;
+		font-family: $font-reg;
+
+		& p {
+			@include rem(margin, 15px 0px);
+
+			&:first-child {
+				margin-top: 0px;
+			}
+
+			&:last-child {
+				margin-bottom: 0px;
+			}
+		}
+
+		& ul {
+
+		}
+
+		& ul li {
+			position: relative;
+			@include rem(padding-left, 16px);
+			@include rem(margin, 10px 0px);
+
+			&:after {
+				content: "";
+				display: block;
+				position: absolute;
+				top: 9px;
+				left: 0px;
+				width: 6px;
+				height: 6px;
+				background: $color-green;
+				border-radius: 50%;
+			}
+		}
+
+		& b, & strong {
+			font-weight: bold;
+		}
+
+		& h2 {
+			@include rem(font-size, 30px);
+			@include rem(line-height, 34px);
+		}
+
+		& h3 {
+			@include rem(font-size, 24px);
+			@include rem(line-height, 30px);
+		}
+
+		& em {
+			font-style: italic;
+		}
+
+		& .green {
+			color: $color-green;
+		}
+
+		& img {
+			float: right;
+			@include rem(max-width, 300px);
+			@include rem(max-height, 225px);
+			@include rem(margin, 10px);
+			@include rem(margin-right, 0px);
+		}
+
+		& table {
+			border: solid 1px $color-border;
+			@include rem(font-size, 14px);
+			@include rem(line-height, 20px);
+			text-align: left;
+			width: 100%;
+		}
+
+		& td {
+			border: solid 1px $color-border;
+			@include rem(padding, 10px);
+		}
+
+		& th {
+			border: solid 1px $color-border;
+			@include rem(padding, 10px);
+			font-weight: bold;
+			text-transform: uppercase;
+			text-align: center;
+			@include rem(font-size, 12px);
+			@include rem(line-height, 18px);
+			background: $color-grey-extralight;
+		}
+	}
+
+	&__price {
+		background: $color-grey-extralight;
+		border: solid 1px $color-border;
+		@include rem(font-size, 15px);
+		@include rem(line-height, 24px);
+		@include rem(padding, 15px);
+		color: $color-grey-dark;
+		font-family: $font-medium;
+		border-radius: $border-radius-base;
+		@include rem(margin-top, 20px);
+	}
+
+	&__price-num {
+		white-space: nowrap;
+		font-family: $font-reg;
+		font-weight: bold;
+		@include rem(font-size, 30px);
+		color: $color-green;
+		@include rem(margin-left, 10px);
+	}
+
+	&__price-icon {
+		display: inline-block;
+    	vertical-align: top;
+		@include rem(font-size, 28px);
+		@include rem(margin-left, 5px);
+	}
+
+	&__wrap {
+		position: relative;
+		//@include rem(padding-top, 53px);
+	}
+
+	&__info {
+		width: 100%;
+		@include rem(font-size, 14px);
+		@include rem(line-height, 16px);
+		color: $color-grey;
+		font-family: $font-medium;
+		border-bottom: solid 1px $color-border;
+		@include rem(padding, 10px 15px);
+		position: relative;
+		width: 100%;
+		top: -15px;
+		left: -15px;
+		box-sizing: content-box;
+	}
+
+	&__info-item {
+		white-space: nowrap;
+		display: block;
+		text-overflow: ellipsis;
+    	overflow: hidden;
+	}
+
+	&__info-icon {
+		@include rem(margin-right, 5px);
+		@include rem(font-size, 16px);
+		@include rem(line-height, 16px);
+	}
+
+	&--info-bottom {
+		top: auto;
+		bottom: -15px;
+		border-bottom: none;
+		border-top: solid 1px $color-border;
+	}
+}
+
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.catalog-detail {
+
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.catalog-detail {
+
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.catalog-detail {
+		&__price {
+			text-align: center;
+		}
+
+		&__price-num {
+			display: block;
+			margin-left: 0px;
+			@include rem(margin-top, 5px);
+		}
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.catalog-detail {
+		&__character-title {
+			font-family: $font-medium;
+			padding-bottom: 0px;
+		}
+
+		&__gal {
+			max-width: 350px;
+			margin: 0 auto;
+		}
+
+		& table {
+			display: none;
+		}
+	}
+}

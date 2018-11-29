@@ -1,0 +1,543 @@
+.order-answer {
+	position: relative;
+
+	&__border {
+		border-right: solid 1px $color-border;
+		height: 100%;
+	}
+
+	&__img {
+		display: inline-block;
+		vertical-align: top;
+		@include rem(width, 50px);
+		@include rem(min-width, 50px);
+		@include rem(height, 50px);
+		border-radius: 50%;
+		overflow: hidden;
+		border: solid 1px $color-border;
+
+		& img {
+			width: 100%;
+		}
+	}
+	&__content-padd {
+		@include rem(padding, 15px 15px);
+		@include rem(padding-top, 31px);
+		height: 100%;
+		border-right: solid 1px $color-border;
+		position: relative;
+	}
+
+	&__status {
+		position: absolute;
+		top: -5px;
+		left: -5px;
+		@include rem(font-size, 12px);
+		@include rem(line-height, 26px);
+		@include rem(padding, 0px 20px);
+		white-space: nowrap;
+		background: rgba($color-green,0.9);
+		border-left: solid 3px $color-green-dark;
+		color: #fff;
+		font-family: $font-medium;
+		text-transform: uppercase;
+	}
+
+	&__content-wrap {
+		display: flex;
+		height: 100%;
+		flex-direction: column;
+    	justify-content: center;
+		align-items: center;
+		text-align: center;
+	}
+
+	&__content {
+		width: 100%;
+		//@include rem(padding-left, 15px);
+	}
+
+	&__type {
+		@include rem(font-size, 14px);
+		@include rem(line-height, 16px);
+		color: $color-grey-dark;
+		@include rem(margin, 5px 0px);
+	}
+
+	&__title {
+		display: block;
+		font-family: $font-medium;
+		color: $color-green;
+		@include rem(font-size, 14px);
+		@include rem(line-height, 18px);
+		@include rem(margin-bottom, 10px);
+	}
+
+	&__prices {
+		height: 100%;
+		border-left: solid 1px $color-border;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+	}
+
+	&__price {
+		color: $color-green;
+		@include rem(font-size, 26px);
+		@include rem(line-height, 26px);
+		text-align: center;
+		font-weight: bold;
+		white-space: nowrap;
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	&--price-old {
+		color: $color-grey;
+	}
+
+	&__icon-valuta {
+		display: inline-block;
+		vertical-align: top;
+		@include rem(margin-left, 10px);
+		@include rem(font-size, 26px);
+		@include rem(line-height, 26px);
+	}
+
+	&__price-detail {
+		text-align: left;
+		border-bottom: solid 1px $color-border;
+		@include rem(padding-bottom, 5px);
+		@include rem(margin-bottom, 5px);
+
+		&:last-child {
+			border-bottom: none;
+			padding-bottom: 0;
+			margin-bottom: 0;
+		}
+	}
+
+	&__price-detail-title {
+		@include rem(font-size, 14px);
+		@include rem(line-height, 20px);
+		font-family: $font-medium;
+		font-weight: normal;
+		color: $color-base;
+	}
+
+	&__price-detail &__price {
+		@include rem(font-size, 18px);
+	}
+
+	&__price-detail &__icon-valuta {
+		@include rem(font-size, 18px);
+		@include rem(margin-left, 5px);
+	}
+
+	&__icon-question {
+		display: inline-block;
+		vertical-align: top;
+		@include rem(font-size, 20px);
+		@include rem(line-height, 26px);
+		@include rem(margin-left, 5px);
+		color: $color-red;
+		cursor: pointer;
+		transition: all $transition-speed ease;
+
+		&:hover {
+			color: darken($color-red,10%);
+		}
+	}
+
+	&__price-info {
+		@include rem(font-size, 14px);
+		@include rem(line-height, 20px);
+		text-align: center;
+		font-family: $font-medium;
+	}
+
+	&__price-info-new {
+		@include rem(font-size, 18px);
+		@include rem(line-height, 20px);
+		text-align: center;
+		font-weight: bold;
+		color: $color-orange;
+	}
+
+	&__price-info-old {
+		@include rem(font-size, 14px);
+		@include rem(line-height, 20px);
+		text-align: center;
+		color: $color-grey-light;
+		font-style: italic;
+		font-family: $font-medium;
+		@include rem(padding-right, 25px);
+	}
+
+	&__header {
+		background: $color-grey-lighter;
+		text-align: center;
+		@include rem(font-size, 11px);
+		@include rem(line-height, 16px);
+		@include rem(padding, 7px 5px);
+		font-family: $font-medium;
+		text-transform: uppercase;
+		border-bottom: solid 1px $color-border;
+	}
+
+	&__stone {
+		background: $color-grey-lighter;
+		border: solid 1px $color-border;
+		display: block;
+		position: relative;
+		@include rem(max-width, 100px);
+		width: 100%;
+		margin: 0 auto;
+
+		& img {
+			width: 100%;
+		}
+	}
+
+	&__stone-zoom {
+		display: none;
+		background: rgba(0,0,0,.3);
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		text-align: center;
+		cursor: pointer;
+
+		&:after {
+			content: "";
+			display: inline-block;
+			vertical-align: middle;
+			height: 100%;
+			font-size: 0;
+			width: 0;
+		}
+	}
+
+	&__stone-zoom-icon {
+		@include rem(font-size, 40px);
+		@include rem(line-height, 40px);
+		color: #fff;
+		display: inline-block;
+		vertical-align: middle;
+		opacity: 0.5;
+	}
+
+	&__stone:hover &__stone-zoom {
+		display: block;
+	}
+
+	&__stone-name {
+		@include rem(font-size, 12px);
+		@include rem(line-height, 16px);
+		font-family: $font-medium;
+		text-align: center;
+		@include rem(margin-top, 10px);
+	}
+
+	&__time-icon {
+		@include rem(font-size, 30px);
+		@include rem(line-height, 44px);
+		color: $color-grey;
+	}
+
+	&__time-text {
+		@include rem(font-size, 14px);
+		@include rem(line-height, 14px);
+		@include rem(margin-top, 5px);
+		font-family: $font-medium;
+		text-align: center;
+	}
+
+	& .order__docs {
+		@include rem(margin-top, 0px);
+		@include rem(margin-bottom, 20px);
+		@include rem(padding-left, 30px);
+	}
+
+	&__comment {
+		@include rem(font-size, 14px);
+		@include rem(line-height, 20px);
+		border-top: solid 1px $color-border;
+	}
+
+	&__comment-inner {
+		@include rem(padding-left, 30px);
+		position: relative;
+		@include rem(margin-bottom, 10px);
+	}
+
+	&__comment-icon {
+		@include rem(margin-right, 10px);
+		@include rem(font-size, 20px);
+		@include rem(line-height, 20px);
+		position: absolute;
+		top: 0;
+		left: 0;
+		color: $color-grey;
+	}
+
+	&__middle {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__middle-inner {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	&__type-date {
+		@include rem(font-size, 14px);
+		@include rem(line-height, 14px);
+		color: $color-grey-dark;
+		font-style: italic;
+		text-align: right;
+
+		& span {
+			font-family: $font-medium;
+		}
+	}
+
+	&__additionally {
+		position: relative;
+	}
+
+	&__additionally-item {
+		border-top: solid 1px $color-border;
+		position: relative;
+	}
+
+	&__additionally-line {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 3px;
+		height: 100%;
+		padding: 10px 0px;
+
+		&:after {
+			content: "";
+			display: block;
+			width: 100%;
+			height: 100%;
+			background: $color-green;
+		}
+	}
+
+	&__additionally-btn-wrap {
+		width: 100%;
+		position: absolute;
+		bottom: -30px;
+		left: 0;
+		z-index: 1;
+		text-align: center;
+	}
+
+	&__additionally-btn {
+		transition: all $transition-speed ease;
+		display: inline-block;
+		vertical-align: top;
+		@include rem(font-size, 14px);
+		@include rem(line-height, 30px);
+		@include rem(padding, 0px 15px);
+		background: $color-orange;
+		color: #fff;
+		cursor: pointer;
+		border-radius: 0px 0px $border-radius-base $border-radius-base;
+
+		&:hover {
+			background: darken($color-orange, 5%);
+		}
+	}
+
+	&__contacts {
+		border-top: solid 1px $color-border;
+		//@include rem(padding, 26px 15px);
+		//padding-bottom: 0px;
+		//background: darken($color-grey-dark,10%);
+		text-align: center;
+		position: relative;
+	}
+
+	&__contacts-title {
+		background: lighten($color-orange,10%);
+		@include rem(height, 20px);
+		width: 100%;
+		text-align: left;
+
+		& span {
+			display: inline-block;
+			vertical-align: top;
+			background: darken($color-grey-dark,10%);
+			@include rem(font-size, 14px);
+			@include rem(line-height, 20px);
+			@include rem(padding, 0px 15px);
+			border: solid 3px lighten($color-orange,10%);
+			border-left: none;
+			color: #fff;
+			position: relative;
+			@include rem(top, -6px);
+		}
+	}
+
+	&__contacts-body {
+		background: darken($color-grey-dark,10%);
+		@include rem(padding-top, 10px);
+	}
+
+	&__contacts-item {
+		display: inline-block;
+		vertical-align: top;
+		color: #fff;
+		@include rem(font-size, 15px);
+		@include rem(line-height, 19px);
+		@include rem(margin, 0px 10px);
+		@include rem(margin-bottom, 10px);
+
+		&:hover {
+			color: $color-green-light;
+		}
+	}
+
+	&__contacts-icon {
+		display: inline-block;
+		vertical-align: top;
+		@include rem(margin-right, 5px);
+		@include rem(font-size, 15px);
+	}
+
+
+	&__info-approved {
+		@include rem(font-size, 12px);
+		@include rem(line-height, 20px);
+		text-align: center;
+		font-family: $font-medium;
+		color: $color-orange;
+		text-transform: uppercase;
+	}
+
+	&__info-icon {
+		display: block;
+		@include rem(width, 30px);
+		@include rem(line-height, 30px);
+		border-radius: 50%;
+		background: $color-orange;
+		color: #fff;
+		margin: 0 auto;
+		@include rem(margin-bottom, 5px);
+	}
+}
+
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.order-answer {
+		&__header {
+			& span {
+				display: block;
+			}
+		}
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.order-answer {
+		&__prices {
+			border-top: solid 1px $color-border;
+			border-left: none;
+		}
+
+		&__header {
+			& span {
+				display: inline;
+			}
+		}
+	}
+}
+
+//------------------- < 992 > 768 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) and (min-width: ($width-content-md)) {
+	.order-answer {
+		&__btns .btn {
+			@include rem(max-width, 250px);
+		}
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.order-answer {
+		&__price-info {
+			@include rem(font-size, 12px);
+			@include rem(line-height, 18px);
+		}
+
+		&__prices {
+			border-left: solid 1px $color-border;
+			border-top: none;
+		}
+
+		&__price {
+			@include rem(font-size, 22px);
+		}
+
+		&__icon-valuta {
+			@include rem(margin-left, 5px);
+			@include rem(font-size, 22px);
+		}
+
+		&__type-date {
+			@include rem(font-size, 13px);
+		}
+
+		&__border {
+			border: none;
+			border-bottom: solid 1px $color-border;
+		}
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.order-answer {
+		&__price-info {
+			@include rem(font-size, 14px);
+			@include rem(line-height, 20px);
+		}
+
+		&__prices {
+			border-top: solid 1px $color-border;
+			border-left: none;
+		}
+
+		&__price {
+			@include rem(font-size, 26px);
+		}
+
+		&__icon-valuta {
+			@include rem(margin-left, 10px);
+			@include rem(font-size, 26px);
+		}
+
+		&__border {
+			border-right: solid 1px $color-border;
+			border-bottom: none;
+		}
+
+		&__content-padd {
+			border: none;
+			border-bottom: solid 1px $color-border;
+		}
+	}
+}

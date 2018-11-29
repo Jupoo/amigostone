@@ -1,0 +1,66 @@
+.why {
+	text-align: center;
+
+	&__img {
+		height: 100px;
+
+		& img {
+			display: inline-block;
+			vertical-align: top;
+			max-width: 130px;
+			max-height: 100px;
+		}
+	}
+
+	&_name {
+		font-weight: bold;
+		@include rem(margin-top, 30px);
+		@include rem(font-size, 20px);
+		@include rem(line-height, 26px);
+	}
+
+	&__text {
+		@include rem(font-size, 16px);
+		@include rem(line-height, 22px);
+		@include rem(margin-top, 10px);
+		font-family: $font-light;
+	}
+}
+
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.why {
+		&_name {
+			@include rem(margin-top, 15px);
+		}
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.why {
+
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.why {
+		&__img {
+			height: auto;
+
+			& img {
+				max-width: 110px;
+				max-height: 90px;
+			}
+		}
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.why {
+
+	}
+}

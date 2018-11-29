@@ -1,0 +1,83 @@
+.filter-top {
+	border: solid 1px $color-border;
+	background: #fff;
+	border-radius: $border-radius-base;
+	@include rem(padding, 10px);
+
+	&__list {
+		text-align: center;
+	}
+
+	&__item {
+		display: inline-block;
+		vertical-align: top;
+		@include rem(padding, 5px 3px);
+
+		& a {
+			display: block;
+			background: $color-grey-light;
+			color: $color-base;
+			@include rem(padding, 0px 15px);
+			@include rem(font-size, 14px);
+			@include rem(line-height, 30px);
+			border-radius: $border-radius-base;
+			//font-family: $font-medium;
+			text-transform: uppercase;
+			transition: all $transition-speed ease;
+
+			&:hover {
+				background: $color-grey;
+				color: #fff;
+			}
+		}
+	}
+
+	&--active a {
+		background: $color-red;
+		color: #fff;
+
+		&:hover {
+			background: $color-red;
+			color: #fff;
+		}
+	}
+
+	&__title {
+		@include rem(font-size, 16px);
+		@include rem(line-height, 16px);
+		@include rem(margin-top, 5px);
+		@include rem(margin-bottom, 10px);
+		text-align: center;
+		font-family: $font-medium;
+		text-transform: uppercase;
+	}
+}
+
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.filter-top {
+
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.filter-top {
+
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.filter-top {
+
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.filter-top {
+
+	}
+}

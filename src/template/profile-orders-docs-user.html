@@ -1,0 +1,163 @@
+<!-- @@master  = partials/_master-accounts.html-->
+ 
+<!-- @@block  =  content-->
+<section class="page__section">
+    <div class="page__content-inner">
+        <ul class="breadcrumbs">
+            <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link"><span class="icon--home"></span></a></li>
+            <li class="breadcrumbs__item"><a href="profile-user.html" class="breadcrumbs__link">Личный кабинет</a></li>
+            <li class="breadcrumbs__item"><div class="breadcrumbs__link">Мои заказы</div></li>
+        </ul>
+        <div class="page__header">
+            <h1 class="page__header-title">Личный кабинет | Кожевникова Виктория Юрьевна</h1>
+        </div>
+        <div class="page__body profile">
+            <div class="row">
+                <div class="col-xl-3 col-md-4">
+                    <div class="col-bottom-min">
+                        <!-- @@include = partials/_profile-card-user.html -->
+                    </div>
+                    <!-- @@include = partials/_profile-menu-user.html -->
+                </div>
+                <div class="col-xl-9 col-md-8 col-sm-top-min">
+                    <div class="col-bottom-min">
+                        <!-- @@include = partials/_profile-menu-top-user.html -->
+                    </div>
+                    <div class="col-bottom-min">
+                        <div class="clearfix">
+                            <div class="left col-md-full pos-md-center">
+                                <div class="profile__header">Работа с заказами</div>
+                            </div>
+                            <div class="right col-md-full col-md-top-micro">
+                                <a href="" target="_blank" class="btn btn--min btn--orange col-md-full"><span class="icon--plus-squared"></span>Разместить новый заказ</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box page__info col-bottom-min">Здесь отображаются все отсканированные договоры по заказам, подписанные обеими сторонами. Договор может быть загружен вами или компанией.</div>
+                    <div class="col-bottom-min">
+                        <div class="tabs-page">
+                            <div class="tabs-page__btns">
+                                <a href="/profile-orders-user.html" class="tabs-page__btn-wrap tabs-page--btn-first"><div class="tabs-page__btn">Мои заказы</div></a>
+                                <a href="/profile-orders-docs-user.html" class="tabs-page__btn-wrap current"><div class="tabs-page__btn">Документы к заказам</div></a>
+                                <a href="/profile-orders-reviews-user.html" class="tabs-page__btn-wrap"><div class="tabs-page__btn">Отзывы к заказам</div></a>
+                            </div>
+                            <div class="tabs-page__body tabs-page--body-no-border">
+                                <div class="box col-bottom-min">
+                                    <div class="order-docs js-expand-wrap">
+                                        <div class="order-docs__top">
+                                            <div class="order-docs__title col-xsm-full"><span class="order-docs__icon icon--doc-form"></span>Договор к заказу <span class="order-docs__order-id">ID 442</span></div>
+                                            <div class="order-docs__date col-xsm-full"><span class="order-docs__icon icon--calendar"></span>Загружен: <span>26.11.2017</span></div>
+                                        </div>
+                                        <div class="separate-line separate-line--micro"></div>
+                                        <a href="" class="order-docs__order-name">П-образная столешница на кухню из акрила светлых тонов</a>
+                                        <div class="separate-line separate-line--micro"></div>
+                                        <div class="order-docs__wrap">
+                                            <div class="order-docs__img"><img src="/img/files/banner.jpg" alt=""></div>
+                                            <div class="order-docs__body">
+                                                <div class="order-docs__info">Компания <a href="">AmigoStone</a> загрузила заключенный с вами договор на выполнение работ.<br />Внимательно прочитайте договор до конца.<br />Если данные верны, подтвердите, если вы нашли несоответствие, отклоните договор.</div>
+                                                <!--
+                                                Если договор загрузил сам заказчик:
+                                                <div class="order-docs__info">Вы загрузили договор, заключенный с компанией <a href="">AmigoStone</a> на выполнение работ.</div>
+                                                -->
+
+                                                <!--
+                                                Договор, загруженный компанией, ожидает подтверждения от заказчика
+                                                <div class="order-docs__info">Компания <a href="">AmigoStone</a> загрузила заключенный с вами договор на выполнение работ.<br />Подтвердите корректность подписанного договора.</div>
+                                                -->
+
+                                                <!--
+                                                Если заказчик подтвердил загруженный компанией договор:
+                                                <div class="order-docs__info">Компания <a href="">AmigoStone</a> загрузила заключенный с вами договор на выполнение работ.<br />Договор был подтверждён вами.</div>
+                                                -->
+
+                                                <!--
+                                                Если заказчик отклонил загруженный компанией договор:
+                                                <div class="order-docs__info">Вы отклонили договор, загруженный компанией <a href="">AmigoStone</a>. Ожидайте от компании загрузки нового корректного договора или загрузите договор сами на странице заказа.</div>
+                                                -->
+                                                <div class="col-top-min js-expand-hidden">
+                                                    <!--
+                                                    Если договор подтвержден или загружен самим заказчиком, то на кнопке пишем - ПРОСМОТРЕТЬ
+                                                    <div class="btn btn--min col-xsm-full">Просмотреть</div>
+                                                    -->
+
+                                                    <!--
+                                                    Если договор был отклонен заказчиком, показываем кнопку - Загрузить договор с возможностью перехода на страницу заказа и скролив к блоку с загрузкой договора
+                                                    <a href="/profile-order-user.html/#company_contract" class="btn btn--min col-xsm-full">Загрузить договор</a>
+                                                    -->
+                                                    <div class="btn btn--min js-expand-btn col-xsm-full" data-expand="hidden" data-id="expand1">Просмотреть и подтвердить</div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="js-expand-body none" data-id="expand1">
+                                            <div class="box box--grey col-top-min">
+                                                <div class="order-docs__file-wrap">
+                                                    <div class="order-docs__file">
+                                                        <img src="/img/files/banner.jpg" alt="">
+                                                    </div>
+                                                    <div class="order-docs__file-arrow js-expand-btn" data-expand="show" data-id="expand1"><span class="icon--up-open-mini"></span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Выводим только если договор не подтвержден -->
+                                        <div class="js-expand-wrap">
+                                            <div class="clearfix none js-expand-show col-top-min">
+                                                <div class="btn btn--micro right col-xsm-full"><span class="icon--done"></span>Подтвердить договор</div>
+                                                <div class="btn btn--micro btn--orange right col-xsm-full marg-r-min marg-r-min-xsm-reset col-xsm-top-micro js-expand-btn" data-id="expand2"><span class="icon--ban"></span>Отклонить</div>
+                                            </div>
+                                            <div class="js-expand-body none" data-id="expand2">
+                                                <div class="separate-line separate-line--min"></div>
+                                                <form action="" method="post" class="form" enctype="multipart/form-data">
+                                                    <div class="page__info-header col-bottom-min">Пожалуйста, укажите причину отклонения договора</div>
+                                                    <div class="col-bottom-micro">
+                                                        <label for="reject1" class="pseudo-check js-check-notice">
+                                                            <div class="pseudo-check__check"><span class="pseudo-check__check-icon icon--check"></span></div>
+                                                            <div class="pseudo-check__text">Некорректные реквизиты</div>
+                                                            <input id="reject1" name="" value="yes" type="checkbox" class="pseudo-check__real" />
+                                                        </label>
+                                                    </div>
+                                                    <div class="col-bottom-micro">
+                                                        <label for="reject2" class="pseudo-check js-check-notice">
+                                                            <div class="pseudo-check__check"><span class="pseudo-check__check-icon icon--check"></span></div>
+                                                            <div class="pseudo-check__text">Сумма не указана или отличается от фактической</div>
+                                                            <input id="reject2" name="" value="yes" type="checkbox" class="pseudo-check__real" />
+                                                        </label>
+                                                    </div>
+                                                    <div class="js-checkshow-wrap">
+                                                        <div class="col-bottom-micro">
+                                                            <label for="reject3" class="pseudo-check js-check-notice">
+                                                                <div class="pseudo-check__check"><span class="pseudo-check__check-icon icon--check"></span></div>
+                                                                <div class="pseudo-check__text">Другое</div>
+                                                                <input id="reject3" name="" value="yes" type="checkbox" class="pseudo-check__real js-checkshow-checkbox" />
+                                                            </label>
+                                                        </div>
+                                                        <div class="js-checkshow-show none">
+                                                            <div class="form__field">
+                                                                <div class="form__title">Укажите свою причину</div>
+                                                                <input placeholder="Напишите причину отклонения договора" name="" value="" type="text" class="form__input" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="separate-line separate-line--min"></div>
+
+                                                    <div class="box box--light-green box--ok page__info col-bottom-micro">Договор отклонён. Компания получит уведомление о некорректно загруженном договоре.</div>
+                                                    <div class="clearfix">
+                                                        <button class="btn btn--micro btn--orange right col-xsm-full" type="submit" name="" value="0">Отклонить договор</button>
+                                                        <div class="btn btn--micro btn--empty right col-xsm-full marg-r-min marg-r-min-xsm-reset col-xsm-top-micro js-expand-btn">Не отклонять</div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- @@close-->

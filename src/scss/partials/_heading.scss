@@ -1,0 +1,120 @@
+.heading {
+	@include rem(font-size, 50px);
+	@include rem(line-height, 60px);
+	@include rem(margin-bottom, 50px);
+	text-align: center;
+
+	&:after {
+		content: "";
+		display: block;
+		margin: 0 auto;
+		width: 100%;
+		@include rem(max-width, 200px);
+		background: $color-green;
+		height: 2px;
+		margin-top: 20px;
+	}
+
+	&--white {
+		color: #fff;
+
+		&:after {
+			background: #fff;
+		}
+	}
+
+	&--middle {
+		@include rem(font-size, 28px);
+		@include rem(line-height, 34px);
+		@include rem(margin-bottom, 20px);
+
+		&:after {
+			@include rem(max-width, 100px);
+			margin-top: 10px;
+		}
+	}
+
+	&--small {
+		@include rem(font-size, 22px);
+		@include rem(line-height, 28px);
+		@include rem(margin-bottom, 20px);
+
+		&:after {
+			@include rem(max-width, 100px);
+			margin-top: 10px;
+		}
+	}
+}
+
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.heading {
+		@include rem(font-size, 40px);
+		@include rem(line-height, 50px);
+
+		&--middle {
+			@include rem(font-size, 30px);
+			@include rem(line-height, 36px);
+		}
+
+		&--small {
+			@include rem(font-size, 30px);
+			@include rem(line-height, 36px);
+		}
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.heading {
+		@include rem(font-size, 35px);
+		@include rem(line-height, 45px);
+
+		&--middle {
+			@include rem(font-size, 30px);
+			@include rem(line-height, 36px);
+		}
+
+		&--small {
+			@include rem(font-size, 30px);
+			@include rem(line-height, 36px);
+		}
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.heading {
+		@include rem(font-size, 30px);
+		@include rem(line-height, 40px);
+
+		&--middle {
+			@include rem(font-size, 30px);
+			@include rem(line-height, 36px);
+		}
+
+		&--small {
+			@include rem(font-size, 30px);
+			@include rem(line-height, 36px);
+		}
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.heading {
+		@include rem(font-size, 23px);
+		@include rem(line-height, 33px);
+
+		&--middle {
+			@include rem(font-size, 22px);
+			@include rem(line-height, 28px);
+		}
+
+		&--small {
+			@include rem(font-size, 22px);
+			@include rem(line-height, 28px);
+		}
+	}
+}

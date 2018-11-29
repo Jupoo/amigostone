@@ -1,0 +1,165 @@
+.page-footer {
+	background: $bg-grey-dark;
+	@include rem(padding, 30px 0px);
+
+	&__title {
+		color: $color-green;
+		font-weight: bold;
+		text-transform: uppercase;
+		@include rem(font-size, 15px);
+		@include rem(line-height, 24px);
+	}
+
+	&__menu-col {
+		display: inline-block;
+		vertical-align: top;
+		@include rem(margin-right, 60px);
+		text-align: left;
+
+		&:last-child {
+			margin-right: 0px;
+		}
+	}
+
+	&__menu {
+
+		& li {
+
+		}
+
+		& li a {
+			display: block;
+			color: #fff;
+			@include rem(font-size, 16px);
+			@include rem(line-height, 26px);
+			font-family: $font-light;
+
+			&:hover {
+				color: $color-orange;
+			}
+		}
+	}
+
+	&__logo {
+		@include rem(margin-bottom, 15px);
+		display: inline-block;
+    	vertical-align: top;
+
+		& img {
+			@include rem(height, 50px);
+		}
+	}
+
+	&__copyright {
+		color: #fff;
+		@include rem(font-size, 15.8px);
+		@include rem(line-height, 26px);
+		font-family: $font-light;
+		@include rem(margin-top, 6px);
+		white-space: nowrap;
+	}
+
+	&__contacts {
+
+	}
+
+	&__contacts-body {
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	&__contacts-icon {
+		display: inline-block;
+		vertical-align: top;
+		color: #fff;
+		@include rem(font-size, 28px);
+		@include rem(line-height, 46px);
+		@include rem(margin-right, 10px);
+		color: $color-green;
+	}
+
+	&__link {
+		display: block;
+	}
+
+	&--link-phone {
+		@include rem(font-size, 20px);
+		@include rem(line-height, 24px);
+		font-weight: bold;
+		color: $color-green;
+	}
+
+	&--link-email {
+		@include rem(font-size, 18px);
+		@include rem(line-height, 26px);
+	}
+	
+	&__mode {
+		color: #fff;
+		@include rem(font-size, 15.1px);
+		@include rem(line-height, 26px);
+		font-family: $font-light;
+		font-style: italic;
+		@include rem(margin-bottom, 4px);
+		white-space: nowrap;
+	}
+
+	&__btn {
+
+	}
+}
+
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.page-footer {
+		&__menu {
+			& li a {
+				@include rem(font-size, 15px);
+			}
+		}
+
+		&__copyright {
+			@include rem(font-size, 13.8px);
+			@include rem(margin-top, 9px);
+		}
+
+		&__logo {
+			@include rem(margin-bottom, 18px);
+		}
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.page-footer {
+		&__mode {
+			@include rem(font-size, 14.4px);
+		}
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.page-footer {
+
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.page-footer {
+		&__menu-col {
+			width: 100%;
+			text-align: center;
+			margin-right: 0px;
+		}
+
+		&__logo {
+			& img {
+				height: auto;
+				@include rem(width, 206px);
+			}
+		}
+	}
+}

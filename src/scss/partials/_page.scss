@@ -1,0 +1,227 @@
+.page {
+ 	display: flex;
+  	flex-direction: column;
+  	height: 100%;
+  	background: $bg-base;
+
+	&__content {
+		flex-grow: 1;
+	    flex-shrink: 0;
+	    flex-basis: auto;
+	}
+
+	&__content-inner {
+		margin: 0 auto;
+		@include rem(width, $width-content-xl);
+		@include rem(padding, 0 $padd-desktop);
+		max-width: 100%;
+	}
+
+	&--content-inner-min {
+		width: 100%;
+		max-width: 600px;
+		margin: 0 auto;
+	}
+
+	&__section {
+		@include rem(padding-top, 30px);
+		@include rem(padding-bottom, 60px);
+		background: none;
+	}
+
+	&--grey {
+		background: $bg-grey-light;
+	}
+
+	&--white {
+		background: #fff;
+	}
+
+	&__bottom {
+		flex-grow: 0;
+		flex-shrink: 0;
+		flex-basis: auto;
+	}
+
+	&--bg-stone {
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+		background-image: url("#{$img-path}bg_stone.jpg");
+	}
+
+	&--bg-stone-light {
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+		background-image: url("#{$img-path}bg_stone_light.jpg");
+	}
+
+	&__header {
+		border-bottom: solid 1px lighten($color-green, 40%);
+		@include rem(padding-bottom, 10px);
+	}
+
+	&__header-title {
+		@include rem(font-size, 25px);
+		@include rem(line-height, 35px);
+		font-family: $font-medium;
+	}
+
+	&__body {
+		@include rem(margin-top, 30px);
+	}
+
+	&__info {
+		@include rem(font-size, 16px);
+		@include rem(line-height, 24px);
+		color: $color-grey-dark;
+		font-family: $font-light;
+	}
+
+	&__info-header {
+		@include rem(font-size, 18px);
+		@include rem(line-height, 22px);
+		font-family: $font-medium;
+		color: $color-base;
+	}
+
+	&__box {
+		background: #fff;
+		border: solid 1px $color-border;
+		@include rem(padding, 30px);
+		border-radius: $border-radius-base;
+	}
+
+	&__text {
+		@include rem(font-size, 15px);
+		@include rem(line-height, 23px);
+		color: $color-base;
+		font-family: $font-reg;
+
+		& p {
+			@include rem(margin, 15px 0px);
+
+			&:first-child {
+				margin-top: 0px;
+			}
+
+			&:last-child {
+				margin-bottom: 0px;
+			}
+		}
+
+		& ul {
+
+		}
+
+		& ul li {
+			position: relative;
+			@include rem(padding-left, 16px);
+			@include rem(margin, 10px 0px);
+
+			&:after {
+				content: "";
+				display: block;
+				position: absolute;
+				top: 9px;
+				left: 0px;
+				width: 6px;
+				height: 6px;
+				background: $color-green;
+				border-radius: 50%;
+			}
+		}
+
+		& b, & strong {
+			font-weight: bold;
+		}
+
+		& h2 {
+			@include rem(font-size, 30px);
+			@include rem(line-height, 34px);
+		}
+
+		& h3 {
+			@include rem(font-size, 24px);
+			@include rem(line-height, 30px);
+		}
+
+		& em {
+			font-style: italic;
+		}
+
+		& .green {
+			color: $color-green;
+		}
+
+		& img {
+			float: right;
+			@include rem(max-width, 300px);
+			@include rem(max-height, 225px);
+			@include rem(margin, 10px);
+			@include rem(margin-right, 0px);
+		}
+	}
+}
+
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.page {
+		&__content-inner {
+			width: 100%;
+			padding: 0 $padd-mobile;
+		}
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.page {
+		&__box {
+			@include rem(padding, 20px);
+		}
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.page {
+		&__box {
+			@include rem(padding, 15px);
+		}
+
+		&__text {
+			img {
+				width: 100%;
+				max-width: none;
+				max-height: none;
+				@include rem(margin, 15px 0px);
+				@include rem(margin-top, 0px);
+			}
+
+			& h2 {
+				@include rem(font-size, 26px);
+				@include rem(line-height, 30px);
+			}
+
+			& h3 {
+				@include rem(font-size, 20px);
+				@include rem(line-height, 26px);
+			}
+		}
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.page {
+		&__text {
+			& h2 {
+				@include rem(font-size, 22px);
+				@include rem(line-height, 26px);
+			}
+		}
+	}
+}

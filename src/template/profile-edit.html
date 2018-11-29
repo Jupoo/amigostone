@@ -1,0 +1,319 @@
+<!-- @@master  = partials/_master-accounts.html-->
+ 
+<!-- @@block  =  content-->
+<section class="page__section">
+    <div class="page__content-inner">
+        <ul class="breadcrumbs">
+            <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link"><span class="icon--home"></span></a></li>
+            <li class="breadcrumbs__item"><a href="profile.html" class="breadcrumbs__link">Личный кабинет</a></li>
+            <li class="breadcrumbs__item"><div class="breadcrumbs__link">Редактирование профиля</div></li>
+        </ul>
+        <div class="page__header">
+            <h1 class="page__header-title">Личный кабинет | ООО СТУПКА</h1>
+        </div>
+        <div class="page__body profile">
+            <div class="row">
+                <div class="col-xl-3 col-md-4">
+                    <div class="col-bottom-min">
+                        <!-- @@include = partials/_profile-card.html -->
+                    </div>
+                    <!-- @@include = partials/_profile-menu.html -->
+                </div>
+                <div class="col-xl-9 col-md-8 col-sm-top-min">
+                    <div class="col-bottom-min">
+                        <!-- @@include = partials/_profile-menu-top.html -->
+                    </div>
+                    <!-- @@include = partials/_profile-edit-header.html -->
+                    <div class="box page__info col-bottom-min">Здесь может отображаться какая-то подсказка</div>
+                    <div class="tabs-page js-tab">
+                        <!-- @@include = partials/_profile-edit-menu.html -->
+                        <div class="tabs-page__body tabs-page--body-no-border">
+                            <div class="box">
+                                <form action="" method="post" class="form" enctype="multipart/form-data">
+                                    <div class="page__info-header col-bottom-min">Тип компании</div>
+                                    <div class="row row--padd-min">
+                                        <div class="col-lg-6 col-md-12">
+                                            <div class="form__field">
+                                                <label for="check1" class="pseudo-check">
+                                                    <div class="pseudo-check__check"><span class="pseudo-check__check-icon icon--check"></span></div>
+                                                    <div class="pseudo-check__text">Камнеобработчик</div>
+                                                    <input id="check1" name="" value="yes" type="checkbox" class="pseudo-check__real" />
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-12">
+                                            <div class="js-checkshow-wrap">
+                                                <label for="check_provider" class="pseudo-check">
+                                                    <div class="pseudo-check__check"><span class="pseudo-check__check-icon icon--check"></span></div>
+                                                    <div class="pseudo-check__text">Поставщик</div>
+                                                    <input id="check_provider" name="" value="yes" type="checkbox" class="pseudo-check__real js-checkshow-checkbox" />
+                                                </label>
+                                                <div class="js-checkshow-show" style="display: none;">
+                                                    <div class="separate-line separate-line--min"></div>
+                                                    <label for="check3" class="pseudo-check">
+                                                        <div class="pseudo-check__check"><span class="pseudo-check__check-icon icon--check"></span></div>
+                                                        <div class="pseudo-check__text">Поставщик камня</div>
+                                                        <input id="check3" name="" value="yes" type="checkbox" class="pseudo-check__real" />
+                                                    </label>
+                                                    <label for="check4" class="pseudo-check col-top-micro">
+                                                        <div class="pseudo-check__check"><span class="pseudo-check__check-icon icon--check"></span></div>
+                                                        <div class="pseudo-check__text">Поставщик оборудования</div>
+                                                        <input id="check4" name="" value="yes" type="checkbox" class="pseudo-check__real" />
+                                                    </label>
+                                                    <label for="check5" class="pseudo-check col-top-micro">
+                                                        <div class="pseudo-check__check"><span class="pseudo-check__check-icon icon--check"></span></div>
+                                                        <div class="pseudo-check__text">Поставщик химии для камня</div>
+                                                        <input id="check5" name="" value="yes" type="checkbox" class="pseudo-check__real" />
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="separate-line"></div>
+
+                                    <div class="page__info-header col-bottom-min">Выберите категории заказов для получения уведомлений на e-mail</div>
+                                    <div class="form__field">
+                                        <div class="form__title">Изделия из камня</div>
+                                        <div class="smart-search" data-id="smart-search-1">
+                                            <div class="smart-search__search">
+                                                <div class="smart-search__search-text">Найдите через поиск категорию, например: “укладка полов”<div class="smart-search__search-icon icon--search"></div></div>
+                                                <div class="smart-search__search-wrap">
+                                                    <input type="text" name="" value="" placeholder="Например: “укладка полов”" class="form__input smart-search__search-input" autocomplete="off" />
+                                                    <input type="hidden" name="" value="" class="js-search-id" />
+                                                    <div class="smart-search__search-result">
+                                                        <ul>
+                                                            <li class="smart-search__item multy active" data-id="1">Памятники</li>
+                                                            <li class="smart-search__item multy active" data-id="2">Статуи</li>
+                                                            <li class="smart-search__item multy active" data-id="11">Облицовка фасадов</li>
+                                                            <li class="smart-search__item multy active" data-id="3">Фартуки</li>
+                                                            <li class="smart-search__item multy active" data-id="4">Монтажные работы</li>
+                                                            <li class="smart-search__item multy active" data-id="5">Мойки</li>
+                                                            <li class="smart-search__item multy active" data-id="55">Перевозка камня</li>
+                                                            <li class="smart-search__item multy active" data-id="63">Облицовка внутренняя и наружная</li>
+                                                            <li class="smart-search__item multy active" data-id="25">Укладка полов</li>
+                                                            <li class="smart-search__item multy active" data-id="241">Архитектурные проекты</li>
+                                                            <li class="smart-search__item smart-search--item-empty">Результатов не найдено</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="smart-search__selected-title">Вы выбрали категории:</div><!-- Класс hidden, если нет выбранных категорий -->
+                                            <div class="smart-search__selected-list">
+                                                <div class="smart-search__selected-wrap" data-id="11">
+                                                    <div class="smart-search__selected-block">
+                                                        <span class="smart-search__selected-icon icon--right-open-mini"></span>
+                                                        <div class="smart-search__selected-name">Облицовка фасадов</div>
+                                                        <input type="hidden" name="smart-search-1[]" value="11" />
+                                                        <div class="smart-search__selected-del icon--delete"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form__field col-top">
+                                        <div class="form__title">Услуги по камню</div>
+                                        <div class="smart-search" data-id="smart-search-2">
+                                            <div class="smart-search__search">
+                                                <div class="smart-search__search-text">Найдите через поиск категорию, например: “укладка полов”<div class="smart-search__search-icon icon--search"></div></div>
+                                                <div class="smart-search__search-wrap">
+                                                    <input type="text" name="" value="" placeholder="Например: “укладка полов”" class="form__input smart-search__search-input" autocomplete="off" />
+                                                    <input type="hidden" name="" value="" class="js-search-id" />
+                                                    <div class="smart-search__search-result">
+                                                        <ul>
+                                                            <li class="smart-search__item multy active" data-id="1">Памятники</li>
+                                                            <li class="smart-search__item multy active" data-id="2">Статуи</li>
+                                                            <li class="smart-search__item multy active" data-id="11">Облицовка фасадов</li>
+                                                            <li class="smart-search__item multy active" data-id="3">Фартуки</li>
+                                                            <li class="smart-search__item multy active" data-id="4">Монтажные работы</li>
+                                                            <li class="smart-search__item multy active" data-id="5">Мойки</li>
+                                                            <li class="smart-search__item multy active" data-id="55">Перевозка камня</li>
+                                                            <li class="smart-search__item multy active" data-id="63">Облицовка внутренняя и наружная</li>
+                                                            <li class="smart-search__item multy active" data-id="25">Укладка полов</li>
+                                                            <li class="smart-search__item multy active" data-id="241">Архитектурные проекты</li>
+                                                            <li class="smart-search__item smart-search--item-empty">Результатов не найдено</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="smart-search__selected-title hidden">Вы выбрали категории:</div><!-- Класс hidden, если нет выбранных категорий -->
+                                            <div class="smart-search__selected-list"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form__field col-top">
+                                        <div class="form__title">Продажа/Поставка</div>
+                                        <div class="smart-search" data-id="smart-search-3">
+                                            <div class="smart-search__search">
+                                                <div class="smart-search__search-text"><span class="js-text-insert">Найдите через поиск категорию, например: “укладка полов”</span><div class="smart-search__search-icon icon--search"></div></div>
+                                                <div class="smart-search__search-wrap">
+                                                    <input type="text" name="" value="" placeholder="Например: “укладка полов”" class="form__input smart-search__search-input" autocomplete="off" />
+                                                    <input type="hidden" name="" value="" class="js-search-id" />
+                                                    <div class="smart-search__search-result">
+                                                        <ul>
+                                                            <li class="smart-search__item multy active" data-id="1">Памятники</li>
+                                                            <li class="smart-search__item multy active" data-id="2">Статуи</li>
+                                                            <li class="smart-search__item multy active" data-id="11">Облицовка фасадов</li>
+                                                            <li class="smart-search__item multy active" data-id="3">Фартуки</li>
+                                                            <li class="smart-search__item multy active" data-id="4">Монтажные работы</li>
+                                                            <li class="smart-search__item multy active" data-id="5">Мойки</li>
+                                                            <li class="smart-search__item multy active" data-id="55">Перевозка камня</li>
+                                                            <li class="smart-search__item multy active" data-id="63">Облицовка внутренняя и наружная</li>
+                                                            <li class="smart-search__item multy active" data-id="25">Укладка полов</li>
+                                                            <li class="smart-search__item multy active" data-id="241">Архитектурные проекты</li>
+                                                            <li class="smart-search__item smart-search--item-empty">Результатов не найдено</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="smart-search__selected-title hidden">Вы выбрали категории:</div><!-- Класс hidden, если нет выбранных категорий -->
+                                            <div class="smart-search__selected-list"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="separate-line"></div>
+
+                                    <div class="page__info-header col-bottom-min">Заполните информацию о компании</div>
+                                    <div class="row row--padd-min">
+                                        <div class="col-lg-6 col-md-12">
+                                            <div class="form__field">
+                                                <div class="form__title">Название компании</div>
+                                                <input placeholder="Название вашей компании" name="" value="" type="text" class="form__input" />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-12">
+                                            <div class="form__field">
+                                                <div class="form__title">Адрес сайта</div>
+                                                <input placeholder="Например: site.com" name="" value="" type="text" class="form__input" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row row--padd-min">
+                                        <div class="col-lg-6 col-md-12">
+                                            <div class="form__field">
+                                                <div class="form__title">Контактное лицо</div>
+                                                <input placeholder="Контактное лицо" name="" value="" type="text" class="form__input" />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-12">
+                                            <div class="form__field">
+                                                <div class="form__title">Контактный телефон</div>
+                                                <input placeholder="+7 (___) ___-__-__" name="" value="" type="tel" class="form__input request-phone" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row row--padd-min">
+                                        <div class="col-lg-6 col-md-12">
+                                            <div class="form__field">
+                                                <div class="form__title">Город</div>
+                                                <!-- @@include = partials/_smart-search-city.html -->
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-12">
+                                            <div class="form__field">
+                                                <div class="form__title">Индекс</div>
+                                                <input placeholder="Индекс" name="" value="" type="text" class="form__input" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row row--padd-min">
+                                        <div class="col-lg-6 col-md-12">
+                                            <div class="form__field">
+                                                <div class="form__title">Фактический адрес</div>
+                                                <input placeholder="Фактический адрес" name="" value="" type="text" class="form__input" />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-12">
+                                            <div class="form__field">
+                                                <div class="form__title">Юридический адрес</div>
+                                                <input placeholder="Юридический адрес" name="" value="" type="text" class="form__input" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__field">
+                                        <div class="form__title">Описание деятельности компании</div>
+                                        <textarea placeholder="Напишите несколько слов о вашей компании" name="" class="form__textarea"></textarea>
+                                    </div>
+
+                                    <div class="separate-line"></div>
+
+                                    <div class="page__info-header col-bottom-min">Ваш e-mail/логин</div>
+                                    <div class="form__field">
+                                        <div class="form__title">E-mail</div>
+                                        <input placeholder="E-mail" name="" value="amigostone@mail.ru" type="email" class="form__input" disabled="disabled" />
+                                        <a href="/profile-edit-pass.html" class="form__hint">Как я могу изменить e-mail?</a>
+                                    </div>
+
+                                    <div class="separate-line"></div>
+
+                                    <div class="page__info-header col-bottom-min">Реквизиты компании</div>
+                                    <div class="row row--padd-min">
+                                        <div class="col-lg-6 col-md-12">
+                                            <div class="form__field">
+                                                <div class="form__title">ИНН</div>
+                                                <input placeholder="ИНН" name="" value="" type="text" class="form__input" disabled="disabled" />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-12">
+                                            <div class="form__field">
+                                                <div class="form__title">КПП</div>
+                                                <input placeholder="КПП" name="" value="" type="text" class="form__input" disabled="disabled" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row row--padd-min">
+                                        <div class="col-lg-6 col-md-12">
+                                            <div class="form__field">
+                                                <div class="form__title">ОГРН</div>
+                                                <input placeholder="ОГРН" name="" value="" type="text" class="form__input" disabled="disabled" />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-12">
+                                            <div class="form__field">
+                                                <div class="form__title">ОКПО</div>
+                                                <input placeholder="ОКПО" name="" value="" type="text" class="form__input" disabled="disabled" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row row--padd-min">
+                                        <div class="col-lg-6 col-md-12">
+                                            <div class="form__field">
+                                                <div class="form__title">ОКВЭД</div>
+                                                <input placeholder="ОКВЭД" name="" value="" type="text" class="form__input" disabled="disabled" />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-12">
+                                            <div class="form__field">
+                                                <div class="form__title">БИК</div>
+                                                <input placeholder="БИК" name="" value="" type="text" class="form__input" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row row--padd-min">
+                                        <div class="col-lg-6 col-md-12">
+                                            <div class="form__title">Расчетный счёт</div>
+                                            <input placeholder="Расчетный счёт" name="" value="" type="text" class="form__input" />
+                                        </div>
+                                        <div class="col-lg-6 col-md-12 col-md-top-micro">
+                                            <div class="form__title">Корсчёт</div>
+                                            <input placeholder="Корсчёт" name="" value="" type="text" class="form__input" />
+                                        </div>
+                                    </div>
+
+                                    <div class="separate-line separate-line--min"></div>
+
+                                    <div class="box box--light-green box--ok page__info col-bottom-micro">Данные успешно сохранены!</div>
+                                    <div class="clearfix">
+                                        <button class="btn btn--min right col-xsm-full" type="submit" name="state" value="0">Сохранить</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- @@close-->

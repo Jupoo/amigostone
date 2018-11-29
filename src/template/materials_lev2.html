@@ -1,0 +1,63 @@
+<!-- @@master  = partials/_master.html-->
+ 
+<!-- @@block  =  content-->
+<section class="page__section">
+    <div class="page__content-inner">
+        <ul class="breadcrumbs">
+            <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link"><span class="icon--home"></span></a></li>
+            <li class="breadcrumbs__item"><a href="/materials.html" class="breadcrumbs__link">Каталог камней</a></li>
+            <li class="breadcrumbs__item"><div class="breadcrumbs__link">Натуральный камень</div></li>
+        </ul>
+        <div class="page__header">
+            <h1 class="page__header-title">Натуральный камень</h1>
+        </div>
+        <div class="page__body">
+            <div class="row">
+                <div class="col-xl-3 col-md-4 col-sm-bottom-min">
+                    <!-- @@include = partials/_categories.html -->
+                </div>
+                <div class="col-xl-9 col-md-8">
+                    <div class="box page__info col-bottom-min">
+                        В каталоге представлен весь ассортимент камня на рынке с фотографиями и описанием.<br />
+                        Также, на странице камня вы можете просматривать компании, которые занимаются продажей этого камня и их стоимость.<br />
+                        Стоимость м2 камня указана в валюте доллар или евро.<br />
+                        Чтобы оставить заявку, нажмите кнопку «заказать» и уточните детали вашего запроса.
+                    </div>
+                    <div class="sorting">
+                        <div class="sorting__title">Сортировка:</div>
+                        <div class="sorting__body">
+                            <div class="sorting__order-by">
+                                <div class="sorting__order-by-label">по имени:</div>
+                                <a href="/catalogue/materials/?o=title" class="sorting__toggle-views"><span class="sorting__icon icon--up-open-mini"></span></a>
+                                <a href="/catalogue/materials/?o=-title" class="sorting__toggle-views"><span class="sorting__icon icon--down-open-mini"></span></a>
+                            </div>
+                            <div class="sorting__order-by">
+                                <div class="sorting__order-by-label">по дате:</div>
+                                <a href="/catalogue/materials/?o=date" class="sorting__toggle-views sorting--toggle-views-active"><span class="sorting__icon icon--up-open-mini"></span></a>
+                                <a href="/catalogue/materials/?o=-date" class="sorting__toggle-views"><span class="sorting__icon icon--down-open-mini"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row--padd-min">
+                        <div class="col-xl-4 col-sm-6 col-bottom-min">
+                            <!-- @@include = partials/_catalog-item-lev2.html -->
+                        </div>
+                        <div class="col-xl-4 col-sm-6 col-bottom-min">
+                            <!-- @@include = partials/_catalog-item-lev2.html -->
+                        </div>
+                        <div class="col-xl-4 col-sm-6 col-bottom-min">
+                            <!-- @@include = partials/_catalog-item-lev2.html -->
+                        </div>
+                        <div class="col-xl-4 col-sm-6 col-bottom-min">
+                            <!-- @@include = partials/_catalog-item-lev2.html -->
+                        </div>
+                        <div class="col-xl-4 col-sm-6 col-bottom-min">
+                            <!-- @@include = partials/_catalog-item-lev2.html -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- @@close-->

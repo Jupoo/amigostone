@@ -1,0 +1,46 @@
+<!-- @@master  = partials/_master-accounts.html-->
+ 
+<!-- @@block  =  content-->
+<section class="page__section">
+    <div class="page__content-inner">
+        <ul class="breadcrumbs">
+            <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link"><span class="icon--home"></span></a></li>
+            <li class="breadcrumbs__item"><a href="profile.html" class="breadcrumbs__link">Личный кабинет</a></li>
+            <li class="breadcrumbs__item"><div class="breadcrumbs__link">Редактирование профиля</div></li>
+        </ul>
+        <div class="page__header">
+            <h1 class="page__header-title">Личный кабинет | ООО СТУПКА</h1>
+        </div>
+        <div class="page__body profile">
+            <div class="row">
+                <div class="col-xl-3 col-md-4">
+                    <div class="col-bottom-min">
+                        <!-- @@include = partials/_profile-card.html -->
+                    </div>
+                    <!-- @@include = partials/_profile-menu.html -->
+                </div>
+                <div class="col-xl-9 col-md-8 col-sm-top-min">
+                    <div class="col-bottom-min">
+                        <!-- @@include = partials/_profile-menu-top.html -->
+                    </div>
+                    <!-- @@include = partials/_profile-edit-header.html -->
+                    <!--<div class="box page__info col-bottom-min">Здесь вы можете загрузить логотип компании или аватар. Размер изображения не должен превышать 5Мб.</div>-->
+                    <div class="tabs-page js-tab">
+                        <!-- @@include = partials/_profile-edit-menu.html -->
+                        <div class="tabs-page__body tabs-page--body-no-border">
+                            <div class="box">
+                                <form action="" method="post" class="form" enctype="multipart/form-data">
+                                    <div class="pos-center col-top col-bottom">
+                                        <div class="form__hint col-bottom-micro"><div class="pos-center">Здесь вы можете загрузить логотип компании или аватар.<br />Размер изображения не должен превышать 5Мб.</div></div>
+                                        <div class="btn btn--min col-xsm-full"><span class="icon--upload"></span>Загрузить логотип</div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- @@close-->

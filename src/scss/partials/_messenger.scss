@@ -1,0 +1,146 @@
+.messenger__alert-wrap {
+	display: block;
+    position: fixed;
+	bottom: 2%;
+	right: 19%;
+	z-index: 10000;
+
+	-webkit-animation: swinging 5s ease-in-out 0s infinite;
+	-moz-animation: swinging 5s ease-in-out 0s infinite;
+	animation: swinging 5s ease-in-out 0s infinite;
+	-webkit-transform-origin: 80% 100%;
+	-moz-transform-origin: 80% 100%;
+	transform-origin: 80% 100%;
+}
+
+@keyframes swinging {
+	0% {
+		transform: rotate(0);
+	}
+	5% {
+		transform: rotate(6deg);
+	}
+	10% {
+		transform: rotate(-5deg);
+	}
+	15% {
+		transform: rotate(4deg);
+	}
+	20% {
+		transform: rotate(-3deg);
+	}
+	25% {
+		transform: rotate(2deg);
+	}
+	30% {
+		transform: rotate(0);
+	}
+	35% {
+		transform: rotate(0);
+	}
+	40% {
+		transform: rotate(0);
+	}
+	45% {
+		transform: rotate(0);
+	}
+	50% {
+		transform: rotate(0);
+	}
+	100% {
+		transform: rotate(0);
+	}
+}
+
+@-webkit-keyframes swinging {
+	0% {
+		transform: rotate(0);
+	}
+	5% {
+		transform: rotate(6deg);
+	}
+	10% {
+		transform: rotate(-5deg);
+	}
+	15% {
+		transform: rotate(4deg);
+	}
+	20% {
+		transform: rotate(-3deg);
+	}
+	25% {
+		transform: rotate(2deg);
+	}
+	30% {
+		transform: rotate(0);
+	}
+	35% {
+		transform: rotate(0);
+	}
+	40% {
+		transform: rotate(0);
+	}
+	45% {
+		transform: rotate(0);
+	}
+	50% {
+		transform: rotate(0);
+	}
+	100% {
+		transform: rotate(0);
+	}
+}
+
+@-moz-keyframes swinging {
+	0% {
+		transform: rotate(0);
+	}
+	5% {
+		transform: rotate(6deg);
+	}
+	10% {
+		transform: rotate(-5deg);
+	}
+	15% {
+		transform: rotate(4deg);
+	}
+	20% {
+		transform: rotate(-3deg);
+	}
+	25% {
+		transform: rotate(2deg);
+	}
+	30% {
+		transform: rotate(0);
+	}
+	35% {
+		transform: rotate(0);
+	}
+	40% {
+		transform: rotate(0);
+	}
+	45% {
+		transform: rotate(0);
+	}
+	50% {
+		transform: rotate(0);
+	}
+	100% {
+		transform: rotate(0);
+	}
+}
+
+.messenger__alert-body {
+	background: url('#{$img-path}dialog.png');
+	width: 262px;
+	height: 84px;
+}
+.messenger__alert-text-container {
+    width: 190px;
+	padding-top: 10px;
+    margin-left: 70px;
+}
+.messenger__alert-body span {
+	color: #fff;
+    font-size: 12px;
+}

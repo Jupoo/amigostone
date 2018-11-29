@@ -1,0 +1,86 @@
+.services {
+	display: block;
+	background: $bg-grey-light;
+	border: solid 1px $color-border;
+	@include rem(padding, 15px);
+	border-radius: $border-radius-base;
+	transition: all $transition-speed ease;
+	text-align: center;
+
+	&:hover {
+		background: darken($bg-grey-light, 3%);
+	}
+
+    &__icon {
+		@include rem(font-size, 60px);
+		@include rem(line-height, 60px);
+		@include rem(height, 60px);
+		color: $color-green-dark;
+
+		& .icon--fireplace {
+			@include rem(font-size, 80px);
+		}
+
+		& .icon--stonehenge {
+			@include rem(font-size, 80px);
+		}
+	}
+
+	&__text {
+		@include rem(margin-top, 20px);
+		@include rem(font-size, 12px);
+		@include rem(line-height, 18px);
+		@include rem(height, 34px);
+		text-transform: uppercase;
+		color: $color-base;
+		font-family: $font-medium;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.services {
+		&__icon {
+			@include rem(font-size, 50px);
+			@include rem(line-height, 50px);
+			@include rem(height, 50px);
+
+			& .icon--fireplace {
+				@include rem(font-size, 70px);
+			}
+
+			& .icon--stonehenge {
+				@include rem(font-size, 70px);
+			}
+		}
+
+		&__text {
+			@include rem(margin-top, 10px);
+		}
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.services {
+
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.services {
+
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.services {
+
+	}
+}

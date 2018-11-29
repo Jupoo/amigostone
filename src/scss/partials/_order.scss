@@ -1,0 +1,986 @@
+.order {
+	display: block;
+	background: #fff;
+	border: solid 1px $color-border;
+	@include rem(padding, 15px);
+	border-radius: $border-radius-base;
+	transition: all $transition-speed ease;
+	position: relative;
+
+	&:hover {
+		background: darken(#fff, 1.5%);
+	}
+
+	&--detail:hover {
+		background: #fff;
+	}
+
+	&--grey {
+		background: $bg-grey-light;
+
+		&:hover {
+			background: darken($bg-grey-light, 2%);
+		}
+	}
+
+	&__img {
+		display: block;
+		background: $color-grey-lighter;
+		border: solid 1px $color-border;
+		border-radius: $border-radius-base;
+
+		& img {
+			width: 100%;
+			border-radius: $border-radius-base;
+		}
+	}
+
+	&--detail &__img {
+		max-width: 300px;
+		margin: 0 auto;
+	}
+
+	&__body {
+
+	}
+
+	&__info {
+		color: $color-grey;
+		@include clearfix();
+		background: lighten($color-grey-lighter, 3%);
+		@include rem(padding, 4px 10px);
+		border-radius: $border-radius-base;
+		@include rem(margin-bottom, 10px);
+		@include rem(font-size, 14px);
+		@include rem(line-height, 22px);
+		font-family: $font-medium;
+		transition: background $transition-speed ease;
+	}
+
+	&:hover &__info {
+		background: $color-grey-lighter;
+	}
+
+	&--grey &__info {
+		background: $color-grey-lighter;
+	}
+
+	&--grey:hover &__info {
+		background: darken($color-grey-lighter, 3%);
+	}
+
+	&--detail:hover &__info {
+		background: lighten($color-grey-lighter, 3%);
+	}
+
+	&__info-icon {
+		color: $color-grey-dark;
+		@include rem(font-size, 18px);
+		@include rem(line-height, 22px);
+		@include rem(margin-right, 5px);
+		@include rem(height, 22px);
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	&__title {
+		display: block;
+		color: $color-green;
+		@include rem(font-size, 18px);
+		@include rem(line-height, 22px);
+		font-family: $font-medium;
+		transition: color $transition-speed ease;
+		@include rem(margin-bottom, 10px);
+	}
+
+	&:hover &__title {
+		color: lighten($color-green, 4%);
+	}
+
+	&:hover &__title:hover {
+		color: darken($color-green, 4%);
+	}
+
+	&--detail:hover &__title, &--detail:hover &__title:hover {
+		color: $color-green;
+	}
+
+	&__text {
+		@include rem(font-size, 16px);
+		@include rem(line-height, 24px);
+		color: $color-base;
+	}
+
+	&__wrap {
+		@include rem(margin-bottom, 38px);
+	}
+
+	&__detail {
+		width: 100%;
+		@include rem(font-size, 14px);
+		@include rem(line-height, 16px);
+		color: $color-grey;
+		font-family: $font-medium;
+		border-top: solid 1px $color-border;
+		@include rem(padding, 10px 15px);
+		position: absolute;
+		width: 100%;
+		bottom: 0;
+		left: 0;
+		@include clearfix();
+	}
+
+	&__detail-item {
+		white-space: nowrap;
+		display: inline-block;
+		vertical-align: top;
+		@include rem(margin-left, 20px);
+
+		&:first-child {
+			margin-left: 0px;
+		}
+	}
+
+	&__icon {
+		display: inline-block;
+		@include rem(margin-right, 5px);
+		@include rem(font-size, 16px);
+		@include rem(line-height, 16px);
+	}
+
+	&__flag {
+		position: absolute;
+		@include rem(top, 10px);
+		@include rem(left, -8px);
+		@include rem(padding, 0px 8px);
+		@include rem(min-width, 160px);
+		background: $color-red;
+		color: #fff;
+		white-space: nowrap;
+		@include rem(font-size, 14px);
+		@include rem(line-height, 30px);
+		font-family: $font-medium;
+		z-index: 1;
+		border-radius: $border-radius-base $border-radius-base $border-radius-base 0px;
+		text-align: center;
+
+		&:after {
+			content: "";
+			display: block;
+			position: absolute;
+			bottom: -7px;
+			left: 0;
+			border-style: solid;
+			border-width: 3px 3px 4px 4px;
+			border-right-color: darken($color-red, 10%);
+    		border-top-color: darken($color-red, 10%);
+			width: 0;
+			height: 0;
+			padding: 0;
+			margin: 0;
+		}
+	}
+
+	&--flag-selected {
+		background: $color-green;
+
+		&:after {
+			border-right-color: darken($color-green, 10%);
+    		border-top-color: darken($color-green, 10%);
+		}
+	}
+
+	&--flag-completed {
+		background: $color-grey;
+
+		&:after {
+			border-right-color: darken($color-grey, 10%);
+    		border-top-color: darken($color-grey, 10%);
+		}
+	}
+
+	&__price {
+		background: $color-grey-extralight;
+		border: solid 1px $color-border;
+		@include rem(font-size, 15px);
+		@include rem(line-height, 24px);
+		@include rem(padding, 15px);
+		color: $color-grey-dark;
+		font-family: $font-medium;
+		border-radius: $border-radius-base;
+		@include rem(margin-top, 20px);
+	}
+
+	&__price-num {
+		white-space: nowrap;
+		font-family: $font-reg;
+		font-weight: bold;
+		@include rem(font-size, 30px);
+		color: $color-green;
+		@include rem(margin-left, 10px);
+	}
+
+	&__price-icon {
+		display: inline-block;
+    	vertical-align: top;
+		@include rem(font-size, 28px);
+		@include rem(margin-left, 5px);
+	}
+
+	&__steps-wrap {
+		background: darken($color-grey-extralight,2%);
+		@include rem(padding, 10px 15px);
+		@include rem(margin, 15px -15px);
+		@include rem(margin-bottom, -15px);
+		border-top: solid 1px $color-border;
+	}
+
+	&__steps {
+		@include rem(font-size, 14px);
+		@include clearfix();
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	&__step {
+		float: left;
+		background: $color-grey;
+		border-radius: $border-radius-base;
+		@include rem(padding-right, 10px);
+		color: #fff;
+		@include rem(margin-right, 15px);
+		position: relative;
+		@include rem(line-height, 30px);
+		opacity: 0.5;
+
+		&:after {
+			content: "";
+			display: block;
+			position: absolute;
+			@include rem(width, 15px);
+			@include rem(height, 2px);
+			background: $color-grey;
+			right: -15px;
+			top: 14px;
+		}
+
+		&:last-child {
+			@include rem(margin-right, 0px);
+		}
+
+		&:last-child:after {
+			display: none;
+		}
+	}
+
+	&--step-active {
+		background: $color-green;
+		opacity: 1;
+
+		&:after {
+			background: $color-green;
+		}
+	}
+
+	&__step-check {
+		display: inline-block;
+		vertical-align: top;
+		@include rem(line-height, 30px);
+		@include rem(margin-left, 10px);
+	}
+
+	&__step-check.icon--waiting {
+		@include rem(font-size, 18px);
+	}
+
+	&__step-num {
+		display: inline-block;
+		vertical-align: top;
+		border-radius: $border-radius-base 50% 50% $border-radius-base;
+		@include rem(width, 30px);
+		@include rem(margin-right, 5px);
+		background: $color-grey-dark;
+		text-align: center;
+		color: #fff;
+		@include rem(line-height, 30px);
+	}
+
+	&--step-active &__step-num {
+		background: $color-green-dark;
+	}
+
+	&__new-response {
+		color: #fff;
+		background: $color-orange;
+		@include rem(padding, 0px 5px);
+		@include rem(margin-left, 5px);
+		border-radius: $border-radius-base;
+		display: inline-block;
+		vertical-align: top;
+		@include rem(font-size, 12px);
+		@include rem(line-height, 16px);
+		font-family: $font-reg;
+	}
+
+	&__status-wrap {
+		background: darken($color-grey-extralight,2%);
+		@include rem(padding, 10px 15px);
+		padding-left: 0px;
+		@include rem(margin, 15px -15px);
+		@include rem(margin-bottom, -15px);
+		border-top: solid 1px $color-border;
+	}
+
+	&__status {
+		display: inline-block;
+		vertical-align: top;
+		background: $color-grey;
+		border-radius: 0px $border-radius-base $border-radius-base 0px;
+		@include rem(padding, 0px 15px);
+		color: #fff;
+		@include rem(font-size, 14px);
+		@include rem(line-height, 30px);
+	}
+
+	&--status-choose &__status {
+		background: $color-red;
+	}
+
+	&--status-selected &__status {
+		background: $color-green;
+	}
+
+	&--status-completed &__status {
+		background: $color-grey;
+	}
+
+	&--status-rejected &__status {
+		background: $color-grey;
+	}
+
+	&__status-icon {
+		display: inline-block;
+		vertical-align: top;
+		@include rem(line-height, 30px);
+		@include rem(margin-left, 10px);
+		@include rem(font-size, 18px);
+	}
+
+	&__status-icon.icon--check {
+		@include rem(font-size, 14px);
+	}
+
+	&__status-info {
+		@include rem(font-size, 14px);
+		@include rem(line-height, 20px);
+		@include rem(padding-left, 15px);
+		@include rem(margin-top, 10px);
+		color: $color-grey-dark;
+		font-style: italic;
+	}
+
+	&__detail-top {
+		background: $color-green;
+		@include rem(padding, 10px 15px);
+		@include rem(margin, -15px);
+		@include rem(margin-bottom, 15px);
+		border-radius: $border-radius-base $border-radius-base 0px 0px;
+		@include clearfix();
+		@include rem(font-size, 15px);
+		@include rem(line-height, 20px);
+	}
+
+	&__detail-top-btn {
+		display: block;
+		color: #fff;
+		cursor: pointer;
+		transition: all $transition-speed ease;
+
+		&:hover {
+			color: $color-green-darker;
+		}
+	}
+
+	&__detail-top-icon {
+		display: inline-block;
+		vertical-align: top;
+		@include rem(font-size, 12px);
+		@include rem(line-height, 20px);
+		@include rem(margin-right, 5px);
+	}
+
+	&__detail-top-icon.icon--left-open-mini {
+		@include rem(font-size, 20px);
+	}
+
+	&__addition {
+		@include rem(margin, 0px -15px);
+		@include rem(margin-top, 20px);
+		@include rem(margin-bottom, -15px);
+	}
+
+	&__addition-item {
+		border-top: solid 1px $color-border;
+		position: relative;
+	}
+
+	&__addition-comment {
+		@include rem(font-size, 15px);
+		@include rem(line-height, 21px);
+		@include rem(margin-bottom, 24px);
+	}
+
+	&__addition-title {
+		position: absolute;
+		bottom: 15px;
+		right: 15px;
+		@include rem(font-size, 14px);
+		@include rem(line-height, 14px);
+		color: $color-grey-dark;
+		font-style: italic;
+
+		& span {
+			font-family: $font-medium;
+		}
+	}
+
+	&__addition-title-inlist {
+		@include rem(font-size, 13.4px);
+		@include rem(line-height, 14px);
+		@include rem(margin-top, 5px);
+		color: $color-grey-dark;
+		font-style: italic;
+		text-align: right;
+
+		& span {
+			font-family: $font-medium;
+		}
+	}
+
+	&__addition-line {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 3px;
+		height: 100%;
+		padding: 10px 0px;
+
+		&:after {
+			content: "";
+			display: block;
+			width: 100%;
+			height: 100%;
+			background: $color-green;
+		}
+	}
+
+	&__file {
+		display: block;
+		border: solid 1px $color-border;
+		background: #fff;
+		position: relative;
+		text-align: center;
+		@include rem(height, 60px);
+		border-radius: $border-radius-base;
+		transition: all $transition-speed ease;
+	}
+
+	&__file-name {
+		position: absolute;
+		@include rem(bottom, 13px);
+		left: 0;
+		width: 100%;
+		color: #fff;
+		@include rem(font-size, 14px);
+		@include rem(line-height, 14px);
+	}
+
+	&__file-load {
+		display: none;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		@include rem(font-size, 20px);
+		@include rem(line-height, 60px);
+		color: #fff;
+		background:	rgba(0,0,0,0.3);
+		border-radius: $border-radius-base;
+		transition: all $transition-speed ease;
+	}
+
+	&__file:hover &__file-load {
+		display: block;
+	}
+
+	&__file-icon {
+		display: inline-block;
+		vertical-align: top;
+		@include rem(font-size, 40px);
+		@include rem(line-height, 60px);
+		color: $color-green;
+	}
+
+	&__file:hover &__file-icon {
+		color: $color-green;
+	}
+
+	&__file-header {
+		@include rem(font-size, 15px);
+		@include rem(line-height, 23px);
+		font-family: $font-medium;
+	}
+
+	&__docs {
+		@include clearfix();
+		@include rem(margin-top, -14px);
+	}
+
+	&--docs-t-no {
+		@include rem(margin-top, 0px);
+	}
+
+	.order-response__content &__docs, .message__chat-mess &__docs {
+		@include rem(margin-top, 10px);
+	}
+
+	&__doc {
+		display: block;
+		border: solid 1px $color-border;
+		background: #fff;
+		position: relative;
+		text-align: center;
+		@include rem(height, 40px);
+		@include rem(width, 40px);
+		border-radius: $border-radius-base;
+		transition: all $transition-speed ease;
+		overflow: hidden;
+
+		& img {
+			width: 100%;
+		}
+	}
+
+	&__doc-name {
+		position: absolute;
+		@include rem(bottom, 6px);
+		left: 0;
+		width: 100%;
+		color: #fff;
+		@include rem(font-size, 11px);
+		@include rem(line-height, 14px);
+	}
+
+	&__doc-load {
+		display: none;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		@include rem(font-size, 18px);
+		@include rem(line-height, 40px);
+		color: #fff;
+		background:	rgba(0,0,0,0.3);
+		border-radius: $border-radius-base;
+		transition: all $transition-speed ease;
+	}
+
+	&__doc:hover &__doc-load {
+		display: block;
+	}
+
+	&__doc-icon {
+		display: inline-block;
+		vertical-align: top;
+		@include rem(font-size, 30px);
+		@include rem(line-height, 38px);
+		color: $color-green;
+	}
+
+	&__doc:hover &__doc-icon {
+		color: $color-green;
+	}
+
+	&__btn-show-wrap {
+		@include rem(margin-top, -15px);
+		text-align: center;
+	}
+
+	&__btn-show {
+		display: inline-block;
+		vertical-align: top;
+		@include rem(font-size, 14px);
+		@include rem(line-height, 20px);
+		@include rem(padding, 5px 30px);
+		background: #fff;
+		color: $color-green;
+		border: solid 2px $color-green;
+		border-top: none;
+		text-transform: uppercase;
+		border-radius: 0px 0px $border-radius-base $border-radius-base;
+		cursor: pointer;
+		transition: all $transition-speed ease;
+		font-family: $font-medium;
+
+		&:hover {
+			background: darken($color-green,5%);
+			color: #fff;
+			border: solid 2px darken($color-green,5%);
+			border-top: none;
+		}
+
+		& span {
+			display: inline-block;
+			vertical-align: top;
+			@include rem(font-size, 30px);
+			@include rem(line-height, 20px);
+			@include rem(margin-left, 10px);
+		}
+	}
+
+	&--btn-show-wrap-hidden {
+		border-top: solid 1px $color-border;
+		@include rem(margin, 0px -15px);
+		@include rem(margin-top, 15px);
+	}
+
+	&__lifetime {
+		text-align: center;
+	}
+
+	&__lifetime-timer {
+		font-family: $font-medium;
+		@include rem(font-size, 18px);
+		@include rem(line-height, 40px);
+		color: $color-green;
+		text-transform: uppercase;
+	}
+
+	&__lifetime-count {
+		display: inline-block;
+		vertical-align: top;
+		@include shadow();
+		background: #fff;
+		border-radius: $border-radius-base;
+		@include rem(padding, 10px);
+		@include rem(margin, 0px 10px);
+		@include rem(font-size, 12px);
+		@include rem(line-height, 12px);
+		color: $color-green-dark;
+		text-transform: uppercase;
+
+		& span {
+			@include rem(font-size, 20px);
+			@include rem(line-height, 20px);
+		}
+	}
+
+	&--lifetime-count-err {
+		color: $color-red;
+	}
+
+	&__lifetime-text {
+		@include rem(font-size, 16px);
+		@include rem(line-height, 22px);
+		@include rem(margin-top, 20px);
+		color: $color-grey-dark;
+		text-align: right;
+    	font-style: italic;
+	}
+
+	&__lifetime-icon {
+		display: inline-block;
+		vertical-align: top;
+		@include rem(margin-right, 5px);
+		@include rem(font-size, 18px);
+	}
+
+	&__completion {
+
+	}
+
+	&__completion-item {
+		display: flex;
+		justify-content: space-between;
+		@include rem(padding-bottom, 15px);
+
+		&:last-child {
+			padding-bottom: 0px;
+		}
+	}
+
+	&__completion-l {
+		@include rem(max-width, 30px);
+		position: relative;
+		flex-grow: 1;
+
+		&:before {
+			content: "";
+			display: block;
+			position: absolute;
+			@include rem(top, 15px);
+			@include rem(left, 14px);
+			z-index: 1;
+			width: 2px;
+			background: $color-green;
+			height: 100%;
+		}
+	}
+
+	&__completion-item:last-child &__completion-l:before {
+		display: none;
+	}
+
+	&__completion-r {
+		flex-grow: 2;
+	}
+
+	&__completion-num {
+		position: relative;
+		@include rem(width, 30px);
+		@include rem(height, 30px);
+		@include rem(font-size, 14px);
+		@include rem(line-height, 30px);
+		border-radius: 50%;
+		background: $color-green;
+		color: #fff;
+		text-align: center;
+		font-family: $font-medium;
+		z-index: 2;
+	}
+
+	&__completion-body {
+		@include rem(padding-left, 20px);
+	}
+
+	&__completion-text {
+		@include rem(padding-top, 4px);
+		@include rem(font-size, 15px);
+		@include rem(line-height, 22px);
+	}
+
+	&__completion-contract {
+		text-align: center;
+		@include rem(margin-top, 10px);
+	}
+
+	&__completion-contract-text {
+		@include rem(font-size, 14px);
+		@include rem(line-height, 32px);
+		font-family: $font-medium;
+		color: $color-orange;
+		text-transform: uppercase;
+	}
+
+	&--contract-loaded {
+		color: $color-green;
+	}
+
+	&__completion-contract-icon {
+		display: inline-block;
+		vertical-align: top;
+		@include rem(margin-right, 5px);
+		@include rem(font-size, 18px);
+	}
+
+	&__mark {
+		color: $color-grey-light;
+	}
+
+	&__mark-star {
+		@include rem(font-size, 30px);
+		cursor: pointer;
+		transition: all $transition-speed ease;
+
+		&:hover {
+			color: $color-orange;
+		}
+
+		&.active {
+			color: $color-orange;
+		}
+	}
+
+	&__status-viewed {
+		color: #fff;
+		background: $color-red;
+		@include rem(padding, 0px 10px);
+		border-radius: $border-radius-base;
+		display: inline-block;
+		vertical-align: top;
+		@include rem(font-size, 12px);
+		@include rem(line-height, 22px);
+		font-family: $font-reg;
+		@include rem(margin-bottom, 10px);
+	}
+
+	&--status-viewed-y {
+		background: $color-grey;
+	}
+
+	&__id {
+		color: $color-green;
+	}
+
+	&__contractor {
+		border: solid 1px $color-border;
+		@include rem(font-size, 15px);
+		@include rem(line-height, 24px);
+		@include rem(padding, 15px);
+		color: $color-grey-dark;
+		font-family: $font-medium;
+		border-radius: $border-radius-base;
+		@include rem(margin-top, 20px);
+		text-align: right;
+	}
+
+	&__contractor-name {
+		font-family: $font-reg;
+		font-weight: bold;
+		@include rem(font-size, 16px);
+		color: $color-green;
+		@include rem(margin-left, 10px);
+	}
+}
+
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.order {
+		&__step {
+			width: 50%;
+			text-align: left;
+			margin-right: 0px;
+			border-radius: 0px;
+			@include rem(margin, 1px 0px);
+
+			&:after {
+				display: none;
+			}
+
+			&:nth-child(n) {
+				border-right: solid 1px #fff;
+			}
+
+			&:nth-child(2n) {
+				border-left: solid 1px #fff;
+			}
+		}
+
+		&__step-num {
+			border-radius: 0px 50% 50% 0px;
+		}
+
+		.order-response__additionally &__docs {
+			@include rem(margin-bottom, 24px);
+		}
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.order {
+		&__title {
+			@include rem(font-size, 17px);
+			@include rem(line-height, 21px);
+		}
+
+		&__text {
+			@include rem(font-size, 15px);
+			@include rem(line-height, 23px);
+		}
+
+		&__detail-text {
+			display: none;
+		}
+
+		&--detail &__info {
+			margin-left: 0px;
+		}
+
+		&--detail &__flag {
+			@include rem(top, 10px);
+		}
+
+		&__addition-title-inlist {
+			text-align: center;
+		}
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.order {
+		&__price {
+			text-align: center;
+		}
+
+		&__price-num {
+			display: block;
+			margin-left: 0px;
+			@include rem(margin-top, 5px);
+		}
+
+		&__contractor {
+			text-align: center;
+		}
+
+		&__contractor-name {
+			display: block;
+			margin-left: 0px;
+			@include rem(margin-top, 5px);
+		}
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.order {
+		max-width: 350px;
+    	margin: 0 auto;
+
+		&--detail {
+			max-width: none;
+			margin: 0;
+		}
+
+		&__info {
+			@include rem(margin-top, 15px);
+			margin-left: 0px;
+		}
+
+		&--detail &__info {
+			margin-top: 0px;
+		}
+
+		&--detail &__flag {
+			@include rem(top, 10px);
+		}
+
+		&__price {
+			@include rem(font-size, 14px);
+		}
+
+		&__step {
+			width: 100%;
+
+			&:nth-child(n) {
+				border: none;
+			}
+
+			&:nth-child(2n) {
+				border: none;
+			}
+		}
+
+		&__lifetime-count {
+			display: block;
+			@include rem(width, 160px);
+			margin: 0 auto;
+		}
+
+		&__docs {
+			@include rem(margin-bottom, 24px);
+		}
+	}
+}

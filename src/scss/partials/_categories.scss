@@ -1,0 +1,235 @@
+.categories {
+	background: #fff;
+	border: solid 1px $color-border;
+	border-radius: $border-radius-base;
+
+	&__title {
+		font-family: $font-medium;
+		@include rem(padding, 10px 15px);
+		@include rem(font-size, 18px);
+	}
+
+	&__menu {
+
+	}
+
+	&__menu-item {
+		border-top: solid 1px $color-border;
+
+		/*&:last-child {
+			border-radius: 0px 0px $border-radius-base $border-radius-base;
+		}*/
+
+		& > a {
+			display: block;
+			@include rem(padding, 10px 15px);
+			@include rem(padding-right, 55px);
+			color: $color-grey-dark;
+			@include rem(font-size, 16px);
+			@include rem(line-height, 20px);
+			transition: all $transition-speed ease;
+			position: relative;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			overflow: hidden;
+		}
+	}
+
+	&__menu-arrow {
+		display: block;
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		height: 100%;
+		@include rem(width, 40px);
+		@include rem(line-height, 40px);
+		@include rem(font-size, 18px);
+		color: $color-grey;
+		transition: all $transition-speed ease;
+	}
+
+	&__menu-item-sub > a > &__menu-arrow {
+		border-left: solid 1px $color-border;
+	}
+
+	&__menu-item > a > &__menu-arrow {
+		border-left: solid 1px $color-border;
+	}
+
+	&__menu-item.js-cat-wrap > a:hover > &__menu-arrow {
+		background: darken($color-grey-extralight,5%);
+		color: darken($color-grey-dark,10%);
+	}
+
+	&__menu-item.js-cat-wrap > a > &__menu-arrow.js-cat-btn {
+		//background: #fff;
+
+		&:hover {
+			background: darken($color-grey-extralight,5%);
+			color: darken($color-grey-dark,10%);
+		}
+	}
+
+	&__menu-item.js-cat-wrap > a.js-cat-btn > &__menu-arrow {
+		background: none;
+	}
+
+	/*&__menu-item:last-child > a > &__menu-arrow {
+		border-radius: 0px 0px $border-radius-base 0px;
+	}*/
+
+	&__menu-item > a:hover {
+		background: $color-grey-extralight;
+		color: darken($color-grey-dark,10%);
+	}
+
+	&__menu-item:last-child > a {
+		border-radius: 0px 0px $border-radius-base $border-radius-base;
+	}
+
+	&__menu-item.categories--active:last-child > a {
+		border-radius: 0px;
+	}
+
+	/*&__menu-item:last-child > a > &__menu-arrow {
+		border-radius: 0px 0px $border-radius-base/1.3 0px;
+	}*/
+
+	&--active:last-child > a > &__menu-arrow {
+		border-radius: 0px;
+	}
+
+	&__menu-item.categories--active:last-child &__menu-item-sub:last-child > a {
+		border-radius: 0px 0px $border-radius-base $border-radius-base;
+	}
+
+	&--menu-arrow-active {
+		display: none;
+	}
+
+	&__menu-sub {
+		display: none;
+	}
+
+	&--active &__menu-sub {
+		display: block;
+	}
+
+	&--active > a {
+		color: $color-green;
+	}
+
+	&--active-global > a {
+		border-left: solid 3px $color-green;
+		@include rem(padding, 10px 12px);
+		color: $color-green;
+	}
+
+	&--active > a:hover {
+
+	}
+
+	&--active > a > &__menu-arrow {
+		color: $color-green;
+	}
+
+	&--active > a > &__menu-arrow:hover {
+
+	}
+
+	&--active > a > &--menu-arrow-close {
+		display: none;
+	}
+
+	&--active > a > &--menu-arrow-active {
+		display: block;
+	}
+
+	&__menu-item-sub {
+		border-top: solid 1px $color-border;
+		transition: all $transition-speed ease;
+		position: relative;
+
+		& > a {
+			display: block;
+			@include rem(padding, 10px 15px);
+			@include rem(padding-right, 55px);
+			@include rem(padding-left, 35px);
+			color: $color-grey-dark;
+			@include rem(font-size, 16px);
+			@include rem(line-height, 20px);
+			transition: all $transition-speed ease;
+			position: relative;
+
+			&:hover {
+				background: $color-grey-extralight;
+				color: darken($color-grey-dark,10%);
+			}
+		}
+	}
+
+	&__menu-item-sub > &__menu-add {
+		display: block;
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		height: 100%;
+		@include rem(width, 40px);
+		@include rem(line-height, 40px);
+		@include rem(font-size, 18px);
+		transition: all $transition-speed ease;
+		border-left: solid 1px $color-border;
+		padding: 0;
+		transition: all $transition-speed ease;
+		background: $color-grey-extralight;
+		color: $color-grey-dark;
+
+		&:hover {
+			background: lighten($color-green,54%);
+			color: $color-green;
+		}
+	}
+
+	&__menu-item-sub:hover > a > &__menu-arrow {
+		color: darken($color-grey,10%);
+	}
+
+	&--sub-active > a,
+	&--sub-active > a:hover {
+		background: $color-grey-extralight;
+		color: $color-green;
+	}
+
+	/*&--sub-active > a > &__menu-arrow {
+		display: none;
+	}*/
+}
+
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.categories {
+
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.categories {
+
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.categories {
+
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.categories {
+
+	}
+}

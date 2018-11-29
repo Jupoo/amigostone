@@ -1,0 +1,97 @@
+.contacts {
+	&__item {
+		border-bottom: solid 1px $color-border;
+		@include rem(padding, 20px 0px);
+		//border-left: solid 3px $color-green;
+		//padding-left: 10px;
+
+		&:first-child {
+			padding-top: 0px;
+		}
+
+		&:last-child {
+			padding-bottom: 0px;
+			border-bottom: none;
+		}
+	}
+
+	&__title {
+		font-weight: bold;
+		@include rem(font-size, 14px);
+		@include rem(line-height, 20px);
+		text-transform: uppercase;
+	}
+
+	&__text {
+		display: block;
+		font-family: $font-medium;
+		color: $color-green;
+		@include rem(font-size, 16px);
+		@include rem(line-height, 20px);
+		@include rem(margin-top, 10px);
+	}
+
+	&__icon {
+		display: inline-block;
+		vertical-align: top;
+		@include rem(margin-right, 10px);
+		@include rem(font-size, 20px);
+		@include rem(line-height, 20px);
+		color: $color-green-dark;
+	}
+
+	&__info {
+		color: $color-grey-dark;
+		@include rem(font-size, 14px);
+		@include rem(line-height, 16px);
+		font-style: italic;
+	}
+
+	&__requisites {
+		@include rem(font-size, 14px);
+		@include rem(line-height, 20px);
+		color: $color-grey-dark;
+
+		& p {
+			@include rem(margin, 10px 0px);
+
+			&:last-child {
+				margin-bottom: 0px;
+			}
+		}
+
+		& b {
+			font-weight: bold;
+			color: $color-green;
+		}
+	}
+}
+
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.contacts {
+
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.contacts {
+
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.contacts {
+
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.contacts {
+
+	}
+}

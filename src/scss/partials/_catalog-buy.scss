@@ -1,0 +1,109 @@
+.catalog-buy {
+	border-bottom: solid 1px $color-border;
+	@include rem(padding, 15px 0px);
+
+	&:first-child {
+		padding-top: 0px;
+	}
+
+	&:last-child {
+		padding-bottom: 0px;
+		border-bottom: none;
+	}
+
+	&__company {
+
+	}
+
+	&__company-name {
+		display: block;
+		@include rem(font-size, 18px);
+		@include rem(line-height, 20px);
+		font-family: $font-medium;
+	}
+
+	&__city {
+		color: $color-grey-dark;
+		@include rem(font-size, 14px);
+		@include rem(line-height, 20px);
+		@include rem(margin-top, 4px);
+	}
+
+	&__city-icon {
+		display: inline-block;
+		vertical-align: top;
+		@include rem(font-size, 18px);
+		@include rem(line-height, 18px);
+		@include rem(margin-right, 5px);
+	}
+
+	&__right {
+		@include clearfix();
+		display: inline-block;
+    	vertical-align: top;
+	}
+
+	&__price {
+		float: left;
+		white-space: nowrap;
+		@include rem(font-size, 24px);
+		@include rem(line-height, 40px);
+		font-family: $font-medium;
+	}
+
+	&__price-icon {
+		display: inline-block;
+		vertical-align: top;
+		@include rem(margin-left, 5px);
+		@include rem(font-size, 22px);
+	}
+
+	&__btn {
+		float: left;
+		@include rem(margin-left, 20px);
+	}
+}
+
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.catalog-buy {
+		&__company-name {
+			@include rem(font-size, 16px);
+			@include rem(line-height, 18px);
+		}
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.catalog-buy {
+		@include rem(line-height, 20px);
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.catalog-buy {
+
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.catalog-buy {
+		&__company-name {
+			@include rem(font-size, 15px);
+			@include rem(line-height, 19px);
+		}
+
+		&__price {
+			width: 100%;
+		}
+
+		&__btn {
+			width: 100%;
+			margin-left: 0px;
+		}
+	}
+}

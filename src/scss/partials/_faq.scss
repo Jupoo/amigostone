@@ -1,0 +1,166 @@
+.faq {
+	background: #fff;
+	border: solid 1px $color-border;
+	border-radius: $border-radius-base;
+
+	&__item {
+		border-top: dashed 1px $color-border;
+
+		&:first-child {
+			border-top: none;
+		}
+	}
+
+    &__title {
+		@include rem(font-size, 16px);
+		@include rem(line-height, 26px);
+		font-family: $font-medium;
+		background: #fff;
+		@include rem(padding, 10px 15px);
+		cursor: pointer;
+		transition: color, background $transition-speed ease;
+		position: relative;
+
+		&:hover {
+			color: $color-green;
+			background: lighten($color-grey, 35%);
+		}
+	}
+
+	&__item:first-child &__title {
+		border-radius: $border-radius-base $border-radius-base 0px 0px;
+	}
+
+	&__item:last-child &__title {
+		border-radius: 0px 0px $border-radius-base $border-radius-base;
+	}
+
+	&__item:last-child &__text {
+		border-radius: 0px 0px $border-radius-base $border-radius-base;
+	}
+
+	&--active &__title {
+		background: $color-green;
+		color: #fff;
+	}
+
+	&--active:last-child &__title {
+		border-radius: 0px;
+	}
+
+	&__icon {
+		display: block;
+		@include rem(font-size, 20px);
+		@include rem(line-height, 26px);
+		@include rem(padding, 10px 15px);
+		position: absolute;
+		top: 0px;
+		right: 0px;
+	}
+
+	&--icon-up {
+		display: none;
+	}
+
+	&--active &--icon-up {
+		display: block;
+	}
+
+	&--icon-down {
+		display: block;
+	}
+
+	&--active &--icon-down {
+		display: none;
+	}
+
+	&__text {
+		display: none;
+		@include rem(padding, 15px 30px);
+		background: lighten($color-grey, 38%);
+		@include rem(font-size, 15px);
+		@include rem(line-height, 25px);
+
+		& p {
+			@include rem(margin, 15px 0px);
+
+			&:first-child {
+				margin-top: 0px;
+			}
+
+			&:last-child {
+				margin-bottom: 0px;
+			}
+		}
+
+		& ul {
+
+		}
+
+		& ul li {
+			position: relative;
+			@include rem(padding-left, 16px);
+
+			&:after {
+				content: "";
+				display: block;
+				position: absolute;
+				top: 8px;
+				left: 0px;
+				width: 6px;
+				height: 6px;
+				background: $color-green;
+				border-radius: 50%;
+			}
+		}
+
+		& b, & strong {
+			font-weight: bold;
+		}
+
+		& em {
+			font-style: italic;
+		}
+
+		& .green {
+			color: $color-green;
+		}
+	}
+
+	&--active {
+		border-top: none;
+	}
+
+	&--active &__text {
+		display: block;
+	}
+}
+
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.faq {
+
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.faq {
+
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.faq {
+
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.faq {
+
+	}
+}

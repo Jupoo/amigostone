@@ -1,0 +1,130 @@
+.breadcrumbs {
+    @include rem(padding-bottom, 20px);
+    font-size: 0;
+    list-style: none;
+    margin: 0;
+
+    &__item {
+        display: inline-block;
+        white-space: nowrap;
+        @include rem(margin, 2px 4px 2px 8px);
+        max-width: 94%;
+
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        vertical-align: top;
+        background: $color-grey-lighter;
+        @include rem(font-size, 16px);
+		@include rem(line-height, 28px);
+		@include rem(min-height, 28px);
+		@include rem(padding, 0px 8px);
+        color: $color-grey-dark;
+        cursor: pointer;
+        position: relative;
+        text-decoration: none;
+        transition: all $transition-speed ease;
+        max-width: 100%;
+
+        &:before,
+        &:after {
+            content: '';
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            border-style: solid;
+            border-width: 14px 0 14px 8px;
+            transition: all $transition-speed ease;
+        }
+
+        &:after {
+            right: -8px;
+            border-color: transparent;
+            border-left-color: $color-grey-lighter;
+        }
+
+        &:before {
+            left: -8px;
+            border-color: $color-grey-lighter;
+            border-left-color: transparent;
+        }
+
+        &:hover, &:focus {
+            background: darken($color-grey-lighter, 5%);
+            color: darken($color-grey-dark, 10%);
+
+            &:after {
+                border-color: transparent;
+                border-left-color: darken($color-grey-lighter, 5%);
+            }
+
+            &:before {
+                border-color: darken($color-grey-lighter, 5%);
+                border-left-color: transparent;
+            }
+        }
+    }
+
+    &__item:last-child &__link {
+        cursor: default;
+        color: #fff;
+        background-color: $color-green;
+
+        &:after {
+            border-color: transparent;
+            border-left-color: $color-green;
+        }
+        &:before {
+            border-color: $color-green;
+            border-left-color: transparent;
+        }
+    }
+
+    &__item:first-child &__link {
+        border-radius: $border-radius-base 0px 0px $border-radius-base;
+
+        &:before {
+            display: none;
+        }
+    }
+
+    &__text {
+        display: block;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+}
+
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.breadcrumbs {
+
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.breadcrumbs {
+
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.breadcrumbs {
+
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.breadcrumbs {
+
+	}
+}

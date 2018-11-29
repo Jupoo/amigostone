@@ -1,0 +1,366 @@
+.product-detail {
+	&__status {
+		background: $color-base;
+		@include rem(padding, 10px 15px);
+		color: #fff;
+		text-align: right;
+		border-radius: $border-radius-base;
+		@include rem(font-size, 15px);
+		@include rem(line-height, 15px);
+	}
+
+	&__status-item {
+		display: inline-block;
+		vertical-align: top;
+		@include rem(padding, 0px 15px);
+		border-right: solid 1px $color-grey;
+
+		&:first-child {
+			padding-left: 0px;
+		}
+
+		&:last-child {
+			padding-right: 0px;
+			border-right: none;
+		}
+	}
+
+	&__status-icon {
+		display: inline-block;
+		vertical-align: top;
+		@include rem(margin-right, 10px);
+		@include rem(font-size, 15px);
+		@include rem(line-height, 15px);
+
+		&.icon--truck {
+			@include rem(font-size, 17px);
+		}
+	}
+
+	&__img {
+		border-radius: $border-radius-base;
+		overflow: hidden;
+
+		& img {
+			width: 100%;
+		}
+	}
+
+	&__info {
+		text-align: center;
+	}
+
+	&__info-icon {
+		display: inline-block;
+		vertical-align: top;
+		@include rem(font-size, 24px);
+		@include rem(line-height, 50px);
+		@include rem(width, 54px);
+		@include rem(height, 54px);
+		color: $color-green;
+		background: none;
+		border: solid 2px $color-green;
+		border-radius: 50%;
+	}
+
+	&__info-title {
+		font-family: $font-medium;
+		@include rem(margin-top, 10px);
+		text-transform: uppercase;
+		@include rem(font-size, 14px);
+		@include rem(line-height, 20px);
+		@include rem(height, 40px);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__info-text {
+		font-weight: bold;
+		color: $color-green;
+		@include rem(font-size, 40px);
+		@include rem(line-height, 40px);
+		@include rem(margin-top, 10px);
+	}
+
+	&__info-rating {
+		@include rem(margin-top, 20px);
+	}
+
+	&__list {
+		@include rem(font-size, 18px);
+		@include rem(line-height, 24px);
+	}
+
+	&__list-item {
+		white-space: nowrap;
+
+		& a {
+			display: block;
+		}
+	}
+
+	&__list-count {
+		display: inline-block;
+		//vertical-align: top;
+		@include rem(font-size, 14px);
+		font-weight: bold;
+		color: $color-green-dark;
+	}
+
+	&__list-icon {
+		display: inline-block;
+		//vertical-align: top;
+		@include rem(margin-right, 10px);
+	}
+
+	&__contacts {
+		display: inline-block;
+		vertical-align: top;
+		@include rem(margin, 0px 20px);
+		@include rem(font-size, 16px);
+		@include rem(line-height, 30px);
+		font-family: $font-medium;
+		cursor: pointer;
+		transition: all $transition-speed ease;
+		color: #fff;
+		position: relative;
+		white-space: nowrap;
+
+		&:first-child {
+			margin-left: 0px;
+		}
+
+		&:last-child {
+			margin-right: 0px;
+		}
+
+		&:hover, &.active {
+			color: darken($color-orange,20%);
+		}
+	}
+
+	&__contacts-icon {
+		display: inline-block;
+		vertical-align: top;
+		@include rem(margin-right, 10px);
+		background: #fff;
+		color: $color-orange;
+		border-radius: 50%;
+		@include rem(font-size, 14px);
+		@include rem(line-height, 30px);
+		@include rem(width, 30px);
+		@include rem(height, 30px);
+		transition: all $transition-speed ease;
+
+		&.icon--location {
+			@include rem(font-size, 16px);
+		}
+	}
+
+	&__contacts.active &__contacts-icon,
+	&__contacts:hover &__contacts-icon {
+		color: #fff;
+		background: darken($color-orange,20%);
+	}
+
+	&__contacts-text {
+		position: absolute;
+		z-index: 1;
+		top: 45px;
+		left: -10px;
+		@include rem(width, 250px);
+		@include rem(padding, 5px 10px);
+		background: $color-base;
+		text-align: left;
+		@include rem(font-size, 14px);
+		@include rem(line-height, 22px);
+		white-space: normal;
+		border-radius: 0px 0px $border-radius-base $border-radius-base;
+		color: #fff;
+		display: none;
+		cursor: default;
+
+		&:after {
+			content: "";
+			position: absolute;
+			top: -10px;
+			left: 20px;
+			border-style: solid;
+			border-width: 5px 5px 5px 5px;
+			border-color: $color-orange;
+			border-bottom-color: $color-base;
+		}
+	}
+
+	&__contacts.active &__contacts-text {
+		display: block;
+	}
+
+	&__contacts.active a.product-detail__contacts-text {
+		cursor: pointer;
+	}
+
+	&__contacts.active a.product-detail__contacts-text:hover {
+		color: $color-green;
+	}
+
+	&__contacts:last-child &__contacts-text {
+		left: auto;
+		right: -10px;
+
+		&:after {
+			left: auto;
+			right: 20px;
+		}
+	}
+}
+
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.product-detail {
+		&__list {
+			@include rem(font-size, 16px);
+			@include rem(line-height, 22px);
+		}
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.product-detail {
+		&__info-title {
+			@include rem(font-size, 12px);
+			@include rem(line-height, 18px);
+			@include rem(height, 36px);
+			@include rem(margin-top, 5px);
+		}
+
+		&__info-text {
+			@include rem(font-size, 30px);
+			@include rem(line-height, 30px);
+			@include rem(margin-top, 5px);
+		}
+
+		&__info-rating {
+			@include rem(margin-top, 11px);
+		}
+
+		&__info-icon {
+			@include rem(font-size, 20px);
+			@include rem(line-height, 40px);
+			@include rem(width, 44px);
+			@include rem(height, 44px);
+		}
+
+		&__contacts {
+			@include rem(margin, 0px 10px);
+			@include rem(font-size, 15px);
+		}
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.product-detail {
+		&__img-wrap {
+			@include rem(max-width, 350px);
+			margin: 0 auto;
+		}
+
+		&__status {
+			text-align: left;
+			@include clearfix();
+			@include rem(padding, 5px 15px);
+		}
+
+		&__status-item {
+			display: block;
+			@include rem(padding, 0px);
+			@include rem(margin, 10px 0px);
+			border: none;
+			float: left;
+			width: 50%;
+
+			&:first-child {
+				padding-left: 0px;
+			}
+
+			&:last-child {
+				padding-right: 0px;
+				border-right: none;
+			}
+		}
+
+		&__list {
+			@include rem(line-height, 20px);
+		}
+
+		&__list-item a {
+			border-bottom: solid 1px $color-border;
+			@include rem(padding, 10px 0px);
+		}
+
+		&__list-item:last-child a {
+			border-bottom: none;
+			padding-bottom: 0px;
+		}
+
+		&__list-item:first-child a {
+			padding-top: 0px;
+		}
+
+		&__contacts-wrap {
+			@include clearfix();
+		}
+
+		&__contacts {
+			display: block;
+			margin: 0px;
+			text-align: left;
+			@include rem(padding, 5px 0px);
+			float: left;
+			width: 50%;
+
+			/*&:first-child {
+				padding-top: 0px;
+			}
+
+			&:last-child {
+				padding-bottom: 0px;
+			}*/
+		}
+
+		&__contacts-text {
+			border-radius: $border-radius-base;
+		}
+
+		&__contacts:last-child &__contacts-text {
+			left: -10px;
+			right: auto;
+
+			&:after {
+				left: 20px;
+				right: auto;
+			}
+		}
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.product-detail {
+		&__status-item {
+			width: 100%;
+		}
+
+		&__list {
+			@include rem(font-size, 14px);
+		}
+
+		&__contacts {
+			width: 100%;
+		}
+	}
+}

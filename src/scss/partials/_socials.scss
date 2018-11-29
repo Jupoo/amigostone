@@ -1,0 +1,135 @@
+.socials {
+	display: flex;
+	@include rem(font-size, 16px);
+
+	&__btn {
+		height: em(26px);
+		width: em(26px);
+		min-width: em(26px);
+		background: #fff;
+		border-radius: $border-radius-base;
+		@include rem(margin, 0px 5px);
+		line-height: em(26px);
+		color: $color-green;
+		transition: all $transition-speed ease;
+
+		&:first-child {
+			margin-left: 0px;
+		}
+
+		&:last-child {
+			margin-right: 0px;
+		}
+
+		&:hover {
+			background: $color-green-darker;
+			color: #fff;
+		}
+	}
+
+	&--fb:before {
+		font-size: em(20px);
+	}
+
+	&--pint:before {
+		font-size: em(20px);
+	}
+
+	&--ggl:before {
+    	font-size: em(18px);
+	}
+
+	&-vk:before {
+		font-size: em(20px);
+	}
+
+	&--yt:before {
+		font-size: em(22px);
+	}
+
+	&--inst:before {
+		font-size: em(24px);
+	}
+
+	&--big {
+		@include rem(font-size, 19px);
+	}
+
+	/*&--fb {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		&:after {
+			content: "";
+			display: block;
+			@include spritePosition($SPRITE__icon_socials_fb, $retina:1);
+			@include spriteWidth($SPRITE__icon_socials_fb, $retina:1);
+			@include spriteHeight($SPRITE__icon_socials_fb, $retina:1);
+			@include spriteImage($SPRITE__icon_socials_fb, $retina:1);
+		}
+	}*/
+
+	&--grey &__btn {
+		color: $bg-grey-dark;
+
+		&:hover {
+			background: $color-green;
+			color: #fff;
+		}
+	}
+
+	&--green &__btn {
+		background: $color-green;
+		color: #fff;
+
+		&:hover {
+			background: $color-green-darker;
+			color: #fff;
+		}
+	}
+}
+
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.socials {
+		&--big {
+			@include rem(font-size, 16px);
+		}
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.socials {
+
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.socials {
+
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.socials {
+
+	}
+}
+
+/*@media
+(-webkit-min-device-pixel-ratio: #{$SCREEN_RETINA_pixel_ratio}),
+(min-resolution: #{$SCREEN_RETINA_resolution}dpi) {
+   .socials {
+	   &--fb:after {
+			@include spritePosition($SPRITE__icon_socials_fb, $retina:2);
+			@include spriteWidth($SPRITE__icon_socials_fb, $retina:2);
+			@include spriteHeight($SPRITE__icon_socials_fb, $retina:2);
+			@include spriteImage($SPRITE__icon_socials_fb, $retina:2);
+	   }
+   }
+}*/

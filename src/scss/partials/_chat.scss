@@ -1,0 +1,119 @@
+.chat {
+	display: flex;
+  	flex-direction: column;
+  	height: 100%;
+
+	&__body {
+		flex-grow: 1;
+	    flex-shrink: 0;
+	    flex-basis: auto;
+		@include rem(height, 293px);
+    	overflow: auto;
+		border-top: solid 1px $color-border;
+	}
+
+	&__mess {
+		border-top: solid 1px $color-border;
+		@include rem(padding, 10px 15px);
+
+		&:first-child {
+			border-top: none;
+		}
+	}
+
+	&__mess-header {
+		@include clearfix();
+	}
+
+	&__mess-name {
+		display: block;
+		font-family: $font-medium;
+		@include rem(font-size, 14px);
+		@include rem(line-height, 28px);
+		float: left;
+		width: 70%;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+
+	&__mess-date {
+		@include rem(font-size, 12px);
+		@include rem(line-height, 14px);
+		color: $color-grey-dark;
+		text-align: right;
+		float: right;
+		width: 30%;
+	}
+
+	&__mess-text {
+		@include rem(font-size, 15px);
+		@include rem(line-height, 21px);
+		@include rem(margin-top, 10px);
+	}
+
+	&__write {
+		flex-grow: 0;
+		flex-shrink: 0;
+		flex-basis: auto;
+		border-top: solid 1px $color-border;
+		@include rem(padding, 15px);
+		background: $color-green-maxextralight;
+	}
+
+	&__write-area {
+		@include rem(font-size, 14px);
+		@include rem(line-height, 18px);
+		@include rem(height, 76px);
+		@include rem(padding, 10px);
+		width: 100%;
+		border: solid 1px $color-border-form;
+		border-left: solid 3px $color-green;
+		background: #fff;
+		display: block;
+		font-family: $font-reg;
+		border-radius: $border-radius-base;
+		color: $color-base;
+		resize: none;
+
+		&::-webkit-input-placeholder {
+			line-height: 18px;
+			color: $color-placeholder;
+		}
+
+		&:focus {
+			border: solid 1px darken($color-border-form, 10%);
+			border-left: solid 3px $color-green;
+			color: $color-base;
+		}
+	}
+}
+
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.chat {
+
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.chat {
+
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.chat {
+
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.chat {
+
+	}
+}

@@ -1,0 +1,137 @@
+.notice {
+	display: block;
+	@include rem(padding, 10px 15px);
+	@include rem(margin, 0px -15px);
+	border-top: solid 1px $color-border;
+
+	&--new &__icon {
+		color: $color-orange;
+	}
+
+	&:hover {
+		background: $color-grey-extralight;
+	}
+
+	&--new {
+		background: $color-green-maxextralight;
+
+		&:hover {
+			background: darken($color-green-maxextralight,1%);
+		}
+	}
+
+	&__info {
+		@include rem(font-size, 16px);
+		@include rem(line-height, 20px);
+	}
+
+	&__name {
+		display: block;
+		font-family: $font-medium;
+		overflow: hidden;
+		color: $color-grey-dark;
+	}
+
+	&--new &__name {
+		color: $color-green;
+	}
+
+	&__icon {
+		color: $color-grey;
+		@include rem(min-width, 30px);
+		@include rem(font-size, 18px);
+		@include rem(line-height, 20px);
+		text-align: left;
+		float: left;
+	}
+
+	&__mess {
+		overflow: hidden;
+	}
+
+	&__description {
+		@include rem(font-size, 14px);
+		@include rem(line-height, 18px);
+		@include rem(margin-top, 10px);
+		color: $color-grey-dark;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+
+	&__datetime {
+		text-align: right;
+		color: $color-grey;
+		@include rem(font-size, 12px);
+		font-family: $font-medium;
+		@include rem(min-width, 100px);
+		float: right;
+	}
+
+	&__date {
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	&__time {
+		display: inline-block;
+		vertical-align: top;
+		@include rem(margin-left, 5px);
+	}
+
+	&__order {
+		@include rem(font-size, 14px);
+		@include rem(line-height, 18px);
+		@include rem(margin-top, 10px);
+		color: $color-green;
+
+		& span {
+			font-family: $font-medium;
+			text-transform: uppercase;
+		}
+	}
+}
+
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.notice {
+
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.notice {
+
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.notice {
+
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.notice {
+		&__info {
+			@include rem(font-size, 14px);
+			@include rem(line-height, 18px);
+		}
+
+		&__icon {
+			@include rem(font-size, 16px);
+			@include rem(line-height, 16px);
+			@include rem(min-width, 25px);
+		}
+
+		&__datetime {
+			width: 100%;
+			float: none;
+			@include rem(margin-bottom, 5px);
+		}
+	}
+}

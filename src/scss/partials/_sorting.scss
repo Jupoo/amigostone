@@ -1,0 +1,109 @@
+.sorting {
+	background: #fff;
+	border: solid 1px $color-border;
+	@include rem(font-size, 16px);
+	@include rem(line-height, 24px);
+	@include rem(padding, 15px);
+	@include rem(margin-bottom, 20px);
+	border-radius: $border-radius-base;
+	@include clearfix();
+
+	&__title {
+		float: left;
+		@include rem(margin-right, 30px);
+	}
+
+	&__body {
+		float: right;
+		@include clearfix();
+	}
+
+	&__order-by {
+		float: left;
+		@include clearfix();
+		@include rem(margin-left, 20px);
+
+		&:first-child {
+			margin-left: 0px;
+		}
+	}
+
+	&__order-by-label {
+		color: $color-grey;
+		@include rem(font-size, 14px);
+		float: left;
+		@include rem(margin-right, 5px);
+	}
+
+	&__toggle-views {
+		display: block;
+		float: left;
+		padding: 0px 5px;
+		background: $color-grey-extralight;
+		@include rem(font-size, 14px);
+		@include rem(line-height, 22px);
+		@include rem(min-width, 24px);
+		@include rem(margin-left, 5px);
+		text-align: center;
+		font-family: $font-medium;
+		border-radius: $border-radius-base;
+		border: solid 1px $color-border;
+		color: $color-grey;
+		transition: all $transition-speed ease;
+
+		&:hover {
+			background: $color-grey-lighter;
+			color: $color-grey-dark;
+			border: solid 1px darken($color-border, 10%);
+		}
+	}
+
+	&__icon {
+		display: inline-block;
+    	vertical-align: top;
+		@include rem(font-size, 16px);
+	}
+
+	&--toggle-views-active {
+		background: $color-green;
+		border: solid 1px $color-green;
+		color: #fff;
+
+		&:hover {
+			background: $color-green-dark;
+			border: solid 1px $color-green-dark;
+			color: #fff;
+		}
+	}
+}
+
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.sorting {
+
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.sorting {
+
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.sorting {
+		&__title {
+			display: none;
+		}
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.sorting {
+
+	}
+}

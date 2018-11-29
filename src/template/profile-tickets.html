@@ -1,0 +1,71 @@
+<!-- @@master  = partials/_master-accounts.html-->
+ 
+<!-- @@block  =  content-->
+<section class="page__section">
+    <div class="page__content-inner">
+        <ul class="breadcrumbs">
+            <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link"><span class="icon--home"></span></a></li>
+            <li class="breadcrumbs__item"><a href="profile.html" class="breadcrumbs__link">Личный кабинет</a></li>
+            <li class="breadcrumbs__item"><div class="breadcrumbs__link">Мои заказы</div></li>
+        </ul>
+        <div class="page__header">
+            <h1 class="page__header-title">Личный кабинет | ООО СТУПКА</h1>
+        </div>
+        <div class="page__body profile">
+            <div class="row">
+                <div class="col-xl-3 col-md-4">
+                    <div class="col-bottom-min">
+                        <!-- @@include = partials/_profile-card.html -->
+                    </div>
+                    <!-- @@include = partials/_profile-menu.html -->
+                </div>
+                <div class="col-xl-9 col-md-8 col-sm-top-min">
+                    <div class="col-bottom-min">
+                        <!-- @@include = partials/_profile-menu-top.html -->
+                    </div>
+                    <div class="col-bottom-min">
+                        <div class="pos-md-center">
+                            <div class="profile__header">Ваши обращения</div>
+                        </div>
+                    </div>
+
+                    <!-- Выводится, если диалогов нет BEGIN-->
+                    <div class="box page__info col-bottom-min">Вы пока не обращались к администрации. Для создания обращения нажмите кнопку согласно проблеме.</div>
+                    <div class="pos-center">
+                        <a href="/profile-ticket.html" class="btn btn--micro col-md-full"><span class="icon--help"></span>Задать вопрос администрации</a>
+                        <a href="/profile-ticket.html" class="btn btn--micro btn--orange col-md-full marg-l-min-md-reset col-md-top-micro marg-l-micro"><span class="icon--attention"></span>Сообщить о проблеме</a>
+                    </div>
+                    <!-- Выводится, если диалогов нет END-->
+
+                    <div class="box page__info col-bottom-min">Здесь отображаются все ваши обращения к администрации Amigo Stone</div>
+                    <div class="col-bottom-min">
+                        <div class="row">
+                            <div class="col-xl-8 col-lg-7 col-md-12 col-sm-6">&nbsp</div>
+                            <div class="col-xl-4 col-lg-5 col-md-12 col-sm-6">
+                                <div class="pseudo-select">
+                                    <div class="pseudo-select__control">
+                                        <div class="pseudo-select__arrow"><span class="icon--down-open-mini"></span></div>
+                                        <div class="pseudo-select__text">Все обращения</div>
+                                    </div>
+                                    <ul class="pseudo-select__list">
+                                        <li class="pseudo-select__option current" data-value="1">Все обращения</li>
+                                        <li class="pseudo-select__option" data-value="2">Открытые обращения</li>
+                                        <li class="pseudo-select__option" data-value="3">Закрытые обращения</li>
+                                    </ul>
+                                    <select name="status" class="pseudo-select__real">
+                                        <option value="1" selected="selected">Все обращения</option>
+                                        <option value="2">Открытые обращения</option>
+                                        <option value="3">Закрытые обращения</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- @@include = partials/_ticket.html -->
+                    <!-- @@include = partials/_ticket.html -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- @@close-->

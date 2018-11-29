@@ -1,0 +1,63 @@
+.separate-line {
+	height: 1px;
+	width: 100%;
+	@include rem(margin, 40px 0px);
+	background: $color-border;
+
+	&--min {
+		@include rem(margin, 20px 0px);
+	}
+
+	&--minless {
+		@include rem(margin, 15px 0px);
+	}
+
+	&--micro {
+		@include rem(margin, 10px 0px);
+	}
+
+	&--nopadd {
+		@include rem(margin, 0px);
+	}
+}
+
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.separate-line {
+
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.separate-line {
+
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.separate-line {
+		@include rem(margin, 30px 0px);
+
+		&--min {
+			@include rem(margin, 20px 0px);
+		}
+
+		&--minless {
+			@include rem(margin, 15px 0px);
+		}
+
+		&--micro {
+			@include rem(margin, 10px 0px);
+		}
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.separate-line {
+
+	}
+}

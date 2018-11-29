@@ -1,0 +1,111 @@
+.block-info {
+	background: $bg-grey-light;
+	border: solid 1px $color-border;
+	min-height: 100%;
+	@include rem(padding, 15px);
+	border-radius: $border-radius-base;
+
+	&__header {
+		font-family: $font-medium;
+		text-align: center;
+		border-bottom: solid 1px $color-border;
+		@include rem(font-size, 18px);
+		@include rem(line-height, 21px);
+		@include rem(padding-bottom, 10px);
+		@include rem(margin-bottom, 10px);
+	}
+
+	&__list {
+		@include rem(font-size, 14px);
+		@include rem(line-height, 20px);
+	}
+
+	&__list-item {
+		position: relative;
+		@include rem(padding-left, 15px);
+		@include rem(margin-bottom, 10px);
+
+		&:after {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 6px;
+			left: 0px;
+			width: 6px;
+    		height: 6px;
+			background: $color-green;
+			border-radius: 50%;
+		}
+	}
+
+	&__list-inner {
+		border-bottom: dashed 1px $color-green;
+	}
+
+	&__text {
+		@include rem(font-size, 14px);
+		@include rem(line-height, 20px);
+
+		& p {
+			@include rem(margin, 5px 0px);
+			margin: 5px 0px;
+
+			&:first-child {
+				margin-top: 0;
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		& b {
+			font-weight: bold;
+		}
+	}
+
+	&__banners {
+
+	}
+
+	&__banner {
+		display: block;
+		background: $bg-grey-light;
+		border: solid 1px $color-border;
+		max-width: 350px;
+    	margin: 0 auto;
+
+		& img {
+			width: 100%;
+		}
+	}
+}
+
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.block-info {
+
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.block-info {
+
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.block-info {
+
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.block-info {
+
+	}
+}

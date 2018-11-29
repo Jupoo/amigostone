@@ -1,0 +1,311 @@
+.message {
+	background: #fff;
+	border: solid 1px $color-border;
+	border-radius: $border-radius-base;
+
+	&__order {
+		color: $color-grey;
+		@include rem(font-size, 12px);
+		@include rem(padding, 5px 15px);
+		font-family: $font-medium;
+		border-bottom: solid 1px $color-border;
+		border-radius: $border-radius-base $border-radius-base 0px 0px;
+	}
+
+	&--detail &__order {
+
+	}
+
+	&__order-id {
+
+	}
+
+	&__order-id-num {
+		color: $color-green;
+	}
+
+	&__order-icon {
+		@include rem(font-size, 16px);
+		@include rem(margin-right, 5px);
+	}
+
+	&__order-date {
+
+	}
+
+	&__order-name {
+		display: block;
+		font-family: $font-medium;
+		overflow: hidden;
+		@include rem(font-size, 16px);
+		@include rem(line-height, 20px);
+		@include rem(padding, 5px 15px);
+		background: darken($color-grey-extralight,2%);
+		border-bottom: solid 1px $color-border;
+		color: $color-base;
+	}
+
+	a.message__order-name:hover {
+		color: $color-green;
+	}
+
+	&__body {
+		@include rem(padding, 15px);
+		@include clearfix();
+		display: block;
+		transition: all $transition-speed ease;
+		background: #fff;
+	}
+
+	&--detail &__body {
+		background: darken($color-grey-dark,10%);
+	}
+
+	a.message__body:hover {
+		background: $color-green-maxextralight;
+	}
+
+	&__user {
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+	}
+
+	&__img {
+		@include rem(width, 32px);
+		@include rem(min-width, 32px);
+		@include rem(height, 32px);
+		@include rem(min-height, 32px);
+		border-radius: 50%;
+		overflow: hidden;
+		border: solid 1px $color-border;
+		background: $color-grey-extralight;
+
+		& img {
+			width: 100%;
+		}
+	}
+
+	&__name {
+		@include rem(padding-left, 10px);
+		@include rem(font-size, 14px);
+		@include rem(line-height, 16px);
+		font-family: $font-medium;
+		color: $color-base;
+		transition: all $transition-speed ease;
+	}
+
+	&--detail &__name {
+		color: #fff;
+	}
+
+	a.message__body:hover &__name {
+		color: $color-green;
+	}
+
+	&__text {
+		@include rem(padding-left, 10px);
+		@include rem(font-size, 15px);
+		@include rem(line-height, 21px);
+		color: $color-base;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
+
+	&__btn {
+		float: right;
+		@include rem(padding-left, 15px);
+	}
+
+	a.message__body:hover &__btn .btn {
+		background: darken($color-green, 5%);
+	}
+
+	&__stat {
+		text-align: right;
+		border-top: solid 1px $color-border;
+		@include rem(padding, 10px 15px);
+	}
+
+	&__stat-mess {
+		color: $color-grey;
+		@include rem(font-size, 14px);
+		@include rem(line-height, 17px);
+		font-family: $font-medium;
+	}
+
+	&__body &__stat-mess {
+		color: #fff;
+	}
+
+	&__stat-icon {
+		display: inline-block;
+		vertical-align: top;
+		@include rem(font-size, 16px);
+		@include rem(margin-right, 5px);
+	}
+
+	&--stat-mess-new &__stat-icon {
+		color: $color-orange;
+	}
+
+	&__stat-text {
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	&__stat-count {
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	&__stat-new {
+		color: #fff;
+		background: $color-orange;
+		@include rem(padding, 0px 5px);
+		@include rem(margin-left, 5px);
+		border-radius: $border-radius-base;
+		display: inline-block;
+		vertical-align: top;
+		@include rem(font-size, 12px);
+		@include rem(line-height, 16px);
+		font-family: $font-reg;
+	}
+
+	&__mess-count {
+		float: right;
+		@include rem(padding-left, 15px);
+		@include rem(padding-top, 6px);
+	}
+
+	&__chat {
+
+	}
+
+	&__chat-body {
+		@include rem(height, 400px);
+    	overflow: auto;
+	}
+
+	&__chat-mess {
+		border-top: solid 1px $color-border;
+		@include rem(padding, 10px 15px);
+	}
+
+	&__chat-mess-header {
+		@include clearfix();
+	}
+
+	&__chat-mess-name {
+		display: block;
+		font-family: $font-medium;
+		@include rem(font-size, 14px);
+		@include rem(line-height, 20px);
+		@include rem(padding-top, 4px);
+		float: left;
+		width: 70%;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+
+	&__chat-mess-date {
+		@include rem(font-size, 12px);
+		@include rem(line-height, 20px);
+		color: $color-grey-dark;
+		text-align: right;
+		float: right;
+		width: 30%;
+		@include rem(padding-top, 4px);
+	}
+
+	&__chat-mess-text {
+		@include rem(font-size, 15px);
+		@include rem(line-height, 21px);
+		@include rem(margin-top, 10px);
+	}
+
+	&__chat-write {
+		border-top: solid 1px $color-border;
+		@include rem(padding, 15px);
+		background: $color-green-maxextralight;
+		border-radius: 0px 0px $border-radius-base $border-radius-base;
+	}
+
+	&__chat-write-area {
+		@include rem(font-size, 14px);
+		@include rem(line-height, 18px);
+		@include rem(height, 76px);
+		@include rem(padding, 10px);
+		width: 100%;
+		border: solid 1px $color-border-form;
+		border-left: solid 3px $color-green;
+		background: #fff;
+		display: block;
+		font-family: $font-reg;
+		border-radius: $border-radius-base;
+		color: $color-base;
+		resize: none;
+
+		&::-webkit-input-placeholder {
+			line-height: 18px;
+			color: $color-placeholder;
+		}
+
+		&:focus {
+			border: solid 1px darken($color-border-form, 10%);
+			border-left: solid 3px $color-green;
+			color: $color-base;
+		}
+	}
+
+	&__chat-mess-img {
+		@include rem(width, 28px);
+		@include rem(height, 28px);
+		@include rem(margin-right, 10px);
+		@include rem(margin-top, -4px);
+		border-radius: 50%;
+		overflow: hidden;
+		border: solid 1px $color-border;
+		background: $color-grey-extralight;
+		display: inline-block;
+		vertical-align: top;
+
+		& img {
+			width: 100%;
+		}
+	}
+}
+
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.message {
+
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.message {
+
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.message {
+		&__order-name {
+			@include rem(font-size, 14px);
+			@include rem(line-height, 18px);
+		}
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.message {
+
+	}
+}

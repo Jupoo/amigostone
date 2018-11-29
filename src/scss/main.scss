@@ -1,0 +1,113 @@
+// VARIABLES
+@import "_variables.scss";
+@import '_sprite.scss'; //Сгенеренные переменные с данными для микшинов спрайта
+
+// NORMALIZE
+@import '_normalize.scss'; //normalize custom
+
+
+// FONTS
+@import "_fonts.scss";
+@import "_fontello.scss";
+
+
+// FUNCTIONS
+@import "_functions.scss";
+
+// MIXINS
+@import 'mixins/_mix-sprite.scss'; //Микшины для спрайта
+@import 'mixins/_mix-rem.scss'; //Микшин для rem
+
+@import 'mixins/_clearfix.scss'; //Микшин для clearfix
+@import 'utilities/_clearfix.scss'; //Утилита для clearfix
+
+@import 'mixins/_shadow.scss'; //Микшин для shadow
+@import 'utilities/_shadow.scss'; //Утилита для shadow
+
+
+// BOOTSTRAP СЕТКА
+@import "bootstrap/_variables.scss";
+@import "bootstrap/_breakpoints.scss";
+@import "bootstrap/_grid-framework.scss";
+@import "bootstrap/_mixins-grid.scss";
+@import "bootstrap/_grid.scss";
+
+
+// GLOBAL
+@import "_scaffolding.scss";
+
+
+// BEM-BLOCKS
+@import "partials/_page.scss";
+@import "partials/_page-header.scss";
+@import "partials/_page-footer.scss";
+@import "partials/_box.scss";
+@import "partials/_heading.scss";
+@import "partials/_modal-window.scss";
+@import "partials/_confirm-win.scss";
+
+@import "partials/_btn.scss";
+@import "partials/_form.scss";
+@import "partials/_pseudo-select.scss";
+@import "partials/_pseudo-check.scss";
+@import "partials/_smart-search.scss";
+@import "partials/_socials.scss";
+
+@import "partials/_tabs.scss";
+@import "partials/_tabs-page.scss";
+@import "partials/_show-more.scss";
+@import "partials/_separate-line.scss";
+
+@import "partials/_subscription.scss";
+@import "partials/_footer-menu.scss";
+
+@import "partials/_why.scss";
+@import "partials/_steps.scss";
+@import "partials/_video.scss";
+@import "partials/_block-info.scss";
+@import "partials/_services.scss";
+@import "partials/_counter.scss";
+@import "partials/_slide-main.scss";
+@import "partials/_reg-info.scss";
+@import "partials/_contacts.scss";
+@import "partials/_faq.scss";
+@import "partials/_geoip.scss";
+
+@import "partials/_product-card.scss";
+@import "partials/_product-detail.scss";
+@import "partials/_news-card.scss";
+@import "partials/_order.scss";
+@import "partials/_order-response.scss";
+@import "partials/_order-answer.scss";
+@import "partials/_review.scss";
+@import "partials/_order-docs.scss";
+
+@import "partials/_catalog-card.scss";
+@import "partials/_catalog-item.scss";
+@import "partials/_catalog-detail.scss";
+@import "partials/_catalog-buy.scss";
+
+@import "partials/_filter.scss";
+@import "partials/_sorting.scss";
+@import "partials/_filter-top.scss";
+@import "partials/_sorting-cabinet.scss";
+@import "partials/_categories.scss";
+@import "partials/_breadcrumbs.scss";
+@import "partials/_pagination.scss";
+@import "partials/_chat.scss";
+
+// ЛИЧНЫЙ КАБИНЕТ
+@import "partials/_reg.scss";
+@import "partials/_profile.scss";
+@import "partials/_notice.scss";
+@import "partials/_notice-order.scss";
+@import "partials/_notification.scss";
+@import "partials/_message.scss";
+@import "partials/_stone-select.scss";
+@import "partials/_docs.scss";
+
+// ОФОРМЛЕНИЕ ЗАКАЗА
+@import "partials/_upload-formset.scss";
+
+// МЕССЕНЖЕР
+@import "partials/_messenger.scss";

@@ -1,0 +1,106 @@
+<!-- @@master  = partials/_master-accounts.html-->
+
+<!-- @@block  =  content-->
+<section class="page__section">
+    <div class="page__content-inner">
+        <ul class="breadcrumbs">
+            <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link"><span class="icon--home"></span></a></li>
+            <li class="breadcrumbs__item"><a href="profile-user.html" class="breadcrumbs__link">Личный кабинет</a></li>
+            <li class="breadcrumbs__item"><div class="breadcrumbs__link">Редактирование профиля</div></li>
+        </ul>
+        <div class="page__header">
+            <h1 class="page__header-title">Личный кабинет | Кожевникова Виктория Юрьевна</h1>
+        </div>
+        <div class="page__body profile">
+            <div class="row">
+                <div class="col-xl-3 col-md-4">
+                    <div class="col-bottom-min">
+                        <!-- @@include = partials/_profile-card-user.html -->
+                    </div>
+                    <!-- @@include = partials/_profile-menu-user.html -->
+                </div>
+                <div class="col-xl-9 col-md-8 col-sm-top-min">
+                    <div class="col-bottom-min">
+                        <!-- @@include = partials/_profile-menu-top-user.html -->
+                    </div>
+                    <!-- @@include = partials/_profile-edit-header.html -->
+                    <div class="box page__info col-bottom-min">Здесь вы можете выбрать уведомления, которые будут поступать на ваш e-mail</div>
+                    <div class="tabs-page js-tab">
+                        <!-- @@include = partials/_profile-edit-menu-user.html -->
+                        <div class="tabs-page__body tabs-page--body-no-border">
+                            <div class="box">
+                                <form action="" method="post" class="form" enctype="multipart/form-data">
+                                    <div class="page__info-header col-bottom-min">Заказы</div>
+                                    <div class="col-bottom-micro">
+                                        <label for="check1" class="pseudo-check js-check-notice">
+                                            <div class="pseudo-check__check"><span class="pseudo-check__check-icon icon--check"></span></div>
+                                            <div class="pseudo-check__text">Новый расчёт стоимости по вашему заказу</div>
+                                            <input id="check1" name="" value="yes" type="checkbox" class="pseudo-check__real" />
+                                        </label>
+                                    </div>
+                                    <div class="col-bottom-micro">
+                                        <label for="check2" class="pseudo-check js-check-notice">
+                                            <div class="pseudo-check__check"><span class="pseudo-check__check-icon icon--check"></span></div>
+                                            <div class="pseudo-check__text">Новое личное сообщение от компании</div>
+                                            <input id="check2" name="" value="yes" type="checkbox" class="pseudo-check__real" />
+                                        </label>
+                                    </div>
+
+                                    <div class="separate-line"></div>
+
+                                    <div class="page__info-header col-bottom-min">Ваши вопросы к администрации</div>
+
+                                    <div class="col-bottom-micro">
+                                        <label for="check7" class="pseudo-check js-check-notice">
+                                            <div class="pseudo-check__check"><span class="pseudo-check__check-icon icon--check"></span></div>
+                                            <div class="pseudo-check__text">Ваш вопрос принят в работу</div>
+                                            <input id="check7" name="" value="yes" type="checkbox" class="pseudo-check__real" />
+                                        </label>
+                                    </div>
+                                    <div class="col-bottom-micro">
+                                        <label for="check8" class="pseudo-check js-check-notice">
+                                            <div class="pseudo-check__check"><span class="pseudo-check__check-icon icon--check"></span></div>
+                                            <div class="pseudo-check__text">Вы получили ответ от администрации</div>
+                                            <input id="check8" name="" value="yes" type="checkbox" class="pseudo-check__real" />
+                                        </label>
+                                    </div>
+                                    <div class="col-bottom-micro">
+                                        <label for="check9" class="pseudo-check js-check-notice">
+                                            <div class="pseudo-check__check"><span class="pseudo-check__check-icon icon--check"></span></div>
+                                            <div class="pseudo-check__text">Ваш вопрос закрыт</div>
+                                            <input id="check9" name="" value="yes" type="checkbox" class="pseudo-check__real" />
+                                        </label>
+                                    </div>
+
+                                    <div class="separate-line"></div>
+
+                                    <div class="page__info-header col-bottom-min"><span class="green">Отписка от уведомлений</span></div>
+                                    <div class="js-checkshow-wrap">
+                                        <div class="col-bottom-micro">
+                                            <label for="check12" class="pseudo-check">
+                                                <div class="pseudo-check__check"><span class="pseudo-check__check-icon icon--check"></span></div>
+                                                <div class="pseudo-check__text">Отписаться от всех уведомлений</div>
+                                                <input id="check12" name="" value="yes" type="checkbox" class="pseudo-check__real js-checkshow-checkbox" data-id="unsubscribe" />
+                                            </label>
+                                        </div>
+                                        <div class="js-checkshow-show" style="display: none;">
+                                            <div class="box box--light-orange box--err page__info col-bottom-micro"><b>ВНИМАНИЕ!</b><br />Вы собираетесь отписаться от всех уведомлений на e-mail. В этом случае вы не сможете своевременно узнавать о новых расчётах по вашему заказу!</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="separate-line separate-line--min"></div>
+
+                                    <div class="box box--light-green box--ok page__info col-bottom-micro">Данные успешно сохранены!</div>
+                                    <div class="clearfix">
+                                        <button class="btn btn--min right col-xsm-full" type="submit" name="state" value="0">Сохранить</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- @@close-->

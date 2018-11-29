@@ -1,0 +1,78 @@
+.box {
+	background: #fff;
+	border: solid 1px $color-border;
+	border-radius: $border-radius-base;
+	@include rem(padding, 15px);
+
+	&--grey {
+		background: $color-grey-extralight;
+	}
+
+	&--orange {
+		background: $color-orange;
+	}
+
+	&--light-green {
+		background: $color-green-maxextralight;
+		border: solid 1px lighten($color-green,40%);
+	}
+
+	&--light-orange {
+		background: $color-orange-extralight;
+		border: solid 1px $color-orange-light;
+	}
+
+	&--err {
+		color: $color-orange;
+	}
+
+	&--ok {
+		color: $color-green;
+	}
+
+	&--inline {
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	&--no-padd {
+		padding: 0px;
+	}
+
+	& b {
+		font-family: $font-medium;
+	}
+
+	&__attention-icon {
+		@include rem(font-size, 22px);
+	}
+}
+
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.box {
+
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.box {
+
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.box {
+
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.box {
+
+	}
+}

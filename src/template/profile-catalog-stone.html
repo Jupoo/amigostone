@@ -1,0 +1,97 @@
+<!-- @@master  = partials/_master-accounts.html-->
+ 
+<!-- @@block  =  content-->
+<section class="page__section">
+    <div class="page__content-inner">
+        <ul class="breadcrumbs">
+            <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link"><span class="icon--home"></span></a></li>
+            <li class="breadcrumbs__item"><a href="profile.html" class="breadcrumbs__link">Личный кабинет</a></li>
+            <li class="breadcrumbs__item"><div class="breadcrumbs__link">Статьи</div></li>
+        </ul>
+        <div class="page__header">
+            <h1 class="page__header-title">Личный кабинет | ООО СТУПКА</h1>
+        </div>
+        <div class="page__body profile">
+            <div class="row">
+                <div class="col-xl-3 col-md-4">
+                    <div class="col-bottom-min">
+                        <!-- @@include = partials/_profile-card.html -->
+                    </div>
+                    <!-- @@include = partials/_profile-menu.html -->
+                </div>
+                <div class="col-xl-9 col-md-8 col-sm-top-min">
+                    <div class="col-bottom-min">
+                        <!-- @@include = partials/_profile-menu-top.html -->
+                    </div>
+                    <div class="col-bottom-min">
+                        <div class="clearfix">
+                            <div class="left col-md-full pos-md-center">
+                                <div class="profile__header">Каталог камня</div>
+                            </div>
+                            <div class="right col-md-full col-md-top-micro">
+                                <a href="/profile-catalog-stone-add.html" target="_blank" class="btn btn--min btn--orange col-md-full"><span class="icon--plus-squared"></span>Добавить камни</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box page__info col-bottom-min">Здесь может отображаться какая-то подсказка</div>
+                    <div class="heading heading--middle">Моя витрина</div>
+                    <div class="col-bottom-min">
+                        <div class="row row--padd-min">
+                            <div class="col-xl-4 col-lg-6 col-md-12 pos-lg-center">
+                                <div class="sorting-cabinet">
+                                    <div class="sorting-cabinet__title">по имени:</div>
+                                    <a href="" class="sorting-cabinet__toggle-views sorting-cabinet--toggle-views-active"><span class="sorting-cabinet__icon icon--up-open-mini"></span></a>
+                                    <a href="" class="sorting-cabinet__toggle-views"><span class="sorting-cabinet__icon icon--down-open-mini"></span></a>
+                                </div>
+                                <div class="sorting-cabinet marg-l-min">
+                                    <div class="sorting-cabinet__title">по дате:</div>
+                                    <a href="" class="sorting-cabinet__toggle-views sorting-cabinet--toggle-views-active"><span class="sorting-cabinet__icon icon--up-open-mini"></span></a>
+                                    <a href="" class="sorting-cabinet__toggle-views"><span class="sorting-cabinet__icon icon--down-open-mini"></span></a>
+                                </div>
+                            </div>
+                            <div class="col-xl-8 col-lg-6 col-md-12">
+                                <!-- @@include = partials/_smart-search-name.html -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Если каталог пустой-->
+                    <p>Если пусто:</p>
+                    <div class="box box--light-green box--ok page__info">Каталог пуст.</div>
+                    <p>Если не пусто:</p>
+                    <div class="row row--padd-min">
+                        <div class="col-xl-4 col-sm-6 col-bottom-min">
+                            <!-- @@include = partials/_catalog-item-edit-stone.html -->
+                        </div>
+                        <div class="col-xl-4 col-sm-6 col-bottom-min">
+                            <!-- @@include = partials/_catalog-item-edit-stone.html -->
+                        </div>
+                        <div class="col-xl-4 col-sm-6 col-bottom-min">
+                           <!-- @@include = partials/_catalog-item-edit-stone.html -->
+                        </div>
+                        <div class="col-xl-4 col-sm-6 col-bottom-min">
+                            <!-- @@include = partials/_catalog-item-edit-stone.html -->
+                        </div>
+                        <div class="col-xl-4 col-sm-6 col-bottom-min">
+                            <!-- @@include = partials/_catalog-item-edit-stone.html -->
+                        </div>
+                        <div class="col-xl-4 col-sm-6 col-bottom-min">
+                            <!-- @@include = partials/_catalog-item-edit-stone.html -->
+                        </div>
+                        <div class="col-xl-4 col-sm-6 col-bottom-min">
+                            <!-- @@include = partials/_catalog-item-edit-stone.html -->
+                        </div>
+                        <div class="col-xl-4 col-sm-6 col-bottom-min">
+                            <!-- @@include = partials/_catalog-item-edit-stone.html -->
+                        </div>
+                        <div class="col-xl-4 col-sm-6 col-bottom-min">
+                            <!-- @@include = partials/_catalog-item-edit-stone.html -->
+                        </div>
+                    </div>
+                    <!-- @@include = partials/_pagination.html -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- @@close-->

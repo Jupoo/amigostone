@@ -1,0 +1,92 @@
+<!-- @@master  = partials/_master-accounts.html-->
+ 
+<!-- @@block  =  content-->
+<section class="page__section">
+    <div class="page__content-inner">
+        <ul class="breadcrumbs">
+            <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link"><span class="icon--home"></span></a></li>
+            <li class="breadcrumbs__item"><a href="profile-user.html" class="breadcrumbs__link">Личный кабинет</a></li>
+            <li class="breadcrumbs__item"><div class="breadcrumbs__link">Мои заказы</div></li>
+        </ul>
+        <div class="page__header">
+            <h1 class="page__header-title">Личный кабинет | Кожевникова Виктория Юрьевна</h1>
+        </div>
+        <div class="page__body profile">
+            <div class="row">
+                <div class="col-xl-3 col-md-4">
+                    <div class="col-bottom-min">
+                        <!-- @@include = partials/_profile-card-user.html -->
+                    </div>
+                    <!-- @@include = partials/_profile-menu-user.html -->
+                </div>
+                <div class="col-xl-9 col-md-8 col-sm-top-min">
+                    <div class="col-bottom-min">
+                        <!-- @@include = partials/_profile-menu-top-user.html -->
+                    </div>
+                    <div class="col-bottom-min">
+                        <div class="clearfix">
+                            <div class="left col-md-full pos-md-center">
+                                <div class="profile__header">Работа с заказами</div>
+                            </div>
+                            <div class="right col-md-full col-md-top-micro">
+                                <a href="" target="_blank" class="btn btn--min btn--orange col-md-full"><span class="icon--plus-squared"></span>Разместить новый заказ</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box page__info col-bottom-min">Здесь отображаются все размещённые вами заказы.</div>
+                    <div class="col-bottom-min">
+                        <div class="tabs-page">
+                            <div class="tabs-page__btns">
+                                <a href="/profile-orders-user.html" class="tabs-page__btn-wrap tabs-page--btn-first current"><div class="tabs-page__btn">Мои заказы</div></a>
+                                <a href="/profile-orders-docs-user.html" class="tabs-page__btn-wrap"><div class="tabs-page__btn">Документы к заказам</div></a>
+                                <a href="/profile-orders-reviews-user.html" class="tabs-page__btn-wrap"><div class="tabs-page__btn">Отзывы к заказам</div></a>
+                            </div>
+                            <div class="tabs-page__body tabs-page--body-no-border">
+                                <div class="col-bottom-min">
+                                    <div class="row">
+                                        <div class="col-xl-8 col-lg-7 col-md-12 col-sm-6">&nbsp</div>
+                                        <div class="col-xl-4 col-lg-5 col-md-12 col-sm-6">
+                                            <div class="pseudo-select">
+                                                <div class="pseudo-select__control">
+                                                    <div class="pseudo-select__arrow"><span class="icon--down-open-mini"></span></div>
+                                                    <div class="pseudo-select__text">Все заказы</div>
+                                                </div>
+                                                <ul class="pseudo-select__list">
+                                                    <li class="pseudo-select__option current" data-value="1">Все заказы</li>
+                                                    <li class="pseudo-select__option" data-value="2">Проходят проверку</li>
+                                                    <li class="pseudo-select__option" data-value="3">Ожидают вашего выбора</li>
+                                                    <li class="pseudo-select__option" data-value="4">Заказы в работе</li>
+                                                    <li class="pseudo-select__option" data-value="5">Завершённые заказы</li>
+                                                    <li class="pseudo-select__option" data-value="6">Отклонённые</li>
+                                                </ul>
+                                                <select name="status" class="pseudo-select__real">
+                                                    <option value="1" selected="selected">Все заказы</option>
+                                                    <option value="2">Проходят проверку</option>
+                                                    <option value="3">Ожидают вашего выбора</option>
+                                                    <option value="4">Заказы в работе</option>
+                                                    <option value="5">Завершённые заказы</option>
+                                                    <option value="6">Отклонённые</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-bottom-min">
+                                    <!-- @@include = partials/_profile-order-user.html -->
+                                </div>
+                                <div class="col-bottom-min">
+                                    <!-- @@include = partials/_profile-order-user.html -->
+                                </div>
+                                <div class="col-bottom-min">
+                                    <!-- @@include = partials/_profile-order-user.html -->
+                                </div>
+                                <!-- @@include = partials/_pagination.html -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- @@close-->

@@ -1,0 +1,307 @@
+.profile {
+	&__card {
+		background: #fff;
+		border: solid 1px $color-border;
+		border-radius: $border-radius-base;
+	}
+
+	&__card-body {
+		@include rem(padding, 15px);
+	}
+
+	&__card-info {
+		@include clearfix();
+		@include rem(margin-bottom, 15px);
+	}
+
+	&__card-img {
+		float: left;
+		@include rem(width, 60px);
+		@include rem(height, 60px);
+		border-radius: $border-radius-base;
+		overflow: hidden;
+
+		& img {
+			width: 100%;
+		}
+	}
+
+	&__card-name {
+		overflow: hidden;
+		@include rem(font-size, 15px);
+		@include rem(line-height, 21px);
+		@include rem(padding-left, 15px);
+		font-family: $font-medium;
+		color: $color-green;
+	}
+
+	&__card-bottom {
+		@include clearfix();
+		@include rem(font-size, 14px);
+		@include rem(line-height, 18px);
+		@include rem(padding, 10px 15px);
+		border-top: solid 1px $color-border;
+	}
+
+	&__card-btn {
+		display: block;
+		float: left;
+		width: 50%;
+		color: $color-grey-dark;
+
+		&:hover {
+			color: $color-green;
+		}
+	}
+
+	&__card-icon {
+		@include rem(font-size, 16px);
+		@include rem(margin-left, 5px);
+
+		&.icon--edit {
+			@include rem(font-size, 12px);
+		}
+	}
+
+	&__reviews {
+		@include rem(margin-bottom, 15px);
+	}
+
+	&__reviews-stars {
+		position: relative;
+		display: inline-block;
+    	vertical-align: top;
+
+		& .icon--thumb {
+			@include rem(font-size, 16px);
+		}
+
+		& .icon--star {
+			@include rem(font-size, 17.24px);
+		}
+	}
+
+	&__reviews-stars-empty {
+		color: $color-grey-light;
+		@include rem(height, 16px);
+		white-space: nowrap;
+	}
+
+	&__reviews-stars-active {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		overflow: hidden;
+		white-space: nowrap;
+		@include rem(height, 16px);
+
+		& .icon--thumb {
+			color: $color-green;
+		}
+
+		& .icon--star {
+			color: $color-orange;
+		}
+	}
+
+	&__reviews-count {
+		display: inline-block;
+    	vertical-align: top;
+		@include rem(font-size, 14px);
+		@include rem(line-height, 16px);
+		@include rem(margin-left, 10px);
+	}
+
+	&__reviews-num {
+		display: inline-block;
+		vertical-align: top;
+		font-family: $font-medium;
+	}
+
+	&__reviews-title {
+		display: inline-block;
+		vertical-align: top;
+		@include rem(width, 65px);
+	}
+
+	&__stat {
+		background: $color-green-maxextralight;
+		border: solid 1px $color-border;
+		border-radius: $border-radius-base;
+		@include rem(padding, 15px);
+		text-align: center;
+		height: 100%;
+	}
+
+	&__stat-count {
+		font-family: $font-medium;
+		@include rem(font-size, 40px);
+		color: $color-green;
+	}
+
+	&__stat-text {
+		color: $color-grey;
+		@include rem(font-size, 16px);
+		@include rem(line-height, 20px);
+		@include rem(margin-top, 10px);
+	}
+
+	&__link {
+		text-align: center;
+		border-top: solid 1px $color-border;
+		@include rem(margin, -15px);
+		@include rem(margin-top, 0px);
+
+		& a {
+			display: block;
+			text-decoration: underline;
+			@include rem(padding, 15px 0px);
+		}
+
+		& a:hover {
+			color: $color-orange;
+		}
+	}
+
+	&__space {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+		height: 100%;
+	}
+
+	&__space-top {
+		width: 100%;
+	}
+
+	&__space-bottom {
+		width: 100%;
+	}
+
+	&__empty {
+		background: $color-grey-extralight;
+		@include rem(padding, 15px);
+		@include rem(margin, 0px -15px);
+		color: $color-grey-dark;
+		text-align: center;
+	}
+
+	&__empty-icon {
+		display: inline-block;
+		vertical-align: top;
+		@include rem(font-size, 14px);
+		@include rem(margin-right, 5px);
+	}
+
+	&__edit-wrap {
+
+	}
+
+	&__edit-body {
+		overflow: hidden;
+		@include rem(padding-left, 10px);
+		@include rem(margin-left, -10px);
+	}
+
+	&__edit-btns {
+		float: right;
+	}
+
+	&__edit {
+		height: 100%;
+		@include rem(padding-left, 5px);
+	}
+
+	&__edit-icon {
+		display: block;
+		border: solid 1px $color-border;
+		border-radius: $border-radius-base;
+		@include rem(padding, 15px);
+		background: #fff;
+		color: $color-grey-dark;
+		transition: all $transition-speed ease;
+		cursor: pointer;
+
+		&:hover {
+			background: darken(#fff,3%);
+			color: darken($color-grey-dark,2%);
+			border: solid 1px darken($color-border,3%);
+		}
+	}
+
+	&__edit-icon-wrap {
+		position: relative;
+	}
+
+	&__edit-icon-wrap .confirm-win__modal {
+		width: 243px;
+		right: 60px;
+		left: auto;
+		top: -50%;
+		margin-top: -8px;
+	}
+
+	&__edit-icon-wrap .confirm-win__modal {
+		&:after {
+			border-left-color: lighten($color-grey,10%);
+			border-bottom-color: transparent;
+			left: auto;
+			right: -12px;
+			top: 50%;
+			margin-left: 0;
+			margin-top: -6px;
+		}
+	}
+
+	&__header {
+		@include rem(font-size, 18px);
+		@include rem(line-height, 40px);
+		white-space: nowrap;
+		font-family: $font-medium;
+		text-transform: uppercase;
+	}
+
+	&__city {
+		color: $color-green;
+		@include rem(font-size, 14px);
+		@include rem(line-height, 18px);
+		@include rem(margin-top, 10px);
+		text-align: center;
+	}
+
+	&__city-icon {
+		@include rem(font-size, 18px);
+		@include rem(margin-right, 5px);
+		display: inline-block;
+		vertical-align: top;
+	}
+}
+
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.profile {
+
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.profile {
+
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.profile {
+
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.profile {
+
+	}
+}

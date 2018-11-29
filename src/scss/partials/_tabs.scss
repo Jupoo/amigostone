@@ -1,0 +1,88 @@
+.tabs {
+	&__list {
+		background: none;
+		display: flex;
+	}
+
+	&__btn {
+		@include rem(font-size, 14px);
+		@include rem(line-height, 20px);
+		@include rem(padding, 15px 30px);
+		@include rem(margin-right, 2px);
+		cursor: pointer;
+		background: $color-grey-extralight;
+		border-bottom: solid 1px $color-border;
+		transition: all $transition-speed ease;
+		font-family: $font-medium;
+		text-transform: uppercase;
+		border-radius: $border-radius-base $border-radius-base 0px 0px;
+
+		&:hover {
+			color: $color-green;
+		}
+
+		&.current {
+			background: #fff;
+			color: $color-green;
+			border-bottom: solid 1px #fff;
+		}
+
+		&:last-child {
+			margin-right: 0px;
+		}
+	}
+
+	&__body {
+		@include rem(padding, 30px);
+		background: #fff;
+		border-radius: 0px $border-radius-base $border-radius-base $border-radius-base;
+		@include shadow-path();
+	}
+
+	&__content {
+		display: none;
+
+		&.current {
+			display: block;
+		}
+	}
+}
+
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.tabs {
+
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.tabs {
+
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.tabs {
+
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.tabs {
+		&__body {
+			@include rem(padding, 15px);
+			border-radius: 0px 0px $border-radius-base $border-radius-base;
+		}
+
+		&__btn {
+			width: 50%;
+			@include rem(font-size, 12px);
+			@include rem(line-height, 18px);
+			@include rem(padding, 15px 15px);
+		}
+	}
+}

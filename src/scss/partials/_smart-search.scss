@@ -1,0 +1,229 @@
+.smart-search {
+	&__search {
+		position: relative;
+	}
+
+	&__search-text {
+		@include rem(font-size, 15px);
+		@include rem(line-height, 38px);
+		@include rem(height, 40px);
+		@include rem(padding, 0px 10px);
+		width: 100%;
+		border: solid 1px $color-border-form;
+		background: #fff;
+		display: block;
+		font-family: $font-reg;
+		border-radius: $border-radius-base;
+		color: $color-placeholder;
+		cursor: pointer;
+		overflow: hidden;
+
+		&.filled {
+			color: $color-base;
+		}
+	}
+
+	&__search-icon  {
+		position: absolute;
+		@include rem(width, 38px);
+		@include rem(height, 38px);
+		right: 1px;
+		top: 1px;
+		@include rem(line-height, 40px);
+		@include rem(font-size, 18px);
+		text-align: center;
+		color: $color-grey;
+		border-radius: 0px $border-radius-base $border-radius-base 0px;
+		background: #fff;
+	}
+
+	&__search-icon.smart-search--search-close {
+		right: 39px;
+		@include rem(font-size, 14px);
+
+		&:hover {
+			color: $color-green;
+		}
+	}
+
+	&__search-wrap {
+		display: none;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 5;
+		width: 100%;
+
+		&.block {
+			display: block;
+		}
+	}
+
+	&__search-input {
+
+	}
+
+	&__search-result {
+		display: none;
+		position: absolute;
+		top: 42px;
+		left: 0;
+		width: 100%;
+
+		& > ul {
+			background: #fff;
+			border: solid 1px $color-border-form;
+			overflow: auto;
+			@include rem(padding, 6px 0px);
+			@include rem(max-height, 176px);
+			border-radius: $border-radius-base;
+		}
+
+		&.block {
+			display: block;
+		}
+	}
+
+	&__item-title {
+		@include rem(font-size, 16px);
+		@include rem(line-height, 22px);
+		@include rem(padding, 6px 10px);
+		font-family: $font-light;
+		color: $color-green;
+		cursor: default;
+	}
+
+	&__item {
+		@include rem(font-size, 15px);
+		@include rem(line-height, 21px);
+		@include rem(padding, 6px 10px);
+		font-family: $font-light;
+		cursor: pointer;
+		color: $color-green;
+		cursor: default;
+
+		&:hover {
+			background: none;
+		}
+	}
+
+	&__item.active {
+		color: $color-base;
+		cursor: pointer;
+
+		&:hover {
+			color: $color-green;
+			background: $color-grey-extralight;
+		}
+	}
+
+	&__item.hidden {
+		display: none;
+	}
+
+	&--item-empty {
+		cursor: default;
+		color: $color-grey-dark;
+
+		&:hover {
+			color: $color-grey-dark;
+			background: none;
+		}
+	}
+
+	&__selected-title {
+		font-family: $font-medium;
+		@include rem(font-size, 15px);
+		@include rem(line-height, 21px);
+		@include rem(margin-top, 15px);
+	}
+
+	&__selected-title.hidden {
+		display: none;
+	}
+
+	&__selected-list {
+
+	}
+
+	&__selected-wrap {
+		@include rem(padding, 3px 0px);
+		@include rem(margin, 0px 15px);
+	}
+
+	&__selected-block {
+		position: relative;
+	}
+
+	&__selected-name {
+		@include rem(font-size, 15px);
+		@include rem(line-height, 22px);
+		@include rem(margin-left, 15px);
+		@include rem(margin-right, 40px);
+		@include rem(padding, 4px 0px);
+	}
+
+	&__selected-icon {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		display: block;
+		@include rem(font-size, 20px);
+		@include rem(line-height, 30px);
+		color: $color-grey-dark;
+	}
+
+	&__selected-del  {
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		@include rem(width, 30px);
+		@include rem(height, 30px);
+		background: $color-grey-extralight;
+		border: solid 1px $color-border;
+		@include rem(font-size, 16px);
+		@include rem(line-height, 30px);
+		color: $color-grey;
+		border-radius: $border-radius-base;
+		cursor: pointer;
+
+		&:hover {
+			background: $color-green-maxextralight;
+			border: solid 1px lighten($color-green,44%);
+			color: $color-green;
+		}
+	}
+
+	& .js-ajax {
+		display: none;
+	}
+}
+
+
+//------------------- < 1200 ------------------//
+@media only screen and (max-width: ($width-content-xl - 1px)) {
+	.smart-search {
+
+	}
+}
+
+//------------------- < 992 ------------------//
+@media only screen and (max-width: ($width-content-lg - 1px)) {
+	.smart-search {
+
+	}
+}
+
+//------------------- < 768 ------------------//
+@media only screen and (max-width: ($width-content-md - 1px)) {
+	.smart-search {
+
+	}
+}
+
+//------------------- < 576 ------------------//
+@media only screen and (max-width: ($width-content-sm - 1px)) {
+	.smart-search {
+
+	}
+}
